@@ -52,17 +52,21 @@ const TypingText = () => {
   }, []);
 
   return (
-    <div className="mx-auto h-fi">
-      <h1 className="text-[6rem] font-bold">
-        Hi, It's <span className="text-[#b74b4b]">Issac</span>
-      </h1>
-      <h3 className="text-[4rem] font-bold">
-        {"I'm a "}
-        <span
-          className={`${paused && "cursor-blink"} text-[#b74b4b] pr-0.5 border-r-[2px] border-r-[--cursor-color]`}
-          ref={typingTarget}
-        />
-      </h3>
+    <div className="flex mt-[12%]">
+      <div className="flex flex-col ml-[50%] p-10 rounded-3xl overflow-hidden bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-0 shadow-xl">
+        <h1 className="text-[6rem] font-bold mr-12 mt-[-2rem]">
+          Hi, I'm <span className="text-[--primary]">Issac</span>
+        </h1>
+        <h3 className="text-[4rem] font-bold">
+          {"I'm a "}
+          <span
+            className={`${
+              paused && "cursor-blink"
+            } text-[--primary] pr-0.5 border-r-[2px] border-r-[--cursor-color]`}
+            ref={typingTarget}
+          />
+        </h3>
+      </div>
     </div>
   );
 };

@@ -2,8 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-:root{
+:root {
   --cursor-color: white;
+  --primary: #b74b4b;
 }
 
 .cursor-blink {
@@ -11,10 +12,12 @@
 }
 
 @keyframes cursor-blink {
-  0%, 50% {
+  0%,
+  50% {
     border-color: var(--cursor-color);
   }
-  51%, 100% {
+  51%,
+  100% {
     border-color: transparent;
   }
 }
