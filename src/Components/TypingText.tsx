@@ -2,13 +2,14 @@
 import { useRef, useEffect, useState } from "react";
 
 const TypingText = () => {
-  const texts = ["Developer", "Engineer", "Data Scientist", "Maker"];
-  const text = useRef("");
+  const texts = ["a Developer", "an Engineer", "a Data Scientist", "a Maker"];
   const index = useRef(0);
   const letterIndex = useRef(0);
-  const [paused, setPaused] = useState(false);
   const isDeleting = useRef(false);
-  const typingTarget = useRef<HTMLSpanElement>(null!);
+
+  const [text, setText] = useState("");
+  const [paused, setPaused] = useState(false);
+
   const typingSpeed = 100;
   const pauseBetweenWords = 2200;
 
@@ -21,8 +22,7 @@ const TypingText = () => {
       if (!isDeleting.current) {
         // Typing logic
         if (letterIndex.current < fullTextLength) {
-          text.current += currentText.charAt(letterIndex.current);
-          typingTarget.current.innerHTML = text.current;
+          setText(currentText.slice(0, letterIndex.current+1));
           letterIndex.current++;
           setTimeout(type, typingSpeed);
         } else {
@@ -36,8 +36,7 @@ const TypingText = () => {
       } else {
         // Deleting logic
         if (letterIndex.current > 0) {
-          text.current = text.current.substring(0, letterIndex.current - 1);
-          typingTarget.current.innerHTML = text.current;
+          setText(currentText.slice(0, letterIndex.current+1));
           letterIndex.current--;
           setTimeout(type, typingSpeed);
         } else {
@@ -58,13 +57,12 @@ const TypingText = () => {
           Hi, I'm <span className="text-[--primary]">Issac</span>
         </h1>
         <h3 className="text-[4rem] font-bold">
-          {"I'm a "}
+          {`I'm ${text.split(" ")[0]} `}
           <span
             className={`${
               paused && "cursor-blink"
             } text-[--primary] pr-0.5 border-r-[2px] border-r-[--cursor-color]`}
-            ref={typingTarget}
-          />
+          >{text.split(" ").slice(1).join(" ")}</span>
         </h3>
       </div>
     </div>
