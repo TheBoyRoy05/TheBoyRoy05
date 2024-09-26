@@ -4,7 +4,7 @@
 
 :root {
   --cursor-color: white;
-  --primary: #b74b4b;
+  --text: #b74b4b;
 }
 
 .cursor-blink {
@@ -20,4 +20,48 @@
   100% {
     border-color: transparent;
   }
+}
+
+.fade-gradient {
+  background: linear-gradient(0deg, rgb(6.275% 6.275% 6.275%) 0%, rgb(6.214% 6.214% 6.214% / 0.9903926402016152) 6.25%, rgb(6.036% 6.036% 6.036% / 0.9619397662556434) 12.5%, rgb(5.746% 5.746% 5.746% / 0.9157348061512727) 18.75%, rgb(5.356% 5.356% 5.356% / 0.8535533905932737) 25%, rgb(4.88% 4.88% 4.88% / 0.7777851165098011) 31.25%, rgb(4.338% 4.338% 4.338% / 0.6913417161825449) 37.5%, rgb(3.749% 3.749% 3.749% / 0.5975451610080642) 43.75%, rgb(3.137% 3.137% 3.137% / 0.5) 50%, rgb(2.525% 2.525% 2.525% / 0.4024548389919359) 56.25%, rgb(1.937% 1.937% 1.937% / 0.3086582838174552) 62.5%, rgb(1.394% 1.394% 1.394% / 0.22221488349019902) 68.75%, rgb(0.919% 0.919% 0.919% / 0.14644660940672627) 75%, rgb(0.529% 0.529% 0.529% / 0.08426519384872733) 81.25%, rgb(0.239% 0.239% 0.239% / 0.03806023374435663) 87.5%, rgb(0.06% 0.06% 0.06% / 0.009607359798384785) 93.75%, rgb(0% 0% 0% / 0) 100% )
+}
+
+.text-gradient {
+  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.project-glare {
+  height: 1px;
+  background-image: linear-gradient(90deg, #0000 0%, #dbdbdb 50%, #0000 100%);
+}
+
+.project-bg {
+  position: relative;
+  background-image: linear-gradient(180deg, #222, #181818);
+  overflow: hidden;
+}
+
+.project-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle at top center, #195277 0%, #181818 90%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 1;
+}
+
+.project-bg:hover::before {
+  opacity: 1;
+}
+
+.project-bg .project-content {
+  position: relative;
+  z-index: 2;
 }

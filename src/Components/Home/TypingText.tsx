@@ -22,7 +22,7 @@ const TypingText = () => {
       if (!isDeleting.current) {
         // Typing logic
         if (letterIndex.current < fullTextLength) {
-          setText(currentText.slice(0, letterIndex.current+1));
+          setText(currentText.slice(0, letterIndex.current + 1));
           letterIndex.current++;
           setTimeout(type, typingSpeed);
         } else {
@@ -36,7 +36,7 @@ const TypingText = () => {
       } else {
         // Deleting logic
         if (letterIndex.current > 0) {
-          setText(currentText.slice(0, letterIndex.current+1));
+          setText(currentText.slice(0, letterIndex.current + 1));
           letterIndex.current--;
           setTimeout(type, typingSpeed);
         } else {
@@ -51,18 +51,20 @@ const TypingText = () => {
   }, []);
 
   return (
-    <div className="flex mt-[12%]">
+    <div className="flex mt-[17%]">
       <div className="flex flex-col ml-[50%] p-10 rounded-3xl overflow-hidden bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-0 shadow-xl">
         <h1 className="text-[6rem] font-bold mr-12 mt-[-2rem]">
-          Hi, I'm <span className="text-[--primary]">Issac</span>
+          Hi, I'm <span className="text-[--text]">Issac</span>
         </h1>
         <h3 className="text-[4rem] font-bold">
           {`I'm ${text.split(" ")[0]} `}
           <span
-            className={`${
-              paused && "cursor-blink"
-            } text-[--primary] pr-0.5 border-r-[2px] border-r-[--cursor-color]`}
-          >{text.split(" ").slice(1).join(" ")}</span>
+            className={`${paused && "cursor-blink"} ${
+              text.split(" ").slice(1).join(" ").charAt(0) == "M" ? "text-gradient" : "text-[--text]"
+            } pr-0.5 border-r-[2px] border-r-[--cursor-color]`}
+          >
+            {text.split(" ").slice(1).join(" ")}
+          </span>
         </h3>
       </div>
     </div>
