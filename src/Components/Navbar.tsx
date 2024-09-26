@@ -8,10 +8,14 @@ const Navbar = () => {
 
   return (
     <div className="flex fixed w-full z-10">
-      <button className={`${btnClass} ml-4 font-extrabold`}>
+      <button
+        className={`${btnClass} ml-4 font-extrabold`}
+        onClick={() => navigate(`/`)}
+      >
         <FaHome />
-        Home
+        {"Home"}
       </button>
+      
       <div className="flex flex-1 justify-end">
         <button className={btnClass} onClick={() => navigate(`/about-me`)}>
           {"About Me"}

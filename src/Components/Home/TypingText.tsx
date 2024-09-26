@@ -54,13 +54,13 @@ const TypingText = () => {
     <div className="flex mt-[15vw]">
       <div className="flex flex-col ml-[45vw] p-10 rounded-3xl overflow-hidden bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-0 shadow-xl">
         <h1 className="text-[6rem] font-bold mr-12 mt-[-2rem]">
-          Hi, I'm <span className="text-[--text]">Issac</span>
+          Hi, I'm <span className="text-[--hero-text]">Issac</span>
         </h1>
         <h3 className="text-[4rem] font-bold">
           {`I'm ${text.split(" ")[0]} `}
           <span
             className={`${paused && "cursor-blink"} ${
-              text.split(" ").slice(1).join(" ").charAt(0) == "M" ? "text-gradient" : "text-[--text]"
+              text.split(" ").slice(1).join(" ").charAt(0) == "M" ? "text-gradient" : "text-[--hero-text]"
             } pr-0.5 border-r-[2px] border-r-[--cursor-color]`}
           >
             {text.split(" ").slice(1).join(" ")}

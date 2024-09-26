@@ -7,6 +7,7 @@ import "simplebar-react/dist/simplebar.min.css";
 import { useRef } from "react";
 import Projects from "../Projects/Projects";
 import Blogs from "../Blogs/Blogs";
+import Footer from "../Footer";
 
 const HomePage = () => {
   const mainPage = useRef<HTMLDivElement>(null!);
@@ -29,8 +30,8 @@ const HomePage = () => {
         <div className="bg-[#101010]" ref={mainPage}>
           <Projects upTo={2} />
           <Blogs upTo={3} />
+          <Footer />
         </div>
-        
       </SimpleBar>
     </>
   );
