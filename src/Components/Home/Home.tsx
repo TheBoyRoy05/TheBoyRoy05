@@ -39,7 +39,10 @@ const Home = () => {
             <FaArrowDownLong className="text-3xl mt-4" />
           </button>
         </div>
-        <div className="bg-[#101010]" ref={mainPage}>
+        <div className="bg-[#101010] flex flex-col items-center" ref={mainPage}>
+          <h2 className="text-[4rem] text-white hero-text-shadow mt-10 mb-6">
+            {"I like making things"}
+          </h2>
           <div className="flex flex-col items-center gap-10">
             {projects.map((project, index) => (
               <ProjectCard key={index} {...project} />

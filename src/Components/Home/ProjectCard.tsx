@@ -16,7 +16,7 @@ const ProjectCard = ({ name, time, description, image }: ProjectProps) => {
         <div className="max-h-[900px] min-h-[900px] p-11 pb-0 border border-[#505050] rounded-2xl project-bg group">
           <div className="project-content flex flex-col overflow-hidden">
             <div className="flex items-center justify-between text-[1.75rem] font-bold text-white">
-              <h3 className="mb-2">{name}</h3>
+              <h3 className="mb-2 text-shadow">{name}</h3>
               <FaArrowRight />
             </div>
             <p className="font-bold mb-14">

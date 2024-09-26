@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  font-family: Neue Montreal, sans-serif;
+}
+
 :root {
   --cursor-color: white;
   --text: #b74b4b;
@@ -31,6 +35,14 @@
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+}
+
+.hero-text-shadow {
+  text-shadow: 0 5px 20px #0057ff33, 0 -5px 15px #ff5a0026, 0 0 30px #ffffff4d;
+}
+
+.text-shadow {
+  text-shadow: 0 -2px 10px #fff3;
 }
 
 .project-glare {
