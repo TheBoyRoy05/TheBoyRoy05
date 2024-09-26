@@ -46,7 +46,7 @@ const Scene = () => {
   return (
     <div className="h-screen">
       <Leva hidden />
-      <Canvas camera={{ position: [0, 0, 30], fov: 45 }}>
+      <Canvas camera={{ position: [0, 3, 30], fov: 45 }}>
         <ambientLight intensity={0.7} />
         <Boids
           boundaries={{

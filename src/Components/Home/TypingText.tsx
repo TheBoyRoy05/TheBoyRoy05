@@ -51,8 +51,8 @@ const TypingText = () => {
   }, []);
 
   return (
-    <div className="flex mt-[17%]">
-      <div className="flex flex-col ml-[50%] p-10 rounded-3xl overflow-hidden bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-0 shadow-xl">
+    <div className="flex mt-[15vw]">
+      <div className="flex flex-col ml-[45vw] p-10 rounded-3xl overflow-hidden bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-0 shadow-xl">
         <h1 className="text-[6rem] font-bold mr-12 mt-[-2rem]">
           Hi, I'm <span className="text-[--text]">Issac</span>
         </h1>

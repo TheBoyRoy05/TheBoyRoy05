@@ -11,9 +11,9 @@ const ProjectCard = ({ name, time, description, image }: ProjectProps) => {
   return (
     <div>
       <div className="project-glare" />
-      <div className="flex flex-col items-center max-w-[1440px] bg-[#181818] border border-[#505050] rounded-3xl p-3">
+      <div className="flex flex-col items-center max-w-[72.5vw] bg-[#181818] border border-[#505050] rounded-3xl p-3">
         <div className="project-glare w-1/2" />
-        <div className="max-h-[900px] min-h-[900px] p-11 pb-0 border border-[#505050] rounded-2xl project-bg group">
+        <div className="max-h-[45vw] min-h-[45vw] p-11 pb-0 border border-[#505050] rounded-2xl project-bg group">
           <div className="project-content flex flex-col overflow-hidden">
             <div className="flex items-center justify-between text-[1.75rem] font-bold text-white">
               <h3 className="mb-2 text-shadow">{name}</h3>
