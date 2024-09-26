@@ -5,7 +5,7 @@ interface BlogsProps {
   upTo?: number;
 }
 
-const Blogs = ({ upTo = blogs.length }: BlogsProps) => {
+const Blog = ({ upTo = blogs.length }: BlogsProps) => {
   return (
     <div className="flex flex-col items-center">
       <h2 className="text-[4rem] text-white hero-text-shadow mt-10 mb-6">
@@ -20,4 +20,4 @@ const Blogs = ({ upTo = blogs.length }: BlogsProps) => {
   );
 };
 
-export default Blogs;
+export default Blog;

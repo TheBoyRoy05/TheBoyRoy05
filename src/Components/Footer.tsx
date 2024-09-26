@@ -2,7 +2,8 @@ import { FaGithub, FaLinkedinIn } from "react-icons/fa6";
 import { SiGmail } from "react-icons/si";
 
 const Footer = () => {
-  const btnClass = "btn rounded-full text-white text-lg w-12 p-0 border-none bg-[#202020] hover:bg-[#282828] glow";
+  const btnClass =
+    "btn rounded-full text-white text-lg w-12 p-0 border-none bg-[#202020] hover:bg-[#282828] glow";
 
   return (
     <div className="border-t border-[--border-color] mt-[5vw] flex py-10 bg-[#181818]">
@@ -18,21 +19,11 @@ const Footer = () => {
         className="flex flex-col gap-y-2 border-x border-[--border-color] px-40"
       >
         <h4 className="text-lg font-bold mb-2">{"Quick Links"}</h4>
-        <a href="/">
-          {"Home"}
-        </a>
-        <a href="/about-me">
-          {"About Me"}
-        </a>
-        <a href="/projects">
-          {"Projects"}
-        </a>
-        <a href="/blog">
-          {"Blog"}
-        </a>
-        <a href="/contact-me">
-          {"Contact Me"}
-        </a>
+        <a href="/">{"Home"}</a>
+        <a href="/about-me">{"About Me"}</a>
+        <a href="/projects">{"Projects"}</a>
+        <a href="/blog">{"Blog"}</a>
+        <a href="/contact-me">{"Contact Me"}</a>
       </div>
       <div
         id="social-media-links"

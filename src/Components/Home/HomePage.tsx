@@ -3,10 +3,9 @@ import Scene from "./Boids/Scene";
 import Navbar from "../Navbar";
 import TypingText from "./TypingText";
 import SimpleBar from "simplebar-react";
-import "simplebar-react/dist/simplebar.min.css";
 import { useRef } from "react";
 import Projects from "../Projects/Projects";
-import Blogs from "../Blogs/Blogs";
+import Blog from "../Blogs/Blog";
 import Footer from "../Footer";
 
 const HomePage = () => {
@@ -29,7 +28,7 @@ const HomePage = () => {
         </div>
         <div className="bg-[#101010]" ref={mainPage}>
           <Projects upTo={2} />
-          <Blogs upTo={3} />
+          <Blog upTo={3} />
           <Footer />
         </div>
       </SimpleBar>
