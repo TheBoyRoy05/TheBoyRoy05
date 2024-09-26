@@ -6,23 +6,11 @@ import SimpleBar from "simplebar-react";
 import "simplebar-react/dist/simplebar.min.css";
 import { useRef } from "react";
 import ProjectCard from "./ProjectCard";
+import BlogCard from "./BlogCard";
+import { blogs, projects } from "../../Utils/info";
 
 const Home = () => {
   const mainPage = useRef<HTMLDivElement>(null!);
-  const projects = [
-    {
-      name: "YipYap",
-      time: "Summer '24",
-      description: "The Chat App for Yappers",
-      image: "/src/Assets/YipYap.png",
-    },
-    {
-      name: "Sorting Visualizer",
-      time: "Summer '24",
-      description: "Visualize your favorite sorting algorithms",
-      image: "/src/Assets/SortingVisualizer.png",
-    },
-  ];
 
   const handleClick = () => {
     if (mainPage) mainPage.current.scrollIntoView({ behavior: "smooth" });
@@ -39,14 +27,26 @@ const Home = () => {
             <FaArrowDownLong className="text-3xl mt-4" />
           </button>
         </div>
-        <div className="bg-[#101010] flex flex-col items-center" ref={mainPage}>
-          <h2 className="text-[4rem] text-white hero-text-shadow mt-10 mb-6">
-            {"I like making things"}
-          </h2>
-          <div className="flex flex-col items-center gap-10">
-            {projects.map((project, index) => (
-              <ProjectCard key={index} {...project} />
-            ))}
+        <div className="bg-[#101010]" ref={mainPage}>
+          <div className="flex flex-col items-center">
+            <h2 className="text-[4rem] text-white hero-text-shadow mt-10 mb-6">
+              {"I like making things"}
+            </h2>
+            <div className="flex flex-col items-center gap-10">
+              {projects.map((project, index) => (
+                <ProjectCard key={index} {...project} />
+              ))}
+            </div>
+          </div>
+          <div className="flex flex-col items-center">
+            <h2 className="text-[4rem] text-white hero-text-shadow mt-10 mb-6">
+              {"I like sharing what I learn"}
+            </h2>
+            <div className="flex gap-20 flex-wrap justify-center">
+              {blogs.map((project, index) => (
+                <BlogCard key={index} {...project} />
+              ))}
+            </div>
           </div>
         </div>
       </SimpleBar>
