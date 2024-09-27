@@ -7,6 +7,7 @@ import { useRef } from "react";
 import Projects from "../Projects/Projects";
 import Blog from "../Blogs/Blog";
 import Footer from "../Footer";
+import "simplebar-react/dist/simplebar.min.css";
 
 const HomePage = () => {
   const mainPage = useRef<HTMLDivElement>(null!);

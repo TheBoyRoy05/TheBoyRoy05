@@ -4,7 +4,6 @@ import App from "./App.tsx";
 import { BrowserRouter } from "react-router-dom";
 import "./Styles/fonts.css";
 import "./Styles/index.css";
-import "simplebar-react/dist/simplebar.min.css";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
