@@ -6,6 +6,11 @@ body {
   font-family: Neue Montreal, sans-serif;
 }
 
+h2 {
+  @apply text-white text-center hero-text-shadow mt-10 mb-10;
+  font-size: 3.75vw;
+}
+
 :root {
   --cursor-color: white;
   --border-color: #505050;

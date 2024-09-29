@@ -8,7 +8,7 @@ interface ProjectsProps {
 const Projects = ({ upTo = projects.length }: ProjectsProps) => {
   return (
     <div className="flex flex-col items-center">
-      <h2 className="text-[4rem] text-white hero-text-shadow mt-10 mb-6">
+      <h2>
         I like <span className="text-gradient font-medium">making</span> things
       </h2>
       <div className="flex flex-col items-center gap-10">
