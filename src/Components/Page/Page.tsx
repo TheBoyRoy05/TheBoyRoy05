@@ -5,13 +5,14 @@ import Footer from "./Footer";
 
 interface PageProps {
   children: React.ReactNode;
+  homePage?: boolean;
 }
 
-const Page = ({ children }: PageProps) => {
+const Page = ({ children, homePage }: PageProps) => {
   return (
-    <SimpleBar className="absolute left-0 top-0 w-screen h-screen overflow-x-hidden bg-[#101010]">
+    <SimpleBar className={`absolute left-0 top-0 w-screen h-screen overflow-x-hidden ${!homePage && "bg-[#101010]"}`}>
       <Navbar />
-      <div className="flex flex-col items-center pt-24">{children}</div>
+      {homePage ? children : <div className="flex flex-col items-center py-[10vh]">{children}</div>}
       <Footer />
     </SimpleBar>
   );

@@ -4,16 +4,18 @@ export const projects = [
     time: "Summer '24",
     description: "The Chat App for Yappers",
     image: "/src/Assets/Images/YipYap.png",
+    link: "/yipyap",
   },
   {
     name: "Sorting Visualizer",
     time: "Summer '24",
     description: "Visualize your favorite sorting algorithms",
     image: "/src/Assets/Images/SortingVisualizer.png",
+    link: "/sorting-visualizer",
   },
 ];
 
-export const blogs = [
+export const articles = [
   {
     title: "Wave Simulation",
     time: "June 2024",

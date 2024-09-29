@@ -20,7 +20,7 @@ const ResumePage = () => {
       <Frame width={"50vw"}>
         <div className="project-glare w-1/3" />
         <div
-          className="max-h-[40vw] min-h-[40vw] p-11 pb-0 border border-[--border-color] rounded-2xl project-bg group hover:cursor-pointer"
+          className="max-h-[65.5vw] min-h-[65.5vw] p-11 pb-0 border border-[--border-color] rounded-2xl project-bg group hover:cursor-pointer"
           onClick={download}
         >
           <div className="project-content flex flex-col overflow-hidden">

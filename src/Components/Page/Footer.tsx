@@ -16,7 +16,7 @@ const Footer = () => {
   };
 
   return (
-    <div className="border-t border-[--border-color] mt-[5vw] flex py-8 bg-[#181818]">
+    <div className="border-t border-[--border-color] flex py-8 bg-[#181818]">
       <div className="flex flex-col flex-1 gap-3 items-center">
         <div className="text-[3rem] font-bold">
           <span className="text-white">{"Issac "}</span>
