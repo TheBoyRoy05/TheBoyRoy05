@@ -9,12 +9,12 @@ const ContactForm = () => {
     message: ''
   });
 
-  const handleChange = (e: { target: { name: any; value: any; }; }) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = async (e: { preventDefault: () => void; }) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     const response = await fetch("https://formspree.io/f/mjkbnokj", {
@@ -36,7 +36,7 @@ const ContactForm = () => {
   return (
     <form className="flex-shrink" onSubmit={handleSubmit}>
       <div className="flex flex-col gap-7 items-center">
-        <h3 className="text-white text-shadow text-[2rem] font-bold">Let's Talk</h3>
+        <h3 className="text-white text-shadow text-[2rem] font-bold">Let's Connect</h3>
         <div className="flex gap-6">
           <input 
             type="text" 

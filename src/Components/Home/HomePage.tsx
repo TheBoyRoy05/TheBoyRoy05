@@ -1,12 +1,12 @@
 import { FaArrowDownLong } from "react-icons/fa6";
 import Scene from "./Boids/Scene";
-import Navbar from "../Navbar";
+import Navbar from "../Page/Navbar";
 import TypingText from "./TypingText";
 import SimpleBar from "simplebar-react";
 import { useRef } from "react";
 import Projects from "../Projects/Projects";
 import Blog from "../Blogs/Blog";
-import Footer from "../Footer";
+import Footer from "../Page/Footer";
 import "simplebar-react/dist/simplebar.min.css";
 
 const HomePage = () => {

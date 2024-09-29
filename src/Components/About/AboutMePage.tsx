@@ -1,4 +1,4 @@
-import Page from "../Page";
+import Page from "../Page/Page";
 import AboutMeItem from "./AboutMeItem";
 
 const Emphasize = ({ text }: { text: string }) => {
@@ -65,7 +65,7 @@ const AboutMePage = () => {
                 gaming with my friends.
                 <span className="block mt-5 text-white text-shadow indent-0">Thanks for stopping by!</span>
                 {/* <Emphasize text="Issac" /> */}
-                <img src="/src/Assets/Signature.png" className="w-[7vw] mb-[-1.5rem]" />
+                <img src="/src/Assets/Images/Signature.png" className="w-[7vw] mb-[-1.5rem]" />
               </>
             }
             flip={true}

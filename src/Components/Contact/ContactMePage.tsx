@@ -1,5 +1,5 @@
 import { SiGmail } from "react-icons/si";
-import Page from "./Page";
+import Page from "../Page/Page";
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
 import { IoDocumentText } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";

@@ -1,4 +1,4 @@
-import Page from "../Page";
+import Page from "../Page/Page";
 import Projects from "./Projects";
 
 const ProjectsPage = () => {
