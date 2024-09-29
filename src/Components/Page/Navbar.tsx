@@ -26,6 +26,9 @@ const Navbar = () => {
         <button className={btnClass} onClick={() => navigate(`/blog`)}>
           {"Blog"}
         </button>
+        <button className={btnClass} onClick={() => navigate(`/resume`)}>
+          {"Resume"}
+        </button>
         <button className={btnClass} onClick={() => navigate(`/contact-me`)}>
           {"Contact Me"}
         </button>
