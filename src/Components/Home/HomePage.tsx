@@ -19,9 +19,9 @@ const HomePage = () => {
       <Scene />
       <Page homePage>
         <TypingText />
-        <div className="mt-[9vh] h-64 fade-gradient flex justify-center items-center">
+        <div className="mt-[6vh] h-64 fade-gradient flex justify-center items-center">
           <button onClick={handleClick}>
-            <FaArrowDownLong className="text-3xl mt-[12vh]" />
+            <FaArrowDownLong className="text-3xl mt-[6vh]" />
           </button>
         </div>
         <div className="bg-[#101010] pb-[7vh]" ref={mainPage}>
