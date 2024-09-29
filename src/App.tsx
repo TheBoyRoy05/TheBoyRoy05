@@ -4,6 +4,7 @@ import ProjectsPage from "./Components/Projects/ProjectsPage"
 import BlogPage from "./Components/Blogs/BlogPage"
 import AboutMePage from "./Components/About/AboutMePage"
 import ContactMePage from "./Components/Contact/ContactMePage"
+import ResumePage from "./Components/ResumePage"
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Route path="/projects" element={<ProjectsPage />} />
       <Route path="/blog" element={<BlogPage />} />
       <Route path="/contact-me" element={<ContactMePage />} />
+      <Route path="/resume" element={<ResumePage />} />
     </Routes>
   )
 }
