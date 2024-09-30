@@ -2,8 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --cursor-color: white;
+  --border-color: #505050;
+  --hero-text: #be4a4a;
+}
+
 body {
+  background-color: #1D232A;
   font-family: Neue Montreal, sans-serif;
+}
+
+h1, h2, h4, p, a, span {
+  @apply text-gray-400
 }
 
 h2 {
@@ -11,10 +22,8 @@ h2 {
   font-size: 3.75vw;
 }
 
-:root {
-  --cursor-color: white;
-  --border-color: #505050;
-  --hero-text: #be4a4a;
+.input, .textarea {
+  @apply bg-gray-700
 }
 
 .cursor-blink {
