@@ -56,7 +56,7 @@ const TypingText = () => {
         <h1 className="text-[6rem] font-bold mr-12 mt-[-2rem]">
           Hi, I'm <span className="text-[--hero-text]">Issac</span>
         </h1>
-        <h3 className="text-[4rem] font-bold">
+        <h3 className="text-[4rem] font-bold text-gray-400">
           {`I'm ${text.split(" ")[0]} `}
           <span
             className={`${paused && "cursor-blink"} ${

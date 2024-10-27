@@ -24,12 +24,12 @@ const BlogCard = ({ title, time, description, image, link }: BlogProps) => {
             className="min-h-[260px] rounded-xl border border-[--border-color]"
           />
           <div className="flex justify-between items-center text-xl font-bold text-white text-shadow mt-6 mb-4">
-            <span>{title}</span>
-            <span>{time}</span>
+            <span className="text-white">{title}</span>
+            <span className="text-white">{time}</span>
           </div>
           <p className="font-light indent-8 leading-7">{description}</p>
           <div className="flex items-center text-white justify-end">
-            <p className="text-right p-2 underline text-shadow font-light">
+            <p className="text-right p-2 underline text-shadow font-light text-white">
               {"Learn More"}
             </p>
             <FaArrowRight />

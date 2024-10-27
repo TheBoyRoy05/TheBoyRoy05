@@ -29,12 +29,12 @@ const Footer = () => {
       </div>
       <div id="quick-link" className="flex flex-1 justify-center gap-x-20 border-x border-[--border-color]">
         <div className="flex flex-col gap-y-2 justify-center">
-          <h4 className="text-lg font-bold mb-2">{"Info"}</h4>
+          <h4 className="text-lg font-bold mb-2 text-white">{"Info"}</h4>
           <a href="/about-me" className="hover:underline">{"About"}</a>
           <a href="/contact-me" className="hover:underline">{"Contact"}</a>
         </div>
         <div className="flex flex-col gap-y-2 justify-center">
-          <h4 className="text-lg font-bold mb-2">{"Work"}</h4>
+          <h4 className="text-lg font-bold mb-2 text-white">{"Work"}</h4>
           <a href="/projects" className="hover:underline">{"Projects"}</a>
           <a href="/blog" className="hover:underline">{"Blog"}</a>
         </div>
@@ -43,7 +43,7 @@ const Footer = () => {
         id="social-media-links"
         className="flex flex-col flex-1 items-center justify-center gap-y-8"
       >
-        <h4 className="text-lg font-bold">{"Social Links"}</h4>
+        <h4 className="text-lg font-bold text-white">{"Social Links"}</h4>
         <div className="flex items-center w-[20vw] justify-evenly">
           <button onClick={handleMail} className={btnClass} title={"gmail"}>
             <SiGmail />
