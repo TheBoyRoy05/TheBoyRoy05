@@ -1,14 +1,21 @@
 import { FaArrowDownLong } from "react-icons/fa6";
 import Scene from "./Boids/Scene";
 import TypingText from "./TypingText";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Projects from "../Projects/Projects";
 import Blog from "../Blogs/Blog";
-import "simplebar-react/dist/simplebar.min.css";
 import Page from "../Page/Page";
+import LoadingScreen from "../Other/LoadingScreen";
 
 const HomePage = () => {
   const mainPage = useRef<HTMLDivElement>(null!);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  }, []);
 
   const handleClick = () => {
     if (mainPage) mainPage.current.scrollIntoView({ behavior: "smooth" });
@@ -16,6 +23,7 @@ const HomePage = () => {
 
   return (
     <>
+      {loading && <LoadingScreen />}
       <Scene />
       <Page homePage>
         <TypingText />
