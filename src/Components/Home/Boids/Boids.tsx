@@ -43,7 +43,7 @@ const Boids = ({ boundaries }: BoidsProps) => {
     "General settings",
     {
       PAUSE: { value: false },
-      NUM_BOIDS: { value: 150, min: 1, max: 200 },
+      NUM_BOIDS: { value: 100, min: 1, max: 200 },
       SCALE: { value: 0.6, min: 0.1, max: 1 },
       MIN_SPEED: { value: 0.1, min: 0, max: 10, step: 0.1 },
       MAX_SPEED: { value: 1.2, min: 0, max: 10, step: 0.1 },
