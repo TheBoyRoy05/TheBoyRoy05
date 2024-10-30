@@ -1,5 +1,5 @@
 import { FaArrowRight } from "react-icons/fa6";
-import Frame from "../Frame";
+import Frame from "../Other/Frame";
 import { useNavigate } from "react-router-dom";
 
 interface ProjectProps {

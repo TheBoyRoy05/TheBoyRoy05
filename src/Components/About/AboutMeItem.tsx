@@ -1,4 +1,4 @@
-import Frame from "../Frame";
+import Frame from "../Other/Frame";
 
 interface ItemProps {
   title: string;

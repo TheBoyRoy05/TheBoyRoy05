@@ -1,6 +1,6 @@
 import { HiDownload } from "react-icons/hi";
+import Page from "../Page/Page";
 import Frame from "./Frame";
-import Page from "./Page/Page";
 
 const ResumePage = () => {
   const download = () => {
