@@ -13,7 +13,7 @@ const UnderConstruction = () => {
         </a>
       </h4>
       <img
-        src="https://raw.githubusercontent.com/TheBoyRoy05/TheBoyRoy05/main/src/Assets/Images/Sleepy_Bear.png"
+        src="/src/Assets/Images/Sleepy_Bear.png"
         alt="Under Construction"
         className="bear mt-24 w-[42vw]"
       />

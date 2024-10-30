@@ -1,4 +1,3 @@
-import { FaArrowRight } from "react-icons/fa6";
 import { projects } from "../../Utils/info";
 import Frame from "../Other/Frame";
 import Page from "../Page/Page";

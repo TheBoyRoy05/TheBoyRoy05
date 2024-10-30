@@ -33,7 +33,7 @@ const ResumePage = () => {
               {` — September 25, 2024`}
             </p>
             <img
-              src={"https://raw.githubusercontent.com/TheBoyRoy05/TheBoyRoy05/main/src/Assets/Images/Resume.png"}
+              src={"/src/Assets/Images/Resume.png"}
               alt={"Résumé"}
               className="border border-slate-500 rounded-xl group-hover:mt-[-0.5rem] transition-all duration-300"
             />
