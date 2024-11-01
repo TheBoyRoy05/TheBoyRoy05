@@ -1,4 +1,4 @@
-import { projects } from "../../Utils/info";
+import { projects } from "../../Utils/info.tsx";
 import Emphasize from "../Other/Emphasize";
 import Frame from "../Other/Frame";
 import Page from "../Page/Page";
@@ -201,7 +201,7 @@ const SortingVizPage = () => {
             <div className="project-glare w-1/3" />
             <img
               alt="Algorithms"
-              src="./src/Assets/Images/Projects/Algorithms.png"
+              src={`${baseURL}/src/Assets/Images/Projects/Algorithms.png`}
               className="border border-slate-500 rounded-xl"
             />
           </Frame> */}

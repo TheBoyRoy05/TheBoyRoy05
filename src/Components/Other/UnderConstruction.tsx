@@ -1,3 +1,4 @@
+import { baseURL } from "../../Utils/info.tsx"
 import Page from "../Page/Page"
 
 const UnderConstruction = () => {
@@ -13,7 +14,7 @@ const UnderConstruction = () => {
         </a>
       </h4>
       <img
-        src="./src/Assets/Images/Sleepy_Bear.png"
+        src={`${baseURL}/src/Assets/Images/Sleepy_Bear.png`}
         alt="Under Construction"
         className="bear mt-24 w-[42vw]"
       />
