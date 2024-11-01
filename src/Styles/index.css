@@ -6,6 +6,7 @@
   --cursor-color: white;
   --border-color: #505050;
   --hero-text: #be4a4a;
+  --red: #ff0000;
 }
 
 body {
@@ -23,22 +24,7 @@ h2 {
 }
 
 .input, .textarea {
-  @apply bg-gray-700
-}
-
-.cursor-blink {
-  animation: cursor-blink 1s infinite;
-}
-
-@keyframes cursor-blink {
-  0%,
-  50% {
-    border-color: var(--cursor-color);
-  }
-  51%,
-  100% {
-    border-color: transparent;
-  }
+  background-color: #1D232A;
 }
 
 .bear {
@@ -78,35 +64,39 @@ h2 {
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
 }
 
+.white-glow {
+  box-shadow: 0 0 20px #fff
+}
+
 .project-glare {
   height: 1px;
   background-image: linear-gradient(90deg, #0000 0%, #dbdbdb 50%, #0000 100%);
 }
 
-.project-bg {
+.frame-bg {
   position: relative;
   background-image: linear-gradient(180deg, #222, #181818);
   overflow: hidden;
 }
 
-.project-bg::before {
+.frame-bg::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: radial-gradient(circle at top center, #195277 0%, #181818 90%);
-  opacity: 0;
+  background-image: radial-gradient(circle at top center, var(--gradient-color) 0%, #181818 90%);
+  opacity: var(--opacity, 0);
   transition: opacity 0.5s ease;
-  z-index: 1;
+  z-index: 0;
 }
 
-.project-bg:hover::before {
-  opacity: 1;
+.frame-bg:hover::before {
+  opacity: var(--opacity, 1);
 }
 
-.project-bg .project-content {
+.frame-bg .frame-content {
   position: relative;
   z-index: 2;
 }

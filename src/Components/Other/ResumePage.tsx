@@ -20,10 +20,10 @@ const ResumePage = () => {
       <Frame width={"50vw"}>
         <div className="project-glare w-1/3" />
         <div
-          className="max-h-[65.5vw] min-h-[65.5vw] p-11 pb-0 border border-[--border-color] rounded-2xl project-bg group hover:cursor-pointer"
+          className="max-h-[65.5vw] min-h-[65.5vw] p-11 pb-0 border border-[--border-color] rounded-2xl frame-bg group hover:cursor-pointer"
           onClick={download}
         >
-          <div className="project-content flex flex-col overflow-hidden">
+          <div className="frame-content flex flex-col overflow-hidden">
             <div className="flex items-center justify-between text-[1.75rem] font-bold text-white">
               <h3 className="mb-2 text-shadow">{"Resume"}</h3>
               <HiDownload />

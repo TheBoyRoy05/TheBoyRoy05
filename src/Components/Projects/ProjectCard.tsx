@@ -16,8 +16,8 @@ const ProjectCard = ({ name, time, description, image, link }: ProjectProps) => 
   return (
     <Frame width={"72.5vw"}>
       <div className="project-glare w-1/3" />
-      <div className="max-h-[45vw] min-h-[45vw] p-11 pb-0 border border-[--border-color] rounded-2xl project-bg group hover:cursor-pointer" onClick={() => navigate(link)}>
-        <div className="project-content flex flex-col overflow-hidden">
+      <div className="max-h-[45vw] min-h-[45vw] p-11 pb-0 border border-[--border-color] rounded-2xl frame-bg group hover:cursor-pointer" onClick={() => navigate(link)}>
+        <div className="frame-content flex flex-col overflow-hidden">
           <div className="flex items-center justify-between text-[1.75rem] font-bold text-white">
             <h3 className="mb-2 text-shadow">{name}</h3>
             <FaArrowRight />

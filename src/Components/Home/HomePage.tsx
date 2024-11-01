@@ -3,7 +3,7 @@ import Scene from "./Boids/Scene";
 import TypingText from "./TypingText";
 import { useEffect, useRef, useState } from "react";
 import Projects from "../Projects/Projects";
-import Blog from "../Blogs/Blog";
+import Blog from "../Blog/Blog";
 import Page from "../Page/Page";
 import LoadingScreen from "../Other/LoadingScreen";
 
