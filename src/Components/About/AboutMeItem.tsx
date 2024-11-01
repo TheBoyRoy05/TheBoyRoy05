@@ -1,13 +1,13 @@
-import Frame from "../Frame";
+import Frame from "../Other/Frame";
 
 interface ItemProps {
   title: string;
   image: string;
   text: React.ReactNode;
-  flip: boolean;
+  flip?: boolean;
 }
 
-const AboutMeItem = ({ title, image, text, flip }: ItemProps) => {
+const AboutMeItem = ({ title, image, text, flip=false }: ItemProps) => {
   const picture = (
     <Frame width="40vw">
       <img src={image} className="rounded-2xl border-2 border-[--border-color]" />

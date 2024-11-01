@@ -20,12 +20,12 @@ const Navbar = () => {
         <button className={btnClass} onClick={() => navigate(`/about-me`)}>
           {"About Me"}
         </button>
-        <button className={btnClass} onClick={() => navigate(`/projects`)}>
+        {/* <button className={btnClass} onClick={() => navigate(`/projects`)}>
           {"Projects"}
         </button>
         <button className={btnClass} onClick={() => navigate(`/blog`)}>
           {"Blog"}
-        </button>
+        </button> */}
         <button className={btnClass} onClick={() => navigate(`/resume`)}>
           {"Resume"}
         </button>

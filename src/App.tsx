@@ -1,12 +1,12 @@
 import { Route, Routes } from "react-router-dom"
 import HomePage from "./Components/Home/HomePage"
 import ProjectsPage from "./Components/Projects/ProjectsPage"
-import BlogPage from "./Components/Blogs/BlogPage"
+import BlogPage from "./Components/Blog/BlogPage.tsx"
 import AboutMePage from "./Components/About/AboutMePage"
 import ContactMePage from "./Components/Contact/ContactMePage"
-import ResumePage from "./Components/ResumePage"
 import YipYapPage from "./Components/Projects/YipYapPage"
 import SortingVizPage from "./Components/Projects/SortingVizPage"
+import ResumePage from "./Components/Other/ResumePage.tsx"
 
 function App() {
   return (

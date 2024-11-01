@@ -1,5 +1,5 @@
 import { FaArrowRight } from "react-icons/fa6";
-import Frame from "../Frame";
+import Frame from "../Other/Frame";
 
 interface BlogProps {
   title: string;
@@ -14,10 +14,10 @@ const BlogCard = ({ title, time, description, image, link }: BlogProps) => {
     <Frame width="500px">
       <div className="project-glare w-1/2" />
       <div
-        className="max-h-[560px] min-h-[560px] p-4 pb-0 border border-[--border-color] rounded-2xl project-bg group hover:cursor-pointer"
+        className="max-h-[560px] min-h-[560px] p-4 pb-0 border border-[--border-color] rounded-2xl frame-bg group hover:cursor-pointer"
         onClick={() => window.open(link, "_blank")}
       >
-        <div className="project-content flex flex-col overflow-hidden">
+        <div className="frame-content flex flex-col overflow-hidden">
           <img
             src={image}
             alt={title}
