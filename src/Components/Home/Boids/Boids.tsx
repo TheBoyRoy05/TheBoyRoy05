@@ -2,7 +2,7 @@ import { Plane, Raycaster, Vector2, Vector3 } from "three";
 import Boid from "./Boid";
 import { useControls } from "leva";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { randFloat } from "three/src/math/MathUtils.js";
+import { randFloat } from "three./src/math/MathUtils.js";
 import { useFrame, useThree } from "@react-three/fiber";
 
 interface BoidsProps {

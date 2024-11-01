@@ -201,7 +201,7 @@ const SortingVizPage = () => {
             <div className="project-glare w-1/3" />
             <img
               alt="Algorithms"
-              src="/src/Assets/Images/Projects/Algorithms.png"
+              src="./src/Assets/Images/Projects/Algorithms.png"
               className="border border-slate-500 rounded-xl"
             />
           </Frame> */}

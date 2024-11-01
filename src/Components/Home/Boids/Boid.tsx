@@ -50,7 +50,7 @@ const Boid = (props: BoidProps) => {
   const [relVelocity, setRelVelocity] = useState(new Vector3());
   const [relSteering, setRelSteering] = useState(new Vector3());
 
-  // const { scene } = useGLTF(`/src/assets/spaceship.glb`);
+  // const { scene } = useGLTF(`./src/assets/spaceship.glb`);
   // const clone = useMemo(() => SkeletonUtils.clone(scene), [scene]);
 
   useFrame(() => {
