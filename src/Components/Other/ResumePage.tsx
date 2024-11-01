@@ -1,11 +1,12 @@
 import { HiDownload } from "react-icons/hi";
 import Page from "../Page/Page";
 import Frame from "./Frame";
+import { baseURL } from "../../Utils/info.tsx";
 
 const ResumePage = () => {
   const download = () => {
     const link = document.createElement("a");
-    link.href = "./src/Assets/Resume.pdf";
+    link.href = "/src/Assets/Resume.pdf";
     link.download = "Issac_Roy_Resume.pdf";
     link.click();
   };
@@ -33,7 +34,7 @@ const ResumePage = () => {
               {` — September 25, 2024`}
             </p>
             <img
-              src={"./src/Assets/Images/Resume.png"}
+              src={`${baseURL}/src/Assets/Images/Resume.png`}
               alt={"Résumé"}
               className="border border-slate-500 rounded-xl group-hover:mt-[-0.5rem] transition-all duration-300"
             />
