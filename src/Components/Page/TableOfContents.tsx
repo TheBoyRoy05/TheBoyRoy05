@@ -6,7 +6,7 @@ const TableOfContents = ({ contents }: { contents: object }) => {
   };
 
   return (
-    <div className="fixed left-[82vw] top-[150px] flex flex-col gap-6 z-[100]">
+    <div className="fixed left-[82vw] top-[150px] flex flex-col gap-6 z-[100] fade-in">
       <h6 className="text-gray-300 text-sm">CONTENTS</h6>
       {Object.entries(contents).map(([name, ref], index) => (
         <div
