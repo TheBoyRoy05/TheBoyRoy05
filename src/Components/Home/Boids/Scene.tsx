@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { DoubleSide } from "three";
 import { Edges, Environment, SoftShadows, Stars } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import { degToRad } from "three./src/math/MathUtils.js";
+import { degToRad } from "three/src/math/MathUtils.js";
 import { Bloom, EffectComposer, GodRays } from "@react-three/postprocessing";
 
 const Scene = () => {
