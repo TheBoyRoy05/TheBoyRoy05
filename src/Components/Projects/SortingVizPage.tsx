@@ -3,134 +3,85 @@ import Emphasize from "../Other/Emphasize";
 import Frame from "../Other/Frame";
 import Page from "../Page/Page";
 import SectionCard from "../Other/SectionCard";
-import { FaSortAmountDownAlt, FaTimes } from "react-icons/fa";
-import { LuPartyPopper } from "react-icons/lu";
-import { IoMdSettings } from "react-icons/io";
-import { MdDownload, MdOutlineQueryStats } from "react-icons/md";
+import { FaTimes } from "react-icons/fa";
 import SectionList from "../Other/SectionList";
-import { FaCode, FaExclamation, FaLocationCrosshairs } from "react-icons/fa6";
-import { TbChartBubbleFilled } from "react-icons/tb";
-import { GiClown, GiCoinsPile } from "react-icons/gi";
-import { BsLightningFill, BsSignMergeRightFill } from "react-icons/bs";
+import { FaCode, FaExclamation } from "react-icons/fa6";
 import ProjectCard from "./ProjectCard";
+import { useRef } from "react";
 
 const SortingVizPage = () => {
   const project = projects[projects.length - 1];
-  const priorities = [
-    {
-      title: "Keep it simple, yet fun to use.",
-      text: "Even a child should be able to use and enjoy playing with it.",
-      symbol: <LuPartyPopper />,
-    },
-    {
-      title: "A variety of sorting algorithms.",
-      text: "At least 5 to start with, but the more the merrier.",
-      symbol: <FaSortAmountDownAlt className="rotate-[270deg]" />,
-    },
-    {
-      title: "A myriad of settings to tweak.",
-      text: "So you can see where each algorithm shines and where it falls.",
-      symbol: <IoMdSettings />,
-    },
-    {
-      title: "Live statistics.",
-      text: "So you can track the performance of each algorithm in real time.",
-      symbol: <MdOutlineQueryStats />,
-    },
-  ];
-  const algorithms = [
-    {
-      title: "Selection Sort:",
-      text: "A simple algorithm which runs through the list iteratively and 'selects' the smallest/largest item to sort.",
-      symbol: <FaLocationCrosshairs />,
-    },
-    {
-      title: "Bubble Sort:",
-      text: "A simple algorithm which runs through a list, comparing adjacent values, and performing swaps when necessary, allowing items towards the end to 'bubble' up.",
-      symbol: <TbChartBubbleFilled />,
-    },
-    {
-      title: "Insertion Sort:",
-      text: "A simple algorithm which sorts a list by iteratively 'inserting' each item into their sorted position.",
-      symbol: <MdDownload />,
-    },
-    {
-      title: "Heap Sort:",
-      text: "An algorithm which uses a data-structure called a 'heap' to heapify the list before sorting it.",
-      symbol: <GiCoinsPile />,
-    },
-    {
-      title: "Quick Sort:",
-      text: "A recursive algorithm which chooses a 'partition' and recursively splits the list into two parts, one with items less than the partition, and the other with items that are greater.",
-      symbol: <BsLightningFill />,
-    },
-    {
-      title: "Merge Sort:",
-      text: "A recursive algorithm which splits the list into two halves and recursively sorts them before 'merging' them together.",
-      symbol: <BsSignMergeRightFill />,
-    },
-    {
-      title: "Bozo Sort:",
-      text: "A terrible algorithm which checks if the list is sorted and if not, swaps two random elements, repeating this process until the list is sorted.",
-      symbol: <GiClown />,
-    },
-  ];
+  const overview = useRef(null!);
+  const problem = useRef(null!);
+  const priorities = useRef(null!);
+  const challenges = useRef(null!);
+  const algorithms = useRef(null!);
+
+  const contents = {
+    overview,
+    problem,
+    priorities,
+    challenges,
+    algorithms,
+  };
 
   return (
-    <Page>
+    <Page contents={contents}>
       <div>
         <h2>
           Sorting <span className="text-gradient font-medium">Visualizer</span>
         </h2>
-        <h4 className="font-bold mt-[-1.5rem] mb-14 text-xl">
+        <h4 className="font-bold mt-[-1.5rem] text-xl">
           <span className="text-white">{project.time}</span>
           {` — ${project.description}`}
         </h4>
       </div>
 
-      <div className="flex flex-col gap-10 w-[60vw]">
-        <div className="fade-in-up">
-          <Frame width={"60vw"}>
-            <div className="project-glare w-1/3" />
-            <img
-              src={project.image}
-              alt={project.name}
-              className="border border-slate-500 rounded-xl"
-            />
-          </Frame>
+      <div className="flex flex-col w-[60vw]">
+        <div id="overview" ref={overview} className="flex flex-col gap-10 pt-14">
+          <div className="fade-in-up">
+            <Frame width={"60vw"}>
+              <div className="project-glare w-1/3" />
+              <img
+                src={project.image}
+                alt={project.name}
+                className="border border-slate-500 rounded-xl"
+              />
+            </Frame>
+          </div>
+
+          <div className="flex flex-col gap-4">
+            <div className="flex items-center gap-4">
+              <div className="w-[10px] h-[10px] bg-white rounded-full white-glow" />
+              <h3 className="text-white text-shadow font-bold text-xl">Overview</h3>
+            </div>
+            <div className="flex gap-12 text-lg leading-8">
+              <p className="flex-1">
+                <span className="text-white">
+                  Sorting algorithms are an important factor in algorithmic thinking,
+                </span>{" "}
+                and visualizing them will undoubtedly deepen your understanding of each algorithm's
+                key ideas and features.
+              </p>
+              <p className="flex-1">
+                I built this application to dive deep into sorting algorithms while making sorting
+                algorithms <Emphasize text="simple" /> and <Emphasize text="fun" />
+                to learn. Feel free to play around with it here:{" "}
+                <a
+                  href="https://theboyroy05.github.io/Sorting-Visualizer/"
+                  target="_blank"
+                  className="text-blue-400 underline"
+                >
+                  Sorting Visualizer
+                </a>
+              </p>
+            </div>
+          </div>
         </div>
 
-        <div className="flex flex-col gap-4">
-          <div className="flex items-center gap-4">
-            <div className="w-[10px] h-[10px] bg-white rounded-full white-glow" />
-            <h3 className="text-white text-shadow font-bold text-xl">Overview</h3>
-          </div>
-          <div className="flex gap-12 text-lg leading-8">
-            <p className="flex-1">
-              <span className="text-white">
-                Sorting algorithms are an important factor in algorithmic thinking,
-              </span>{" "}
-              and visualizing them will undoubtedly deepen your understanding of each algorithm's
-              key ideas and features.
-            </p>
-            <p className="flex-1">
-              I built this application to dive deep into sorting algorithms while making sorting
-              algorithms <Emphasize text="trivial" /> and <Emphasize text="fun" />
-              to learn. Feel free to play around with it here:{" "}
-              <a
-                href="https://theboyroy05.github.io/Sorting-Visualizer/"
-                target="_blank"
-                className="text-blue-400 underline"
-              >
-                Sorting Visualizer
-              </a>
-            </p>
-          </div>
-        </div>
+        <div className="divider py-20" ref={problem} />
 
-        <div className="divider my-12" />
-
-        <div id="problem" className="flex flex-col gap-20">
+        <div id="problem" className="flex flex-col gap-20 pb-6">
           <SectionCard
             width="60vw"
             color="#f00"
@@ -167,7 +118,7 @@ const SortingVizPage = () => {
           </div>
         </div>
 
-        <div className="divider my-12" />
+        <div className="divider pt-14 pb-20" ref={priorities} />
 
         <div id="priorities" className="flex gap-12">
           <div className="flex-1">
@@ -191,11 +142,11 @@ const SortingVizPage = () => {
                 <Emphasize text="priorities" /> that I set out to achieve:
               </p>
             </div>
-            <SectionList items={priorities} color={"#7dd3fc"} />
+            <SectionList items={project.priorities!} color={"#7dd3fc"} />
           </div>
         </div>
 
-        <div className="divider my-12" />
+        <div className="divider py-20" ref={challenges} />
 
         <div id="challenges" className="flex flex-col gap-20">
           <SectionCard
@@ -203,7 +154,7 @@ const SortingVizPage = () => {
             color="#F9D10C"
             symbol={<FaExclamation />}
             title="The Main Challenge"
-            text="All of the Algorithms Must be In-Place"
+            text="Implementing the Algorithms"
           />
 
           <div className="flex gap-4">
@@ -235,9 +186,9 @@ const SortingVizPage = () => {
           </div>
         </div>
 
-        <div className="divider my-12" />
+        <div className="divider pt-20" />
 
-        <div id="algorithms" className="flex flex-col items-center gap-12">
+        <div id="algorithms" ref={algorithms} className="flex flex-col items-center gap-12 pt-20">
           <SectionCard
             width="60vw"
             color="#7dd3fc"
@@ -256,18 +207,19 @@ const SortingVizPage = () => {
           </Frame> */}
           <div className="flex flex-col gap-10">
             <div className="flex gap-10">
-              <SectionList items={algorithms.slice(0, 3)} color={"#7dd3fc"} />
-              <SectionList items={algorithms.slice(3, 6)} color={"#7dd3fc"} />
+              <SectionList items={project.algorithms!.slice(0, 3)} color={"#7dd3fc"} />
+              <SectionList items={project.algorithms!.slice(3, 6)} color={"#7dd3fc"} />
             </div>
-            <SectionList items={algorithms.slice(6)} color={"#7dd3fc"} />
+            <SectionList items={project.algorithms!.slice(6)} color={"#7dd3fc"} />
           </div>
         </div>
 
-        <div className="divider my-12" />
+        <div className="divider py-20" />
       </div>
+
       <div className="flex flex-col items-center gap-12">
         <h3 className="text-white hero-text-shadow text-4xl font-bold">Explore my Next Project</h3>
-        <ProjectCard {...projects[projects.length - 2]} />
+        <ProjectCard {...projects[projects.length - 2]} width={"60vw"} />
       </div>
     </Page>
   );
