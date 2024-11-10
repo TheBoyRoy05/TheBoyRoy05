@@ -23,7 +23,7 @@ const ProjectCard = ({ name, time, description, image, link, width }: ProjectPro
         style={{ maxHeight: `${height}vw`, minHeight: `${height}vw` }}
         onClick={() => navigate(link)}
       >
-        <div className="frame-content flex flex-col overflow-hidden">
+        <div className="frame-content flex-col overflow-hidden">
           <div className="flex items-center justify-between text-[1.75rem] font-bold text-white">
             <h3 className="mb-[0.5vw] text-shadow">{name}</h3>
             <FaArrowRight />

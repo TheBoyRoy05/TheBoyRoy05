@@ -52,7 +52,7 @@ const TypingText = () => {
 
   return (
     <div className="flex mt-[16vw]">
-      <div className="flex flex-col ml-[45vw] p-10 rounded-3xl overflow-hidden bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-0 shadow-xl">
+      <div className="flex-col ml-[45vw] p-10 rounded-3xl overflow-hidden bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-0 shadow-xl">
         <h1 className="text-[6rem] font-bold mr-12 mt-[-2rem]">
           Hi, I'm <span className="text-[--hero-text]">Issac</span>
         </h1>

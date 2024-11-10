@@ -17,7 +17,7 @@ const BlogCard = ({ title, time, description, image, link }: BlogProps) => {
         className="max-h-[560px] min-h-[560px] p-4 pb-0 border border-[--border-color] rounded-2xl frame-bg group hover:cursor-pointer"
         onClick={() => window.open(link, "_blank")}
       >
-        <div className="frame-content flex flex-col overflow-hidden">
+        <div className="frame-content flex-col overflow-hidden">
           <img
             src={image}
             alt={title}

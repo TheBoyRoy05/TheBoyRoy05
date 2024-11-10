@@ -14,7 +14,7 @@ const YipYapPage = () => {
 
   return (
     <Page contents={contents}>
-      <div className="flex flex-col items-center">
+      <div className="flex-col items-center">
         <h2>
           Yip<span className="text-gradient font-medium">Yap</span>
         </h2>
@@ -24,8 +24,8 @@ const YipYapPage = () => {
         </h4>
       </div>
 
-      <div className="flex flex-col w-[60vw]">
-        <div id="overview" ref={overview} className="flex flex-col gap-10 pt-14">
+      <div className="flex-col w-[60vw]">
+        <div id="overview" ref={overview} className="flex-col gap-10 pt-14">
           <div className="fade-in-up">
             <Frame width={"60vw"}>
               <div className="project-glare w-1/3" />
@@ -37,7 +37,7 @@ const YipYapPage = () => {
             </Frame>
           </div>
 
-          <div className="flex flex-col gap-4">
+          <div className="flex-col gap-4">
             <div className="flex items-center gap-4">
               <div className="w-[10px] h-[10px] bg-white rounded-full white-glow" />
               <h3 className="text-white text-shadow font-bold text-xl">Overview</h3>

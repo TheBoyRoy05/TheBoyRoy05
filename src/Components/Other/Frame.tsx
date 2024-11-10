@@ -5,25 +5,28 @@ interface FrameProps {
 }
 
 const Frame = ({ children, width, color }: FrameProps) => {
+  const glareStyle = {
+    height: "1px",
+    backgroundImage: `linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, ${
+      color || "#dbdbdb"
+    } 50%, rgba(0, 0, 0, 0) 100%)`,
+  };
+
+  const frameStyle = {
+    width: width,
+    maxWidth: width,
+    "--gradient-color": color || "#195277",
+    "--opacity": color && 0.1,
+  } as React.CSSProperties;
+
   return (
     <div>
+      <div className="w-10/12 mx-auto" style={glareStyle} />
       <div
-        className="w-10/12 mx-auto"
-        style={{
-          height: "1px",
-          backgroundImage: `linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, ${
-            color || "#dbdbdb"
-          } 50%, rgba(0, 0, 0, 0) 100%)`,
-        }}
-      />
-      <div
-        className={`flex flex-col items-center bg-[#181818] border border-[--border-color] rounded-3xl p-3 mx-auto ${color && 'frame-bg'}`}
-        style={{
-          width: width,
-          maxWidth: width,
-          "--gradient-color": color || "#195277",
-          "--opacity": color && 0.1,
-        } as React.CSSProperties}
+        className={`flex-col items-center bg-[#181818] border border-[--border-color] rounded-3xl p-3 mx-auto ${
+          color && "frame-bg"
+        }`}
+        style={frameStyle}
       >
         {children}
       </div>

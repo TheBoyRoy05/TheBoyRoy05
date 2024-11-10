@@ -14,7 +14,7 @@ const SectionCard = ({ width, color, symbol, title, text }: SectionCardProps) =>
 
   return (
     <Frame width={width} color={color}>
-      <div className="frame-content flex flex-col gap-4 items-center p-8">
+      <div className="frame-content flex-col gap-4 items-center p-8">
         <div className={symbolClass} style={{ borderColor: color, color: color }}>
           {symbol}
         </div>

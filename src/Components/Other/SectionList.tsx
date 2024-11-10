@@ -9,7 +9,7 @@ interface SectionListProps {
 
 const SectionList = ({ items, color }: SectionListProps) => {
   return (
-    <div className="join join-vertical rounded-2xl flex flex-col gap-2">
+    <div className="join join-vertical rounded-2xl flex-col gap-2">
       {items.map((item, index) => (
         <div className="join-item bg-gray-800 flex items-center py-6 pl-2 pr-4" key={index}>
           <div

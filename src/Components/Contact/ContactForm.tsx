@@ -35,7 +35,7 @@ const ContactForm = () => {
 
   return (
     <form className="flex-shrink" onSubmit={handleSubmit}>
-      <div className="flex flex-col gap-7 items-center">
+      <div className="flex-col gap-7 items-center">
         <h3 className="text-white text-shadow text-[2rem] font-bold">Let's Connect</h3>
         <div className="flex gap-6">
           <input 
