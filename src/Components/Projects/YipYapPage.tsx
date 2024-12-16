@@ -13,7 +13,7 @@ const YipYapPage = () => {
   };
 
   return (
-    <Page contents={contents}>
+    <Page contents={contents} color="#00639b80">
       <div className="flex-col items-center">
         <h2>
           Yip<span className="text-gradient font-medium">Yap</span>
@@ -44,27 +44,31 @@ const YipYapPage = () => {
             </div>
             <div className="flex gap-12 text-lg leading-8">
               <p className="flex-1">
-                <span className="text-white">
-                  Sorting algorithms are an important factor in algorithmic thinking,
-                </span>{" "}
-                and visualizing them will undoubtedly deepen your understanding of each algorithm's
-                key ideas and features.
+                <span className="text-white">Unleash your inner Yapper with YipYap</span> - the
+                ultimate chat app designed for those who love to talk! Whether you're a Yapper who
+                loves sharing stories, brainstorming ideas, or just staying connected, YipYap makes
+                every conversation <Emphasize text="vibrant" /> and <Emphasize text="engaging" />.
               </p>
               <p className="flex-1">
-                I built this application to dive deep into sorting algorithms while making sorting
-                algorithms <Emphasize text="simple" /> and <Emphasize text="fun" />
-                to learn. Feel free to play around with it here:{" "}
+                With smart features like <Emphasize text="AI-driven" /> topic suggestions,{" "}
+                <Emphasize text="seamless" /> group chats, and a <Emphasize text="sleak" />,
+                user-friendly design, YipYap keeps the conversation flowing. Start yapping today by{" "}
                 <a
-                  href="https://theboyroy05.github.io/Sorting-Visualizer/"
+                  href="https://yipyap.onrender.com/signup"
                   target="_blank"
                   className="text-blue-400 underline"
                 >
-                  Sorting Visualizer
-                </a>
+                  creating an account
+                </a>{" "}
+                and join the YipYap community!
               </p>
             </div>
           </div>
         </div>
+
+        <div className="divider py-20" />
+
+        
       </div>
     </Page>
   );
