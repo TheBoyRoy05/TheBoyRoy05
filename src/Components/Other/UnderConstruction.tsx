@@ -14,7 +14,7 @@ const UnderConstruction = () => {
         </a>
       </h4>
       <img
-        src={`${baseURL}/src/Assets/Images/Sleepy_Bear.png`}
+        src={`${baseURL}/src/Assets/Images/Other/Sleepy_Bear.png`}
         alt="Under Construction"
         className="bear mt-24 w-[42vw]"
       />

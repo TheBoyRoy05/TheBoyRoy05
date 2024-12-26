@@ -22,6 +22,10 @@ h1, h2, h4, p, a, span {
   @apply text-gray-400
 }
 
+p, a {
+  @apply font-light
+}
+
 h2 {
   @apply text-white text-center hero-text-shadow mt-10 mb-10;
   font-size: 3.75vw;
@@ -72,7 +76,7 @@ h2 {
   box-shadow: 0 0 20px #fff
 }
 
-.project-glare {
+.glare {
   height: 1px;
   background-image: linear-gradient(90deg, #0000 0%, #dbdbdb 50%, #0000 100%);
 }

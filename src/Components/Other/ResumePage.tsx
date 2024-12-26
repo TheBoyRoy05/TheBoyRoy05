@@ -6,7 +6,7 @@ import { baseURL } from "../../Utils/info.tsx";
 const ResumePage = () => {
   const download = () => {
     const link = document.createElement("a");
-    link.href = "/src/Assets/Resume.pdf";
+    link.href = "/src/Assets/Images/Other/Resume.pdf";
     link.download = "Issac_Roy_Resume.pdf";
     link.click();
   };
@@ -19,7 +19,7 @@ const ResumePage = () => {
         something amazing
       </h2>
       <Frame width={"50vw"}>
-        <div className="project-glare w-1/3" />
+        <div className="glare w-1/3" />
         <div
           className="max-h-[65.5vw] min-h-[65.5vw] p-11 pb-0 border border-[--border-color] rounded-2xl frame-bg group hover:cursor-pointer"
           onClick={download}
@@ -34,7 +34,7 @@ const ResumePage = () => {
               {` — September 25, 2024`}
             </p>
             <img
-              src={`${baseURL}/src/Assets/Images/Resume.png`}
+              src={`${baseURL}/src/Assets/Images/Other/Resume.png`}
               alt={"Résumé"}
               className="border border-slate-500 rounded-xl group-hover:mt-[-0.5rem] transition-all duration-300"
             />

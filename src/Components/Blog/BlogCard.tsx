@@ -12,7 +12,7 @@ interface BlogProps {
 const BlogCard = ({ title, time, description, image, link }: BlogProps) => {
   return (
     <Frame width="500px">
-      <div className="project-glare w-1/2" />
+      <div className="glare w-1/2" />
       <div
         className="max-h-[560px] min-h-[560px] p-4 pb-0 border border-[--border-color] rounded-2xl frame-bg group hover:cursor-pointer"
         onClick={() => window.open(link, "_blank")}

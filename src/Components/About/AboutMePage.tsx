@@ -64,7 +64,7 @@ const AboutMePage = () => {
                 </span>
                 {/* <Emphasize text="Issac" /> */}
                 <img
-                  src={`${baseURL}/src/Assets/Images/About/Signature.png`}
+                  src={`${baseURL}/src/Assets/Images/Other/Signature.png`}
                   className="w-[3vw] ml-2 mt-2 mb-[-1.5rem]"
                 />
               </>

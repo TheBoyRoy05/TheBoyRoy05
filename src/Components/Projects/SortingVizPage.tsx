@@ -2,12 +2,13 @@ import { projects } from "../../Utils/info.tsx";
 import Emphasize from "../Other/Emphasize";
 import Frame from "../Other/Frame";
 import Page from "../Page/Page";
-import SectionCard from "../Other/SectionCard";
+import SectionCard from "../Other/Section/SectionCard.tsx";
 import { FaTimes } from "react-icons/fa";
-import SectionList from "../Other/SectionList";
+import SectionList from "../Other/Section/SectionList.tsx";
 import { FaCode, FaExclamation } from "react-icons/fa6";
 import ProjectCard from "./ProjectCard";
 import { useRef } from "react";
+import SectionHeader from "../Other/Section/SectionHeader.tsx";
 
 const SortingVizPage = () => {
   const project = projects[projects.length - 1];
@@ -41,7 +42,7 @@ const SortingVizPage = () => {
         <div id="overview" ref={overview} className="flex-col gap-10 pt-14">
           <div className="fade-in-up">
             <Frame width={"60vw"}>
-              <div className="project-glare w-1/3" />
+              <div className="glare w-1/3" />
               <img
                 src={project.image}
                 alt={project.name}
@@ -51,10 +52,7 @@ const SortingVizPage = () => {
           </div>
 
           <div className="flex-col gap-4">
-            <div className="flex items-center gap-4">
-              <div className="w-[10px] h-[10px] bg-white rounded-full white-glow" />
-              <h3 className="text-white text-shadow font-bold text-xl">Overview</h3>
-            </div>
+            <SectionHeader text={"Overview"} style={"text-xl"} />
             <div className="flex gap-12 text-lg leading-8">
               <p className="flex-1">
                 <span className="text-white">
@@ -92,10 +90,7 @@ const SortingVizPage = () => {
 
           <div className="flex gap-4">
             <div className="flex-1">
-              <div className="flex items-center gap-4">
-                <div className="w-[10px] h-[10px] bg-white rounded-full white-glow" />
-                <h4 className="text-white text-shadow font-bold text-3xl">Problem</h4>
-              </div>
+              <SectionHeader text={"Problem"} style={"text-3xl"} />
             </div>
             <div className="flex-1 flex-col gap-4 text-lg leading-8">
               <p>
@@ -122,10 +117,7 @@ const SortingVizPage = () => {
 
         <div id="priorities" className="flex gap-12">
           <div className="flex-1">
-            <div className="flex items-center gap-4">
-              <div className="w-[10px] h-[10px] bg-white rounded-full white-glow" />
-              <h4 className="text-white text-shadow font-bold text-3xl">Priorities</h4>
-            </div>
+            <SectionHeader text={"Priorities"} style={"text-3xl"} />
           </div>
           <div className="flex-1 flex-col gap-10">
             <div className="flex-col gap-4 text-lg leading-8">
@@ -159,12 +151,9 @@ const SortingVizPage = () => {
 
           <div className="flex gap-4">
             <div className="flex-1">
-              <div className="flex items-center gap-4">
-                <div className="w-[10px] h-[10px] bg-white rounded-full white-glow" />
-                <h4 className="text-white text-shadow font-bold text-3xl">Challenges</h4>
-              </div>
+              <SectionHeader text={"Challenge"} style={"text-3xl"} />
             </div>
-            <div className="flex-1 flex-col gap-4 text-lg leading-8">
+            <div className="flex-1 flex-col gap-6 text-lg leading-8">
               <p>
                 <span className="text-white">
                   In practice, sorting algorithms don't need to be in-place.

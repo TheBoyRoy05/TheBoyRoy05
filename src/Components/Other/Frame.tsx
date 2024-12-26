@@ -20,7 +20,7 @@ const Frame = ({ children, width, color }: FrameProps) => {
   } as React.CSSProperties;
 
   return (
-    <div>
+    <div style={{ width: width }}>
       <div className="w-10/12 mx-auto" style={glareStyle} />
       <div
         className={`flex-col items-center bg-[#181818] border border-[--border-color] rounded-3xl p-3 mx-auto ${
