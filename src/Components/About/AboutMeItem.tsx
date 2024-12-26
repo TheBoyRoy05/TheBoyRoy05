@@ -15,7 +15,7 @@ const AboutMeItem = ({ title, image, text, flip=false }: ItemProps) => {
   );
 
   const words = (
-    <div className={`flex flex-col justify-center items-center gap-5 ${flip ? "ml-10" : "mr-10"}`}>
+    <div className={`flex-col justify-center items-center gap-5 ${flip ? "ml-10" : "mr-10"}`}>
       <h4 className="text-[1.25rem] text-gray-100 text-shadow font-bold">{title}</h4>
       <p className="text-gray-400 text-lg font-light leading-8 w-[28vw] indent-6">{text}</p>
     </div>

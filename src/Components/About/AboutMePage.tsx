@@ -6,13 +6,13 @@ import AboutMeItem from "./AboutMeItem";
 const AboutMePage = () => {
   return (
     <Page>
-      <div className="flex flex-col items-center">
+      <div className="flex-col items-center">
         <h2>
           I'm passionate about
           <span className="text-gradient font-medium">{" making "}</span>
           things that improve lives
         </h2>
-        <div className="flex flex-col gap-10 items-center mt-12">
+        <div className="flex-col gap-10 items-center mt-12">
           <AboutMeItem
             title={"This is my story."}
             image={`${baseURL}/src/Assets/Images/About/Profile_Pic.jpg`}
@@ -64,7 +64,7 @@ const AboutMePage = () => {
                 </span>
                 {/* <Emphasize text="Issac" /> */}
                 <img
-                  src={`${baseURL}/src/Assets/Images/About/Signature.png`}
+                  src={`${baseURL}/src/Assets/Images/Other/Signature.png`}
                   className="w-[3vw] ml-2 mt-2 mb-[-1.5rem]"
                 />
               </>

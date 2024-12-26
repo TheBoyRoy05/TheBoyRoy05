@@ -7,7 +7,7 @@ interface BlogProps {
 
 const Blog = ({ upTo = articles.length }: BlogProps) => {
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex-col items-center">
       <h2>
         I like <span className="text-gradient font-medium">sharing</span> what I
         learn

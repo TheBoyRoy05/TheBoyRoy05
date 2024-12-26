@@ -2,12 +2,13 @@ import { projects } from "../../Utils/info.tsx";
 import Emphasize from "../Other/Emphasize";
 import Frame from "../Other/Frame";
 import Page from "../Page/Page";
-import SectionCard from "../Other/SectionCard";
+import SectionCard from "../Other/Section/SectionCard.tsx";
 import { FaTimes } from "react-icons/fa";
-import SectionList from "../Other/SectionList";
+import SectionList from "../Other/Section/SectionList.tsx";
 import { FaCode, FaExclamation } from "react-icons/fa6";
 import ProjectCard from "./ProjectCard";
 import { useRef } from "react";
+import SectionHeader from "../Other/Section/SectionHeader.tsx";
 
 const SortingVizPage = () => {
   const project = projects[projects.length - 1];
@@ -26,7 +27,7 @@ const SortingVizPage = () => {
   };
 
   return (
-    <Page contents={contents}>
+    <Page contents={contents} color={"#00639b80"}>
       <div>
         <h2>
           Sorting <span className="text-gradient font-medium">Visualizer</span>
@@ -37,11 +38,11 @@ const SortingVizPage = () => {
         </h4>
       </div>
 
-      <div className="flex flex-col w-[60vw]">
-        <div id="overview" ref={overview} className="flex flex-col gap-10 pt-14">
+      <div className="flex-col w-[60vw]">
+        <div id="overview" ref={overview} className="flex-col gap-10 pt-14">
           <div className="fade-in-up">
             <Frame width={"60vw"}>
-              <div className="project-glare w-1/3" />
+              <div className="glare w-1/3" />
               <img
                 src={project.image}
                 alt={project.name}
@@ -50,11 +51,8 @@ const SortingVizPage = () => {
             </Frame>
           </div>
 
-          <div className="flex flex-col gap-4">
-            <div className="flex items-center gap-4">
-              <div className="w-[10px] h-[10px] bg-white rounded-full white-glow" />
-              <h3 className="text-white text-shadow font-bold text-xl">Overview</h3>
-            </div>
+          <div className="flex-col gap-4">
+            <SectionHeader text={"Overview"} style={"text-xl"} />
             <div className="flex gap-12 text-lg leading-8">
               <p className="flex-1">
                 <span className="text-white">
@@ -81,7 +79,7 @@ const SortingVizPage = () => {
 
         <div className="divider py-20" ref={problem} />
 
-        <div id="problem" className="flex flex-col gap-20 pb-6">
+        <div id="problem" className="flex-col gap-20 pb-6">
           <SectionCard
             width="60vw"
             color="#f00"
@@ -92,12 +90,9 @@ const SortingVizPage = () => {
 
           <div className="flex gap-4">
             <div className="flex-1">
-              <div className="flex items-center gap-4">
-                <div className="w-[10px] h-[10px] bg-white rounded-full white-glow" />
-                <h4 className="text-white text-shadow font-bold text-3xl">Problem</h4>
-              </div>
+              <SectionHeader text={"Problem"} style={"text-3xl"} />
             </div>
-            <div className="flex-1 flex flex-col gap-4 text-lg leading-8">
+            <div className="flex-1 flex-col gap-4 text-lg leading-8">
               <p>
                 <span className="text-white">Sorting algorithms are hard to understand,</span>{" "}
                 especially as they are taught in class. Typically, you're exposed to the code behind
@@ -122,13 +117,10 @@ const SortingVizPage = () => {
 
         <div id="priorities" className="flex gap-12">
           <div className="flex-1">
-            <div className="flex items-center gap-4">
-              <div className="w-[10px] h-[10px] bg-white rounded-full white-glow" />
-              <h4 className="text-white text-shadow font-bold text-3xl">Priorities</h4>
-            </div>
+            <SectionHeader text={"Priorities"} style={"text-3xl"} />
           </div>
-          <div className="flex-1 flex flex-col gap-10">
-            <div className="flex flex-col gap-4 text-lg leading-8">
+          <div className="flex-1 flex-col gap-10">
+            <div className="flex-col gap-4 text-lg leading-8">
               <p>
                 <span className="text-white">
                   Before I could start building, I had to outline a plan,
@@ -148,7 +140,7 @@ const SortingVizPage = () => {
 
         <div className="divider py-20" ref={challenges} />
 
-        <div id="challenges" className="flex flex-col gap-20">
+        <div id="challenges" className="flex-col gap-20">
           <SectionCard
             width="60vw"
             color="#F9D10C"
@@ -159,12 +151,9 @@ const SortingVizPage = () => {
 
           <div className="flex gap-4">
             <div className="flex-1">
-              <div className="flex items-center gap-4">
-                <div className="w-[10px] h-[10px] bg-white rounded-full white-glow" />
-                <h4 className="text-white text-shadow font-bold text-3xl">Challenges</h4>
-              </div>
+              <SectionHeader text={"Challenge"} style={"text-3xl"} />
             </div>
-            <div className="flex-1 flex flex-col gap-4 text-lg leading-8">
+            <div className="flex-1 flex-col gap-6 text-lg leading-8">
               <p>
                 <span className="text-white">
                   In practice, sorting algorithms don't need to be in-place.
@@ -188,7 +177,7 @@ const SortingVizPage = () => {
 
         <div className="divider pt-20" />
 
-        <div id="algorithms" ref={algorithms} className="flex flex-col items-center gap-12 pt-20">
+        <div id="algorithms" ref={algorithms} className="flex-col items-center gap-12 pt-20">
           <SectionCard
             width="60vw"
             color="#7dd3fc"
@@ -196,16 +185,7 @@ const SortingVizPage = () => {
             title="The Algorithms"
             text="Meet the Algorithms"
           />
-          {/* <h3 className="text-white hero-text-shadow text-4xl font-bold">Meet the Algorithms</h3> */}
-          {/* <Frame width={"60vw"}>
-            <div className="project-glare w-1/3" />
-            <img
-              alt="Algorithms"
-              src={`${baseURL}/src/Assets/Images/Projects/Algorithms.png`}
-              className="border border-slate-500 rounded-xl"
-            />
-          </Frame> */}
-          <div className="flex flex-col gap-10">
+          <div className="flex-col gap-10">
             <div className="flex gap-10">
               <SectionList items={project.algorithms!.slice(0, 3)} color={"#7dd3fc"} />
               <SectionList items={project.algorithms!.slice(3, 6)} color={"#7dd3fc"} />
@@ -217,7 +197,7 @@ const SortingVizPage = () => {
         <div className="divider py-20" />
       </div>
 
-      <div className="flex flex-col items-center gap-12">
+      <div className="flex-col items-center gap-12">
         <h3 className="text-white hero-text-shadow text-4xl font-bold">Explore my Next Project</h3>
         <ProjectCard {...projects[projects.length - 2]} width={"60vw"} />
       </div>

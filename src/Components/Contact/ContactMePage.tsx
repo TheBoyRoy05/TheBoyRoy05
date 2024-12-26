@@ -26,9 +26,9 @@ const ContactMePage = () => {
       <div className="flex px-[20vw]">
         <ContactForm />
         <div className="border-r border-[--border-color] mb-[-2rem] mx-16" />
-        <div className="flex flex-col items-center flex-grow gap-10">
+        <div className="flex-col items-center flex-grow gap-10">
           <h3 className="text-white text-shadow text-[2rem] font-bold">Socials</h3>
-          <div className="flex flex-col gap-6">
+          <div className="flex-col gap-6">
             <button onClick={handleMail} className={btnClass}>
               <SiGmail />
               issacroy05@gmail.com

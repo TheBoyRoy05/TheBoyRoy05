@@ -17,13 +17,13 @@ const ProjectCard = ({ name, time, description, image, link, width }: ProjectPro
 
   return (
     <Frame width={width || "72.5vw"}>
-      <div className="project-glare w-1/3" />
+      <div className="glare w-1/3" />
       <div
         className={`p-[2.75vw] pb-0 border border-[--border-color] rounded-2xl frame-bg group hover:cursor-pointer`}
         style={{ maxHeight: `${height}vw`, minHeight: `${height}vw` }}
         onClick={() => navigate(link)}
       >
-        <div className="frame-content flex flex-col overflow-hidden">
+        <div className="frame-content flex-col overflow-hidden">
           <div className="flex items-center justify-between text-[1.75rem] font-bold text-white">
             <h3 className="mb-[0.5vw] text-shadow">{name}</h3>
             <FaArrowRight />

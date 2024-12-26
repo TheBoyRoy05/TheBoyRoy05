@@ -1,11 +1,15 @@
 import { FaSortAmountDownAlt } from "react-icons/fa";
 import { LuPartyPopper } from "react-icons/lu";
-import { IoMdSettings } from "react-icons/io";
+import { IoMdColorPalette, IoMdSettings } from "react-icons/io";
 import { MdDownload, MdOutlineQueryStats } from "react-icons/md";
-import { FaLocationCrosshairs } from "react-icons/fa6";
+import { FaLocationCrosshairs, FaLock } from "react-icons/fa6";
 import { TbChartBubbleFilled } from "react-icons/tb";
-import { GiClown, GiCoinsPile } from "react-icons/gi";
-import { BsLightningFill, BsSignMergeRightFill } from "react-icons/bs";
+import { GiClown, GiCoinsPile, GiFamilyTree } from "react-icons/gi";
+import { BsLightningFill, BsSignMergeRightFill, BsYinYang } from "react-icons/bs";
+import { FiLayout } from "react-icons/fi";
+import { RiSpeakFill } from "react-icons/ri";
+import { PiTestTubeFill } from "react-icons/pi";
+import { IoSparkles } from "react-icons/io5";
 
 export const baseURL =
   window.location.hostname != "localhost"
@@ -17,14 +21,58 @@ export const projects = [
     name: "YipYap",
     time: "Summer '24",
     description: "The Chat App for Yappers",
-    image: `${baseURL}/src/Assets/Images/Projects/YipYap.png`,
+    image: `${baseURL}/src/Assets/Images/Projects/YipYap/YipYap.png`,
     link: "/yipyap",
+    design: [
+      {
+        title: "User Experience is key -",
+        text: "A clean and simple UI that is easy to navigate and understand.",
+        symbol: <FiLayout />,
+      },
+      {
+        title: "Blending tradition with innovation -",
+        text: "Preserving tried and true features from other chat apps while introducing new and exciting ones.",
+        symbol: <BsYinYang />,
+      },
+      {
+        title: "What Yappers need -",
+        text: "Prioritizing features that allow for maximum user engagement, including AI suggestions to keep conversations flowing.",
+        symbol: <RiSpeakFill />,
+      },
+      {
+        title: "Future color themes -",
+        text: "Designing in grayscale for flexibility in future color themes.",
+        symbol: <IoMdColorPalette />,
+      },
+    ],
+    api: [
+      {
+        title: "Security -",
+        text: "Industry practices like password hashing, user authentication middleware, and session management ensures a secure experience.",
+        symbol: <FaLock />,
+      },
+      {
+        title: "Testing -",
+        text: "Frequent testing using Postman ensures a stable and reliable API, ensuring minimal downtime and maximized functionality.",
+        symbol: <PiTestTubeFill />,
+      },
+      {
+        title: "AI Suggestions -",
+        text: "Using Mintral AI's API with custom prompting to generate text suggestions keeps conversations flowing.",
+        symbol: <IoSparkles />,
+      },
+      {
+        title: "Visualizing the API -",
+        text: "Tableau allows us to visualize the current YipYap API endpoints in use. As YipYap grows, so will this graph.",
+        symbol: <GiFamilyTree className="rotate-180 text-3xl" />,
+      },
+    ],
   },
   {
     name: "Sorting Visualizer",
     time: "Summer '24",
     description: "Visualize your favorite sorting algorithms",
-    image: `${baseURL}/src/Assets/Images/Projects/SortingVisualizer.png`,
+    image: `${baseURL}/src/Assets/Images/Projects/SortingVisualizer/SortingVisualizer.png`,
     link: "/sorting-visualizer",
     priorities: [
       {
@@ -51,17 +99,17 @@ export const projects = [
     algorithms: [
       {
         title: "Selection Sort:",
-        text: "A simple algorithm which runs through the list iteratively and 'selects' the smallest/largest item to sort.",
+        text: "An algorithm which iterates through the list and 'selects' the smallest/largest item to sort.",
         symbol: <FaLocationCrosshairs />,
       },
       {
         title: "Bubble Sort:",
-        text: "A simple algorithm which runs through a list, comparing adjacent values, and performing swaps when necessary, allowing items towards the end to 'bubble' up.",
+        text: "An algorithm which runs through a list, comparing adjacent values, and performing swaps when necessary, allowing items towards the end to 'bubble' up.",
         symbol: <TbChartBubbleFilled />,
       },
       {
         title: "Insertion Sort:",
-        text: "A simple algorithm which sorts a list by iteratively 'inserting' each item into their sorted position.",
+        text: "An algorithm which sorts a list by iteratively 'inserting' each item into their sorted position.",
         symbol: <MdDownload />,
       },
       {

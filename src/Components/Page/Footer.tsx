@@ -17,23 +17,23 @@ const Footer = () => {
 
   return (
     <div className="border-t border-[--border-color] flex py-8 bg-[#181818]">
-      <div className="flex flex-col flex-1 gap-3 items-center">
+      <div className="flex-col flex-1 gap-3 items-center">
         <div className="text-[3rem] font-bold">
           <span className="text-white">{"Issac "}</span>
           <span className="text-[--hero-text]">{"Roy"}</span>
         </div>
-        <div className="flex flex-col gap-2 items-center text-sm font-medium">
+        <div className="flex-col gap-2 items-center text-sm font-medium">
           <span>{"© 2024 Issac Roy, All Rights Reserved"}</span>
           <LastUpdated />
         </div>
       </div>
       <div id="quick-link" className="flex flex-1 justify-center gap-x-20 border-x border-[--border-color]">
-        <div className="flex flex-col gap-y-2 justify-center">
+        <div className="flex-col gap-y-2 justify-center">
           <h4 className="text-lg font-bold mb-2 text-white">{"Info"}</h4>
           <a href="/about-me" className="hover:underline">{"About"}</a>
           <a href="/contact-me" className="hover:underline">{"Contact"}</a>
         </div>
-        <div className="flex flex-col gap-y-2 justify-center">
+        <div className="flex-col gap-y-2 justify-center">
           <h4 className="text-lg font-bold mb-2 text-white">{"Work"}</h4>
           <a href="/projects" className="hover:underline">{"Projects"}</a>
           <a href="/blog" className="hover:underline">{"Blog"}</a>
@@ -41,7 +41,7 @@ const Footer = () => {
       </div>
       <div
         id="social-media-links"
-        className="flex flex-col flex-1 items-center justify-center gap-y-8"
+        className="flex-col flex-1 items-center justify-center gap-y-8"
       >
         <h4 className="text-lg font-bold text-white">{"Social Links"}</h4>
         <div className="flex items-center w-[20vw] justify-evenly">
