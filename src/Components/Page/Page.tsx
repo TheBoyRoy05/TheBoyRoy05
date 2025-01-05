@@ -3,11 +3,10 @@ import SimpleBar from "simplebar-react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import TableOfContents from "./TableOfContents";
-import { ContentsType } from "../../Utils/types";
 
 interface PageProps {
   children: React.ReactNode;
-  contents?: ContentsType;
+  contents?: { [key: string]: React.RefObject<HTMLDivElement> };
   color?: string;
 }
 

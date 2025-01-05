@@ -1,1 +1,0 @@
-export type ContentsType = { [key: string]: React.RefObject<HTMLDivElement> }

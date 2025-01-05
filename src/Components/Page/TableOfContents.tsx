@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
 import { capitalize } from "../../Utils/functions";
-import { ContentsType } from "../../Utils/types";
 
 interface TableOfContentsProps {
-  contents: ContentsType;
+  contents: { [key: string]: React.RefObject<HTMLDivElement> };
 }
 
 const TableOfContents = ({ contents }: TableOfContentsProps) => {
