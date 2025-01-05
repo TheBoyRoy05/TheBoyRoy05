@@ -53,7 +53,16 @@ const YipYapPage = () => {
           </div>
 
           <div className="flex-col gap-4">
-            <SectionHeader text={"Overview"} style={"text-xl"} />
+            <div className="flex justify-between">
+              <SectionHeader text={"Overview"} style={"text-xl"} />
+              <div className="flex gap-4 items-center mr-4">
+                {Object.entries(yipyap.tech).map(([name, item], index) => (
+                  <span key={index} className="text-white text-3xl" title={name}>
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </div>
 
             <div className="flex gap-12 text-lg leading-8">
               <p className="flex-1">
@@ -79,7 +88,7 @@ const YipYapPage = () => {
           </div>
         </div>
 
-        <div className="divider pt-20 pb-10" />
+        <div className="divider pt-10 pb-10" />
 
         <div id="design" className="flex-col gap-10 pt-10" ref={design}>
           <SectionHeader text={"Frontend Design"} style={"text-3xl"} />
@@ -247,7 +256,8 @@ const YipYapPage = () => {
                 There's many ways that YipYap could evolve from here.
               </span>{" "}
               I want to focus on more Yapper features. Currently, the main feature is the{" "}
-              <Emphasize text="AI suggestions" />, which could still be improved, as you can see above.
+              <Emphasize text="AI suggestions" />, which could still be improved, as you can see
+              above.
             </p>
             <p className="flex-1">
               Although there are many other features that I'd like to implement, I plan on learning

@@ -7,14 +7,15 @@ interface BlogProps {
   description: string;
   image: string;
   link: string;
+  tech: { [key: string]: React.ReactNode };
 }
 
-const BlogCard = ({ title, time, description, image, link }: BlogProps) => {
+const BlogCard = ({ title, time, description, image, link, tech }: BlogProps) => {
   return (
     <Frame width="500px">
       <div className="glare w-1/2" />
       <div
-        className="max-h-[560px] min-h-[560px] p-4 pb-0 border border-[--border-color] rounded-2xl frame-bg group hover:cursor-pointer"
+        className="max-h-[580px] min-h-[580px] p-4 pb-0 border border-[--border-color] rounded-2xl frame-bg group hover:cursor-pointer"
         onClick={() => window.open(link, "_blank")}
       >
         <div className="frame-content flex-col overflow-hidden">
@@ -28,11 +29,21 @@ const BlogCard = ({ title, time, description, image, link }: BlogProps) => {
             <span className="text-white">{time}</span>
           </div>
           <p className="font-light indent-8 leading-7">{description}</p>
-          <div className="flex items-center text-white justify-end">
-            <p className="text-right p-2 underline text-shadow font-light text-white">
-              {"Learn More"}
-            </p>
-            <FaArrowRight />
+
+          <div className="flex items-center justify-between">
+            <div className="flex gap-4 items-center py-4 px-2">
+              {Object.entries(tech).map(([name, item], index) => (
+                <span key={index} className="text-white text-3xl" title={name}>
+                  {item}
+                </span>
+              ))}
+            </div>
+            <div className="flex items-center text-white justify-end">
+              <p className="text-right p-2 underline text-shadow font-light text-white">
+                {"Learn More"}
+              </p>
+              <FaArrowRight />
+            </div>
           </div>
         </div>
       </div>

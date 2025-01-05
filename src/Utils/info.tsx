@@ -2,7 +2,7 @@ import { FaSortAmountDownAlt } from "react-icons/fa";
 import { LuPartyPopper } from "react-icons/lu";
 import { IoMdColorPalette, IoMdSettings } from "react-icons/io";
 import { MdDownload, MdOutlineQueryStats } from "react-icons/md";
-import { FaLocationCrosshairs, FaLock } from "react-icons/fa6";
+import { FaFigma, FaLocationCrosshairs, FaLock, FaNodeJs, FaPython, FaReact } from "react-icons/fa6";
 import { TbChartBubbleFilled } from "react-icons/tb";
 import { GiClown, GiCoinsPile, GiFamilyTree } from "react-icons/gi";
 import { BsLightningFill, BsSignMergeRightFill, BsYinYang } from "react-icons/bs";
@@ -10,6 +10,7 @@ import { FiLayout } from "react-icons/fi";
 import { RiSpeakFill } from "react-icons/ri";
 import { PiTestTubeFill } from "react-icons/pi";
 import { IoSparkles } from "react-icons/io5";
+import { SiExpress, SiMongodb, SiNumpy, SiPostman, SiSocketdotio, SiTypescript } from "react-icons/si";
 
 export const baseURL =
   window.location.hostname != "localhost"
@@ -23,6 +24,16 @@ export const projects = [
     description: "The Chat App for Yappers",
     image: `${baseURL}/src/Assets/Images/Projects/YipYap/YipYap.png`,
     link: "/yipyap",
+    tech: {
+      "React": <FaReact />,
+      "TypeScript": <SiTypescript />,
+      "MongoDB": <SiMongodb />,
+      "Express": <SiExpress />,
+      "Node": <FaNodeJs />,
+      "Figma": <FaFigma />,
+      "Postman": <SiPostman />,
+      "SocketIO": <SiSocketdotio />,
+    },
     design: [
       {
         title: "User Experience is key -",
@@ -74,6 +85,10 @@ export const projects = [
     description: "Visualize your favorite sorting algorithms",
     image: `${baseURL}/src/Assets/Images/Projects/SortingVisualizer/SortingVisualizer.png`,
     link: "/sorting-visualizer",
+    tech: {
+      "React": <FaReact />,
+      "TypeScript": <SiTypescript />,
+    },
     priorities: [
       {
         title: "Keep it simple, yet fun to use.",
@@ -144,6 +159,10 @@ export const articles = [
       "The wave equation is a 2nd-order partial differential equation used to describe wave phenomena such as mechanical and electromagnetic waves. This article explores solving the wave equation using the finite-difference method in 1D and 2D, covering discretization, damping, and various boundary conditions for different behaviors.",
     image: `${baseURL}/src/Assets/Images/Blog/WaveSimulation.png`,
     link: "https://medium.com/@issacroy05/a-simple-wave-simulation-35bee02c172b",
+    tech: {
+      "Python": <FaPython />,
+      "Numpy": <SiNumpy />,
+    }
   },
   {
     title: "Altruism",
@@ -152,5 +171,9 @@ export const articles = [
       "Humans are unique due to altruism, prioritizing others' well-being, which contradicts economic models and is absent in even our closest relatives, chimpanzees. Through various simulations, including adding mutations and intelligent decision-making, this article explores evolutionary and traditional game theory.",
     image: `${baseURL}/src/Assets/Images/Blog/Altruism.png`,
     link: "https://medium.com/cognitive-neuroeconomics/decoding-altruism-ccd72547d20e",
+    tech: {
+      "Python": <FaPython />,
+      "Numpy": <SiNumpy />,
+    }
   },
 ];
