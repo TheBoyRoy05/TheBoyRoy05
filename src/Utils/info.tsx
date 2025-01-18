@@ -3,7 +3,7 @@ import { LuPartyPopper } from "react-icons/lu";
 import { IoMdColorPalette, IoMdSettings } from "react-icons/io";
 import { MdDownload, MdOutlineQueryStats } from "react-icons/md";
 import { FaFigma, FaLocationCrosshairs, FaLock, FaNodeJs, FaPython, FaReact } from "react-icons/fa6";
-import { TbChartBubbleFilled } from "react-icons/tb";
+import { TbBrandThreejs, TbChartBubbleFilled } from "react-icons/tb";
 import { GiClown, GiCoinsPile, GiFamilyTree } from "react-icons/gi";
 import { BsLightningFill, BsSignMergeRightFill, BsYinYang } from "react-icons/bs";
 import { FiLayout } from "react-icons/fi";
@@ -152,6 +152,19 @@ export const projects = [
 ];
 
 export const articles = [
+  {
+    title: "Boids Simulation",
+    time: "January 2025",
+    description:
+      "Boids are an elegant demonstration of how complex, lifelike group behavior can emerge from simple rules applied to individual agents. These agents can simulate realistic movements such as swarming, avoiding obstacles, and following leaders. It's mesmerizing to witness—and even more fascinating to simulate.",
+    image: `${baseURL}/src/Assets/Images/Blog/Boids.gif`,
+    link: "https://medium.com/@issacroy05/boids-simulating-flocks-e11c121a35cc",
+    tech: {
+      "React": <FaReact />,
+      "TypeScript": <SiTypescript />,
+      "ThreeJS": <TbBrandThreejs />,
+    }
+  },
   {
     title: "Wave Simulation",
     time: "June 2024",
