@@ -23,7 +23,7 @@ const ProjectCard = ({ name, time, description, image, link, width }: ProjectPro
         onClick={() => navigate(link)}
       >
         <div className="frame-content flex-col overflow-hidden">
-          <div className="flex items-center justify-between ~text-base/xl md:text-3xl font-bold text-white">
+          <div className="flex items-center justify-between ~text-lg/3xl font-bold text-white">
             <h3 className="~mb-2/4 text-shadow">{name}</h3>
             <FaArrowRight />
           </div>

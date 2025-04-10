@@ -18,18 +18,19 @@ const ResumePage = () => {
         <span className="text-gradient font-medium">{" make "}</span>
         something amazing
       </h2>
-      <Frame width={"50vw"}>
+      <Frame width={"clamp(350px, 50vw, 1000px)"}>
         <div className="glare w-1/3" />
         <div
-          className="max-h-[65.5vw] min-h-[65.5vw] p-11 pb-0 border border-[--border-color] rounded-2xl frame-bg group hover:cursor-pointer"
+          className="p-11 pb-0 border border-[--border-color] rounded-2xl frame-bg group hover:cursor-pointer"
+          style={{ height: "clamp(400px, 65vw, 1200px)" }}
           onClick={download}
         >
           <div className="frame-content flex-col overflow-hidden">
-            <div className="flex items-center justify-between text-[1.75rem] font-bold text-white">
-              <h3 className="mb-2 text-shadow">{"Resume"}</h3>
+          <div className="flex items-center justify-between ~text-lg/3xl font-bold text-white">
+            <h3 className="~mb-2/4 text-shadow">{"Résumé"}</h3>
               <HiDownload />
             </div>
-            <p className="font-bold mb-14">
+            <p className="~text-xs/base font-bold mb-[3vw]">
               <span className="text-white">{"Last Updated"}</span>
               {` — September 25, 2024`}
             </p>
