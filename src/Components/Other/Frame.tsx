@@ -2,9 +2,10 @@ interface FrameProps {
   children: React.ReactNode;
   width: string;
   color?: string;
+  className?: string;
 }
 
-const Frame = ({ children, width, color }: FrameProps) => {
+const Frame = ({ children, width, color, className }: FrameProps) => {
   const glareStyle = {
     height: "1px",
     backgroundImage: `linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, ${
@@ -25,7 +26,7 @@ const Frame = ({ children, width, color }: FrameProps) => {
       <div
         className={`flex-col items-center bg-[#181818] border border-[--border-color] rounded-3xl p-3 mx-auto ${
           color && "frame-bg"
-        }`}
+        } ${className}`}
         style={frameStyle}
       >
         {children}

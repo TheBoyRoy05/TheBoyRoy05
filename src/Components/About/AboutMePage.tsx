@@ -9,13 +9,13 @@ const AboutMePage = () => {
       <div className="flex-col items-center">
         <h2>
           I'm passionate about
-          <span className="text-gradient font-medium">{" making "}</span>
-          things that improve lives
+          <span className="text-gradient font-medium">{" improving "}</span>
+          lives
         </h2>
-        <div className="flex-col gap-10 items-center mt-12">
+        <div className="flex-col gap-10 items-center mt-12 P-8 w-full">
           <AboutMeItem
             title={"This is my story."}
-            image={`${baseURL}/src/Assets/Images/About/Profile_Pic.jpg`}
+            image={`${baseURL}/src/Assets/Images/About/Profile_Pic.jpeg`}
             text={
               <>
                 I'm currently studying Data Science at UCSD. I'm pursuing a Math Minor because I
@@ -65,7 +65,7 @@ const AboutMePage = () => {
                 {/* <Emphasize text="Issac" /> */}
                 <img
                   src={`${baseURL}/src/Assets/Images/Other/Signature.png`}
-                  className="w-[3vw] ml-2 mt-2 mb-[-1.5rem]"
+                  className="~w-10/14 ml-2 mt-2 mb-[-1.5rem]"
                 />
               </>
             }

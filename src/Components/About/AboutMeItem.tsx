@@ -7,24 +7,27 @@ interface ItemProps {
   flip?: boolean;
 }
 
-const AboutMeItem = ({ title, image, text, flip=false }: ItemProps) => {
-  const picture = (
-    <Frame width="40vw">
-      <img src={image} className="rounded-2xl border-2 border-[--border-color]" />
-    </Frame>
-  );
-
-  const words = (
-    <div className={`flex-col justify-center items-center gap-5 ${flip ? "ml-10" : "mr-10"}`}>
-      <h4 className="text-[1.25rem] text-gray-100 text-shadow font-bold">{title}</h4>
-      <p className="text-gray-400 text-lg font-light leading-8 w-[28vw] indent-6">{text}</p>
+const AboutMeItem = ({ title, image, text, flip = false }: ItemProps) => {
+  return (
+    <div
+      className={`flex flex-col items-center justify-center gap-8 md:gap-16 w-full ${
+        flip ? "xl:flex-row-reverse" : "xl:flex-row"
+      }`}
+    >
+      <Frame width="clamp(300px, 45vw, 600px)">
+        <img src={image} className="rounded-2xl border-2 border-[--border-color]" />
+      </Frame>
+      <div className={`flex-col justify-center items-center gap-5 w-full`}>
+        <h4 className="~text-base/xl text-gray-100 text-shadow font-bold">{title}</h4>
+        <p
+          className="text-gray-400 ~text-sm/lg font-light ~leading-7/8 indent-6"
+          style={{ width: "clamp(300px, 50vw, 600px)" }}
+        >
+          {text}
+        </p>
+      </div>
     </div>
   );
-
-  return <div className="flex flex-1 items-center gap-16">
-    {flip ? words : picture }
-    {flip ? picture : words }
-  </div>;
 };
 
 export default AboutMeItem;
