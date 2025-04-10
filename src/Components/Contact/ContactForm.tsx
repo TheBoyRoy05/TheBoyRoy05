@@ -56,7 +56,7 @@ const ContactForm = () => {
           />
         </div>
         <input 
-          type="text" 
+          type="email" 
           name="email"
           className="input input-bordered w-full" 
           placeholder="Email" 

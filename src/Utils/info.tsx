@@ -169,7 +169,7 @@ export const articles = [
     title: "Wave Simulation",
     time: "June 2024",
     description:
-      "The wave equation is a 2nd-order partial differential equation used to describe wave phenomena such as mechanical and electromagnetic waves. This article explores solving the wave equation using the finite-difference method in 1D and 2D, covering discretization, damping, and various boundary conditions for different behaviors.",
+      "The wave equation is a 2nd-order PDE used to describe wave phenomena such as mechanical and electromagnetic waves. This article explores solving the wave equation using the finite difference method in 1D and 2D, covering discretization, damping, and various boundary conditions.",
     image: `${baseURL}/src/Assets/Images/Blog/WaveSimulation.png`,
     link: "https://medium.com/@issacroy05/a-simple-wave-simulation-35bee02c172b",
     tech: {

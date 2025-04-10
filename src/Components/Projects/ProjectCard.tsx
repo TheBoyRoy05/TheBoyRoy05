@@ -13,22 +13,21 @@ interface ProjectProps {
 
 const ProjectCard = ({ name, time, description, image, link, width }: ProjectProps) => {
   const navigate = useNavigate();
-  const height = width ? Math.round((Number(width.slice(0, -2)) * 45) / 72.5) + 2 : 45;
 
   return (
-    <Frame width={width || "72.5vw"}>
+    <Frame width={`clamp(350px, 72.5vw, ${width || "1500px"})`}>
       <div className="glare w-1/3" />
       <div
-        className={`p-[2.75vw] pb-0 border border-[--border-color] rounded-2xl frame-bg group hover:cursor-pointer`}
-        style={{ maxHeight: `${height}vw`, minHeight: `${height}vw` }}
+        className={`p-6 pb-0 border border-[--border-color] rounded-2xl frame-bg group hover:cursor-pointer`}
+        style={{ height: "clamp(240px, 45vw, 930px)" }}
         onClick={() => navigate(link)}
       >
         <div className="frame-content flex-col overflow-hidden">
-          <div className="flex items-center justify-between text-[1.75rem] font-bold text-white">
-            <h3 className="mb-[0.5vw] text-shadow">{name}</h3>
+          <div className="flex items-center justify-between ~text-base/xl md:text-3xl font-bold text-white">
+            <h3 className="~mb-2/4 text-shadow">{name}</h3>
             <FaArrowRight />
           </div>
-          <p className="font-bold mb-[3vw]">
+          <p className="~text-xs/base font-bold mb-[3vw]">
             <span className="text-white">{time}</span>
             {` — ${description}`}
           </p>

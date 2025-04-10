@@ -42,9 +42,6 @@ jobs:
           name: production-files
           path: ./dist
 
-      - name: Add CNAME file
-        run: echo 'www.issacroy.com' > ./dist/CNAME
-
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
