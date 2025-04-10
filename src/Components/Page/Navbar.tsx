@@ -7,8 +7,16 @@ const Navbar = () => {
   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
 
+  const pages = {
+    "About Me": "/about-me",
+    Projects: "/projects",
+    Blog: "/blog",
+    Resume: "/resume",
+    "Contact Me": "/contact-me",
+  };
+
   const btnClass =
-    "btn mt-2 md:mt-0 md:ml-4 bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border-none shadow-lg text-gray-200 text-shadow hover:bg-gray-500 hover:bg-opacity-30";
+    "btn mt-2 lg:mt-0 lg:ml-4 bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border-none shadow-lg text-gray-200 text-shadow hover:bg-gray-500 hover:bg-opacity-30";
 
   return (
     <nav className="fixed top-0 left-0 w-full z-20 bg-transparent flex items-center justify-between p-4">
@@ -18,24 +26,20 @@ const Navbar = () => {
       </button>
 
       {/* Desktop Menu */}
-      <div className="hidden md:flex items-center">
+      <div className="hidden lg:flex items-center">
         <button className={btnClass} onClick={() => navigate(`/`)}>
           <FaHome className="inline mr-1" />
           {"Home"}
         </button>
-        <button className={btnClass} onClick={() => navigate(`/about-me`)}>
-          {"About Me"}
-        </button>
-        <button className={btnClass} onClick={() => navigate(`/resume`)}>
-          {"Resume"}
-        </button>
-        <button className={btnClass} onClick={() => navigate(`/contact-me`)}>
-          {"Contact Me"}
-        </button>
+        {Object.entries(pages).map(([name, path], index) => (
+          <button key={index} className={btnClass} onClick={() => navigate(path)}>
+            {name}
+          </button>
+        ))}
       </div>
 
       {/* Mobile Menu Button */}
-      <div className="md:hidden mr-2 z-30">
+      <div className="lg:hidden mr-2 z-30">
         <button onClick={() => setIsOpen(true)}>
           <FaBars size={24} className="text-white" />
         </button>
@@ -43,10 +47,7 @@ const Navbar = () => {
 
       {/* Overlay */}
       {isOpen && (
-        <div
-          className="fixed top-0 left-0 w-full h-full z-20"
-          onClick={() => setIsOpen(false)}
-        >
+        <div className="fixed top-0 left-0 w-full h-full z-20" onClick={() => setIsOpen(false)}>
           <div className="w-full h-full bg-black bg-opacity-40" />
         </div>
       )}
@@ -61,19 +62,28 @@ const Navbar = () => {
         <button className="self-end mb-4" onClick={() => setIsOpen(false)}>
           <FaTimes size={24} className="text-white" />
         </button>
-        <button className={btnClass + " w-full"} onClick={() => { navigate(`/`); setIsOpen(false); }}>
+        <button
+          className={btnClass + " w-full"}
+          onClick={() => {
+            navigate(`/`);
+            setIsOpen(false);
+          }}
+        >
           <FaHome className="inline mr-1" />
           {"Home"}
         </button>
-        <button className={btnClass + " w-full"} onClick={() => { navigate(`/about-me`); setIsOpen(false); }}>
-          {"About Me"}
-        </button>
-        <button className={btnClass + " w-full"} onClick={() => { navigate(`/resume`); setIsOpen(false); }}>
-          {"Resume"}
-        </button>
-        <button className={btnClass + " w-full"} onClick={() => { navigate(`/contact-me`); setIsOpen(false); }}>
-          {"Contact Me"}
-        </button>
+        {Object.entries(pages).map(([name, path], index) => (
+          <button
+            key={index}
+            className={btnClass + " w-full"}
+            onClick={() => {
+              navigate(path);
+              setIsOpen(false);
+            }}
+          >
+            {name}
+          </button>
+        ))}
       </div>
     </nav>
   );
