@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { baseURL, projects } from "../../Utils/info";
+import { projects } from "../../Utils/info";
 import Frame from "../Other/Frame";
 import Page from "../Page/Page";
 import Emphasize from "../Other/Emphasize";
@@ -8,6 +8,12 @@ import SectionHeader from "../Other/Section/SectionHeader";
 import SectionCard from "../Other/Section/SectionCard";
 import { FaExclamation } from "react-icons/fa6";
 import ProjectCard from "./ProjectCard";
+
+import home from "/src/Assets/Images/Projects/YipYap/HomePage.png";
+import friends from "/src/Assets/Images/Projects/YipYap/FriendsPage.png";
+import apiViz from "/src/Assets/Images/Projects/YipYap/APIViz.png";
+import databaseViz from "/src/Assets/Images/Projects/YipYap/DatabaseViz.png";
+import chat from "/src/Assets/Images/Projects/YipYap/ChatPage.png";
 
 const YipYapPage = () => {
   const yipyap = projects[projects.length - 2];
@@ -98,12 +104,12 @@ const YipYapPage = () => {
               <div className="glare w-1/3" />
               <div className="flex flex-col gap-6">
                 <img
-                  src={`${baseURL}/src/Assets/Images/Projects/YipYap/HomePage.png`}
+                  src={home}
                   alt="Home Page Design"
                   className="border border-[--border-color] rounded-xl"
                 />
                 <img
-                  src={`${baseURL}/src/Assets/Images/Projects/YipYap/FriendsPage.png`}
+                  src={friends}
                   alt="Friends Page Design"
                   className="border border-[--border-color] rounded-xl"
                 />
@@ -152,10 +158,7 @@ const YipYapPage = () => {
             <Frame width="30vw">
               <div className="glare w-1/3" />
               <div className="h-[70vh] bg-[#1E1E1E] flex items-center border border-[--border-color] rounded-xl">
-                <img
-                  src={`${baseURL}/src/Assets/Images/Projects/YipYap/APIViz.png`}
-                  alt="API Design"
-                />
+                <img src={apiViz} alt="API Design" />
               </div>
             </Frame>
           </div>
@@ -169,7 +172,7 @@ const YipYapPage = () => {
           <Frame width="60vw">
             <div className="glare w-1/3" />
             <img
-              src={`${baseURL}/src/Assets/Images/Projects/YipYap/DatabaseViz.png`}
+              src={databaseViz}
               alt="Backend Design"
               className="border border-[--border-color] rounded-xl"
             />
@@ -243,11 +246,7 @@ const YipYapPage = () => {
 
           <Frame width="60vw">
             <div className="glare w-1/3" />
-            <img
-              src={`${baseURL}/src/Assets/Images/Projects/YipYap/ChatPage.png`}
-              alt="Chat Page"
-              className="border border-[--border-color] rounded-xl"
-            />
+            <img src={chat} alt="Chat Page" className="border border-[--border-color] rounded-xl" />
           </Frame>
 
           <div className="flex gap-12 text-lg leading-8">

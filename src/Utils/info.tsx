@@ -12,17 +12,18 @@ import { PiTestTubeFill } from "react-icons/pi";
 import { IoSparkles } from "react-icons/io5";
 import { SiExpress, SiMongodb, SiNumpy, SiPostman, SiSocketdotio, SiTypescript } from "react-icons/si";
 
-export const baseURL =
-  window.location.hostname != "localhost"
-    ? "https://raw.githubusercontent.com/TheBoyRoy05/TheBoyRoy05/main"
-    : "";
+import yipyap from "/src/Assets/Images/Projects/YipYap/YipYap.png";
+import sortingViz from "/src/Assets/Images/Projects/SortingVisualizer/SortingVisualizer.png";
+import boids from "/src/Assets/Images/Blog/Boids.gif";
+import wave from "/src/Assets/Images/Blog/WaveSimulation.png";
+import altruism from "/src/Assets/Images/Blog/Altruism.png";
 
 export const projects = [
   {
     name: "YipYap",
     time: "Summer '24",
     description: "The Chat App for Yappers",
-    image: `${baseURL}/src/Assets/Images/Projects/YipYap/YipYap.png`,
+    image: yipyap,
     link: "/yipyap",
     tech: {
       "React": <FaReact />,
@@ -83,7 +84,7 @@ export const projects = [
     name: "Sorting Visualizer",
     time: "Summer '24",
     description: "Visualize your favorite sorting algorithms",
-    image: `${baseURL}/src/Assets/Images/Projects/SortingVisualizer/SortingVisualizer.png`,
+    image: sortingViz,
     link: "/sorting-visualizer",
     tech: {
       "React": <FaReact />,
@@ -157,7 +158,7 @@ export const articles = [
     time: "January 2025",
     description:
       "Boids are an elegant demonstration of how complex, lifelike group behavior can emerge from simple rules applied to individual agents. These agents can simulate realistic movements such as swarming, avoiding obstacles, and following leaders. It's mesmerizing to witness—and even more fascinating to simulate.",
-    image: `${baseURL}/src/Assets/Images/Blog/Boids.gif`,
+    image: boids,
     link: "https://medium.com/@issacroy05/boids-simulating-flocks-e11c121a35cc",
     tech: {
       "React": <FaReact />,
@@ -170,7 +171,7 @@ export const articles = [
     time: "June 2024",
     description:
       "The wave equation is a 2nd-order PDE used to describe wave phenomena such as mechanical and electromagnetic waves. This article explores solving the wave equation using the finite difference method in 1D and 2D, covering discretization, damping, and various boundary conditions.",
-    image: `${baseURL}/src/Assets/Images/Blog/WaveSimulation.png`,
+    image: wave,
     link: "https://medium.com/@issacroy05/a-simple-wave-simulation-35bee02c172b",
     tech: {
       "Python": <FaPython />,
@@ -182,7 +183,7 @@ export const articles = [
     time: "February 2024",
     description:
       "Humans are unique due to altruism, prioritizing others' well-being, which contradicts economic models and is absent in even our closest relatives, chimpanzees. Through various simulations, including adding mutations and intelligent decision-making, this article explores evolutionary and traditional game theory.",
-    image: `${baseURL}/src/Assets/Images/Blog/Altruism.png`,
+    image: altruism,
     link: "https://medium.com/cognitive-neuroeconomics/decoding-altruism-ccd72547d20e",
     tech: {
       "Python": <FaPython />,

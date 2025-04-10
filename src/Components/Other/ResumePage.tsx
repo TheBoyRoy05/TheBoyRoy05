@@ -1,7 +1,7 @@
 import { HiDownload } from "react-icons/hi";
 import Page from "../Page/Page";
 import Frame from "./Frame";
-import { baseURL } from "../../Utils/info.tsx";
+import resume from "/src/Assets/Images/Other/Resume.png";
 
 const ResumePage = () => {
   const download = () => {
@@ -26,8 +26,8 @@ const ResumePage = () => {
           onClick={download}
         >
           <div className="frame-content flex-col overflow-hidden">
-          <div className="flex items-center justify-between ~text-lg/3xl font-bold text-white">
-            <h3 className="~mb-2/4 text-shadow">{"Résumé"}</h3>
+            <div className="flex items-center justify-between ~text-lg/3xl font-bold text-white">
+              <h3 className="~mb-2/4 text-shadow">{"Résumé"}</h3>
               <HiDownload />
             </div>
             <p className="~text-xs/base font-bold mb-[3vw]">
@@ -35,7 +35,7 @@ const ResumePage = () => {
               {` — September 25, 2024`}
             </p>
             <img
-              src={`${baseURL}/src/Assets/Images/Other/Resume.png`}
+              src={resume}
               alt={"Résumé"}
               className="border border-slate-500 rounded-xl group-hover:mt-[-0.5rem] transition-all duration-300"
             />

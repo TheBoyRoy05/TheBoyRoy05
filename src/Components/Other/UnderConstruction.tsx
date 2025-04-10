@@ -1,5 +1,5 @@
-import { baseURL } from "../../Utils/info.tsx"
-import Page from "../Page/Page"
+import Page from "../Page/Page";
+import bear from "/src/Assets/Images/Other/Sleepy_Bear.png";
 
 const UnderConstruction = () => {
   return (
@@ -13,13 +13,9 @@ const UnderConstruction = () => {
           {"Resume"}
         </a>
       </h4>
-      <img
-        src={`${baseURL}/src/Assets/Images/Other/Sleepy_Bear.png`}
-        alt="Under Construction"
-        className="bear mt-24 w-[42vw]"
-      />
+      <img src={bear} alt="Under Construction" className="bear mt-24 w-[42vw]" />
     </Page>
-  )
-}
+  );
+};
 
-export default UnderConstruction
+export default UnderConstruction;
