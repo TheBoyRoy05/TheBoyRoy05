@@ -8,7 +8,7 @@ import ContactForm from "./ContactForm";
 const ContactMePage = () => {
   const navigate = useNavigate();
   const btnClass =
-    "btn rounded-xl text-white w-[20vw] text-lg border-none bg-[#202020] hover:bg-[#282828]";
+    "btn rounded-xl text-white ~text-base/lg border-none bg-[#202020] hover:bg-[#282828] px-20 flex flex-nowrap";
 
   const handleMail = (e: { preventDefault: () => void }) => {
     e.preventDefault();
@@ -23,15 +23,15 @@ const ContactMePage = () => {
         <span className="text-gradient font-medium">{" make "}</span>
         something amazing
       </h2>
-      <div className="flex px-[20vw]">
+      <div className="flex flex-col-reverse xl:flex-row px-[20vw] gap-8">
         <ContactForm />
-        <div className="border-r border-[--border-color] mb-[-2rem] mx-16" />
+        <div className="border-r border-[--border-color] xl:-mb-8 mx-16" />
         <div className="flex-col items-center flex-grow gap-10">
-          <h3 className="text-white text-shadow text-[2rem] font-bold">Socials</h3>
+          <h3 className="text-white text-shadow ~text-2xl/4xl font-bold">Socials</h3>
           <div className="flex-col gap-6">
             <button onClick={handleMail} className={btnClass}>
               <SiGmail />
-              issacroy05@gmail.com
+              Email
             </button>
             <button
               onClick={() => window.open("https://github.com/TheBoyRoy05/", "_blank")}

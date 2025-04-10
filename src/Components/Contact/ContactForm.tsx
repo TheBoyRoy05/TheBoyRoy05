@@ -26,53 +26,59 @@ const ContactForm = () => {
     });
 
     if (response.ok) {
-      toast.success("Message sent successfully!")
+      toast.success("Message sent successfully!");
+      setFormData({ firstName: '', lastName: '', email: '', message: '' });
     } else {
-      console.log(response.json)
-      toast.error("Error sending message")
+      toast.error("Error sending message");
     }
   };
 
   return (
-    <form className="flex-shrink" onSubmit={handleSubmit}>
-      <div className="flex-col gap-7 items-center">
-        <h3 className="text-white text-shadow text-[2rem] font-bold">Let's Connect</h3>
-        <div className="flex gap-6">
-          <input 
-            type="text" 
+    <form onSubmit={handleSubmit} className="w-full max-w-3xl mx-auto px-4">
+      <div className="flex flex-col gap-6 w-full">
+        <h3 className="text-white text-shadow ~text-2xl/4xl font-bold text-center">
+          Let's Connect
+        </h3>
+
+        <div className="flex flex-col md:flex-row gap-4">
+          <input
+            type="text"
             name="firstName"
-            className="input input-bordered flex-1" 
-            placeholder="First Name" 
+            className="input input-bordered w-full"
+            placeholder="First Name"
             value={formData.firstName}
             onChange={handleChange}
           />
-          <input 
-            type="text" 
+          <input
+            type="text"
             name="lastName"
-            className="input input-bordered flex-1" 
-            placeholder="Last Name" 
+            className="input input-bordered w-full"
+            placeholder="Last Name"
             value={formData.lastName}
             onChange={handleChange}
           />
         </div>
-        <input 
-          type="email" 
+
+        <input
+          type="email"
           name="email"
-          className="input input-bordered w-full" 
-          placeholder="Email" 
+          className="input input-bordered w-full"
+          placeholder="Email"
           value={formData.email}
           onChange={handleChange}
         />
-        <textarea 
+
+        <textarea
           name="message"
-          className="textarea textarea-bordered w-full" 
-          placeholder="Message" 
+          className="textarea textarea-bordered w-full"
+          placeholder="Message"
           value={formData.message}
           onChange={handleChange}
         />
+
         <button
           type="submit"
-          className="btn btn-block bg-blue-500 hover:bg-blue-600 text-white text-lg"
+          className="btn w-full bg-blue-500 hover:bg-blue-600 text-white text-lg"
         >
           Submit
         </button>
