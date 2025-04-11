@@ -21,7 +21,7 @@ const ResumePage = () => {
       <Frame midClass={"w-[clamp(325px,50vw,1000px)]"}>
         <div className="glare w-1/3" />
         <div
-          className="p-11 pb-0 border border-[--border-color] rounded-2xl frame-bg group hover:cursor-pointer"
+          className="~p-4/11 pb-0 border border-[--border-color] rounded-2xl frame-bg group hover:cursor-pointer"
           style={{ height: "clamp(400px, 65vw, 1200px)" }}
           onClick={download}
         >
