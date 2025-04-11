@@ -41,7 +41,7 @@ const SortingVizPage = () => {
       <div className="flex-col w-[60vw]">
         <div id="overview" ref={overview} className="flex-col gap-10 pt-14">
           <div className="fade-in-up">
-            <Frame width={"60vw"}>
+            <Frame midClass={"w-[clamp(325px,60vw,1000px)]"}>
               <div className="glare w-1/3" />
               <img
                 src={project.image}

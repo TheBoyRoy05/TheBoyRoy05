@@ -23,7 +23,7 @@ const ContactMePage = () => {
         <span className="text-gradient font-medium">{" make "}</span>
         something amazing
       </h2>
-      <div className="flex flex-col-reverse xl:flex-row px-[20vw] gap-8">
+      <div className="flex flex-col xl:flex-row px-[20vw] gap-8">
         <ContactForm />
         <div className="border-r border-[--border-color] xl:-mb-8 mx-16" />
         <div className="flex-col items-center flex-grow gap-10">

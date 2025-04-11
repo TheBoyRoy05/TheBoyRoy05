@@ -8,18 +8,17 @@ interface ProjectProps {
   description: string;
   image: string;
   link: string;
-  width?: string;
+  props?: any;
 }
 
-const ProjectCard = ({ name, time, description, image, link, width }: ProjectProps) => {
+const ProjectCard = ({ name, time, description, image, link, props }: ProjectProps) => {
   const navigate = useNavigate();
 
   return (
-    <Frame width={`clamp(350px, 72.5vw, ${width || "1500px"})`}>
+    <Frame midClass="w-[clamp(350px,72.5vw,1500px)]" {...props}>
       <div className="glare w-1/3" />
       <div
-        className={`p-6 pb-0 border border-[--border-color] rounded-2xl frame-bg group hover:cursor-pointer`}
-        style={{ height: "clamp(240px, 45vw, 930px)" }}
+        className={`~pt-2/6 ~px-2/6 pb-0 border border-[--border-color] rounded-2xl frame-bg group hover:cursor-pointer`}
         onClick={() => navigate(link)}
       >
         <div className="frame-content flex-col overflow-hidden">
@@ -34,7 +33,7 @@ const ProjectCard = ({ name, time, description, image, link, width }: ProjectPro
           <img
             src={image}
             alt={name}
-            className="border border-slate-500 rounded-xl group-hover:mt-[-0.5vw] transition-all duration-300"
+            className="border border-slate-500 rounded-xl group-hover:mt-[-0.5vw] ~-mb-2/8 transition-all duration-300"
           />
         </div>
       </div>

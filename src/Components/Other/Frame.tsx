@@ -1,11 +1,12 @@
 interface FrameProps {
   children: React.ReactNode;
-  width: string;
   color?: string;
-  className?: string;
+  topClass?: string;
+  midClass?: string;
+  bottomClass?: string;
 }
 
-const Frame = ({ children, width, color, className }: FrameProps) => {
+const Frame = ({ children, color, topClass, midClass, bottomClass }: FrameProps) => {
   const glareStyle = {
     height: "1px",
     backgroundImage: `linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, ${
@@ -14,22 +15,22 @@ const Frame = ({ children, width, color, className }: FrameProps) => {
   };
 
   const frameStyle = {
-    width: width,
-    maxWidth: width,
     "--gradient-color": color || "#195277",
     "--opacity": color && 0.1,
   } as React.CSSProperties;
 
   return (
-    <div style={{ width: width }}>
-      <div className="w-10/12 mx-auto" style={glareStyle} />
-      <div
-        className={`flex-col items-center bg-[#181818] border border-[--border-color] rounded-3xl p-3 mx-auto ${
-          color && "frame-bg"
-        } ${className}`}
-        style={frameStyle}
-      >
-        {children}
+    <div className={`flex flex-col justify-center items-center w-full h-full ${topClass}`}>
+      <div className={midClass}>
+        <div className="w-10/12 mx-auto" style={glareStyle} />
+        <div
+          className={`flex-col h-full items-center bg-[#181818] border border-[--border-color] rounded-3xl ~p-2/3 mx-auto ${
+            color && "frame-bg"
+          } ${bottomClass}`}
+          style={frameStyle}
+        >
+          {children}
+        </div>
       </div>
     </div>
   );

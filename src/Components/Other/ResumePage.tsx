@@ -18,7 +18,7 @@ const ResumePage = () => {
         <span className="text-gradient font-medium">{" make "}</span>
         something amazing
       </h2>
-      <Frame width={"clamp(350px, 50vw, 1000px)"}>
+      <Frame midClass={"w-[clamp(325px,50vw,1000px)]"}>
         <div className="glare w-1/3" />
         <div
           className="p-11 pb-0 border border-[--border-color] rounded-2xl frame-bg group hover:cursor-pointer"

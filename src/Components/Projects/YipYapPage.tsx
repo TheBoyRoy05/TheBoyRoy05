@@ -39,16 +39,16 @@ const YipYapPage = () => {
         <h2>
           Yip<span className="text-gradient font-medium">Yap</span>
         </h2>
-        <h4 className="font-bold mt-[-1.5rem] text-xl">
+        <h4 className="font-bold mt-[-1.5rem] ~text-base/xl">
           <span className="text-white">{yipyap.time}</span>
           {` — ${yipyap.description}`}
         </h4>
       </div>
 
-      <div className="flex-col w-[60vw]">
+      <div className="flex-col w-[80vw] md:w-[60vw]">
         <div id="overview" ref={overview} className="flex-col gap-10 pt-14">
           <div className="fade-in-up">
-            <Frame width={"60vw"}>
+            <Frame midClass={"w-full min-w-[325px]"}>
               <div className="glare w-1/3" />
               <img
                 src={yipyap.image}
@@ -60,17 +60,17 @@ const YipYapPage = () => {
 
           <div className="flex-col gap-4">
             <div className="flex justify-between">
-              <SectionHeader text={"Overview"} style={"text-xl"} />
-              <div className="flex gap-4 items-center mr-4">
+              <SectionHeader text={"Overview"} style={"~text-base/xl"} />
+              <div className="flex ~gap-1/4 items-center mr-4">
                 {Object.entries(yipyap.tech).map(([name, item], index) => (
-                  <span key={index} className="text-white text-3xl" title={name}>
+                  <span key={index} className="text-white ~text-lg/3xl" title={name}>
                     {item}
                   </span>
                 ))}
               </div>
             </div>
 
-            <div className="flex gap-12 text-lg leading-8">
+            <div className="flex flex-col lg:flex-row ~gap-4/12 ~text-base/lg ~leading-7/8">
               <p className="flex-1">
                 <span className="text-white">Unleash your inner Yapper with YipYap</span> - the
                 ultimate chat app designed for those who love to talk! Whether you're a Yapper who
@@ -94,30 +94,32 @@ const YipYapPage = () => {
           </div>
         </div>
 
-        <div className="divider pt-10 pb-10" />
+        <div className="divider ~py-4/10" />
 
-        <div id="design" className="flex-col gap-10 pt-10" ref={design}>
-          <SectionHeader text={"Frontend Design"} style={"text-3xl"} />
+        <div id="design" className="flex-col gap-10 ~pt-4/10" ref={design}>
+          <SectionHeader text={"Frontend Design"} style={"~text-xl/3xl"} />
 
-          <div className="flex gap-12">
-            <Frame width="30vw">
-              <div className="glare w-1/3" />
-              <div className="flex flex-col gap-6">
-                <img
-                  src={home}
-                  alt="Home Page Design"
-                  className="border border-[--border-color] rounded-xl"
-                />
-                <img
-                  src={friends}
-                  alt="Friends Page Design"
-                  className="border border-[--border-color] rounded-xl"
-                />
-              </div>
-            </Frame>
+          <div className="flex flex-col items-center gap-12">
+            <div className="flex-1">
+              <Frame midClass="w-full min-w-[325px]">
+                <div className="glare w-1/3" />
+                <div className="flex flex-col gap-6">
+                  <img
+                    src={home}
+                    alt="Home Page Design"
+                    className="border border-[--border-color] rounded-xl"
+                  />
+                  <img
+                    src={friends}
+                    alt="Friends Page Design"
+                    className="border border-[--border-color] rounded-xl"
+                  />
+                </div>
+              </Frame>
+            </div>
 
-            <div className="flex-1 flex-col justify-around">
-              <div className="flex-col gap-4 text-lg leading-8">
+            <div className="flex-1 flex-col lg:flex-row justify-around items-center gap-6">
+              <div className="flex-col ~gap-1/4 ~text-base/lg ~leading-7/8 flex-[3]">
                 <p>
                   <span className="text-white">To design YipYap,</span> my girlfriend and I used{" "}
                   <Emphasize text="Figma" /> to sketch out ideas and iterate on them until we had a
@@ -133,43 +135,43 @@ const YipYapPage = () => {
                   that it was user-friendly, even in early stages.
                 </p>
               </div>
-              <SectionList items={yipyap.design!} color={"#7dd3fc"} />
+              <SectionList items={yipyap.design!} color={"#7dd3fc"} className="flex-[4]" />
             </div>
           </div>
         </div>
 
-        <div className="divider pt-20" />
+        <div className="divider ~pt-8/20" />
 
         <div id="API_Backend" className="flex-col gap-10 pt-20" ref={backend}>
-          <SectionHeader text={"API & Backend"} style={"text-3xl"} />
+          <SectionHeader text={"API & Backend"} style={"~text-xl/3xl"} />
 
-          <div className="flex gap-12">
-            <div className="flex-1 flex-col justify-around">
-              <p className="text-lg leading-8">
+          <div className="flex flex-col-reverse lg:flex-row gap-12 items-center h-fit">
+            {/* <div className="flex-1 flex-col justify-around gap-6">
+              <p className="~text-base/lg ~leading-7/8">
                 <span className="text-white">
                   A scalable API is the backbone of any successful application.
                 </span>{" "}
                 I built a custom API using <Emphasize text="express.js" /> in order to provide a
                 secure and reliable platform for YipYap to function.
               </p>
-              <SectionList items={yipyap.api!} color={"#7dd3fc"} />
-            </div>
+            </div> */}
+            <SectionList items={yipyap.api!} color={"#7dd3fc"} className="flex-1" />
 
-            <Frame width="30vw">
+            <Frame midClass="w-full min-w-[325px] lg:h-[500px]" topClass="flex-1">
               <div className="glare w-1/3" />
-              <div className="h-[70vh] bg-[#1E1E1E] flex items-center border border-[--border-color] rounded-xl">
-                <img src={apiViz} alt="API Design" />
+              <div className="w-full h-[clamp(250px,30vw,1000px)] lg:h-full bg-[#1E1E1E] flex items-center justify-center border border-[--border-color] rounded-xl">
+                <img src={apiViz} alt="API Design" className="rounded-xl h-full lg:h-fit" />
               </div>
             </Frame>
           </div>
         </div>
 
-        <div className="divider pt-20 pb-16" />
+        <div className="divider ~pt-8/20 ~pb-6/16" />
 
-        <div id="database" className="flex-col gap-10 pt-14" ref={database}>
-          <SectionHeader text={"Database"} style={"text-3xl"} />
+        <div id="database" className="flex-col gap-10 ~pt-6/14" ref={database}>
+          <SectionHeader text={"Database"} style={"~text-xl/3xl"} />
 
-          <Frame width="60vw">
+          <Frame midClass="w-full min-w-[325px]">
             <div className="glare w-1/3" />
             <img
               src={databaseViz}
@@ -178,7 +180,7 @@ const YipYapPage = () => {
             />
           </Frame>
 
-          <div className="flex gap-12 text-lg leading-8">
+          <div className="flex flex-col lg:flex-row ~gap-4/12 ~text-base/lg ~leading-7/8">
             <p className="flex-1">
               <span className="text-white">To create YipYap,</span> I decided to use{" "}
               <Emphasize text="MongoDB" /> a NoSQL, document-based database. The JSON format allows
@@ -196,22 +198,22 @@ const YipYapPage = () => {
           </div>
         </div>
 
-        <div className="divider pt-20" />
+        <div className="divider ~pt-8/20" />
 
-        <div id="challenges" className="flex-col gap-20 pt-20" ref={challenges}>
+        <div id="challenges" className="flex-col ~gap-12/20 ~pt-8/20" ref={challenges}>
           <SectionCard
-            width="60vw"
             color="#F9D10C"
             symbol={<FaExclamation />}
             title="The Main Challenges"
             text="Building an App is Hard"
+            className="w-full min-w-[325px]"
           />
 
-          <div className="flex gap-4">
+          <div className="flex flex-col lg:flex-row gap-4">
             <div className="flex-1">
-              <SectionHeader text={"Challenges"} style={"text-3xl"} />
+              <SectionHeader text={"Challenges"} style={"~text-xl/3xl"} />
             </div>
-            <div className="flex-1 flex-col gap-6 text-lg leading-8">
+            <div className="flex-1 flex-col gap-6 ~text-base/lg ~leading-7/8">
               <p>
                 <span className="text-white">When I started working on YipYap,</span> I only had a
                 vague idea of what I wanted to do with the app. As it was my first app, I was
@@ -239,17 +241,17 @@ const YipYapPage = () => {
           </div>
         </div>
 
-        <div className="divider pt-20" />
+        <div className="divider ~pt-8/20" />
 
-        <div id="Future" className="flex-col gap-10 pt-20" ref={future}>
-          <SectionHeader text={"Future"} style={"text-3xl"} />
+        <div id="Future" className="flex-col gap-10 ~pt-8/20" ref={future}>
+          <SectionHeader text={"Future"} style={"~text-xl/3xl"} />
 
-          <Frame width="60vw">
+          <Frame midClass="w-full min-w-[325px]">
             <div className="glare w-1/3" />
             <img src={chat} alt="Chat Page" className="border border-[--border-color] rounded-xl" />
           </Frame>
 
-          <div className="flex gap-12 text-lg leading-8">
+          <div className="flex flex-col lg:flex-row ~gap-4/12 ~text-base/lg ~leading-7/8">
             <p className="flex-1">
               <span className="text-white">
                 There's many ways that YipYap could evolve from here.
@@ -266,12 +268,16 @@ const YipYapPage = () => {
           </div>
         </div>
 
-        <div className="divider py-20" />
-      </div>
-
-      <div className="flex-col items-center gap-12">
-        <h3 className="text-white hero-text-shadow text-4xl font-bold">Explore my Last Project</h3>
-        <ProjectCard {...projects[projects.length - 1]} width={"60vw"} />
+        <div className="divider ~py-8/20" />
+        <div className="flex-col items-center gap-12">
+          <h3 className="text-white hero-text-shadow ~text-2xl/4xl font-bold">
+            Explore my Last Project
+          </h3>
+          <ProjectCard
+            {...projects[projects.length - 1]}
+            props={{ midClass: "w-full min-w-[325px]" }}
+          />
+        </div>
       </div>
     </Page>
   );

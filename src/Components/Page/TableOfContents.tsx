@@ -37,7 +37,7 @@ const TableOfContents = ({ contents }: TableOfContentsProps) => {
   };
 
   return (
-    <div className="fixed left-[82vw] top-[150px] flex-col gap-6 z-[100] fade-in">
+    <div className="hidden lg:flex lg:flex-col fixed left-[82vw] top-[150px] gap-6 z-[100] fade-in">
       <h6 className="text-gray-300 text-sm">CONTENTS</h6>
       {Object.entries(contents).map(([name, ref], index) => (
         <div

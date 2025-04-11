@@ -12,7 +12,7 @@ interface BlogProps {
 
 const BlogCard = ({ title, time, description, image, link, tech }: BlogProps) => {
   return (
-    <Frame width="clamp(350px, 40vw, 500px)">
+    <Frame midClass="w-[clamp(350px,40vw,500px)]" topClass="w-fit">
       <div className="glare w-1/2" />
       <div
         className="p-4 pb-0 border border-[--border-color] rounded-2xl frame-bg group hover:cursor-pointer"
