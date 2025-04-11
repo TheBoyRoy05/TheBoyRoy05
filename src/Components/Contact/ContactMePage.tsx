@@ -23,10 +23,10 @@ const ContactMePage = () => {
         <span className="text-gradient font-medium">{" make "}</span>
         something amazing
       </h2>
-      <div className="flex flex-col xl:flex-row px-[20vw] gap-8">
+      <div className="flex flex-col md:flex-row justify-center ~px-10/96 md:px-10 gap-8 w-full">
         <ContactForm />
-        <div className="border-r border-[--border-color] xl:-mb-8 mx-16" />
-        <div className="flex-col items-center flex-grow gap-10">
+        <div className="border-r border-[--border-color] md:-mb-8 ~mx-4/16" />
+        <div className="flex-col items-center gap-10">
           <h3 className="text-white text-shadow ~text-2xl/4xl font-bold">Socials</h3>
           <div className="flex-col gap-6">
             <button onClick={handleMail} className={btnClass}>

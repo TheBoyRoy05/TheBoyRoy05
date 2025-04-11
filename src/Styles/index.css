@@ -27,7 +27,7 @@ p, a {
 }
 
 h2 {
-  @apply text-white text-center hero-text-shadow mt-10 mb-10 ~text-3xl/7xl;
+  @apply text-white text-center hero-text-shadow mt-10 mb-10 ~text-3xl/7xl px-8;
 }
 
 .input, .textarea {
