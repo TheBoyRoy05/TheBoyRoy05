@@ -32,13 +32,15 @@ const Scene = () => {
   };
 
   useEffect(() => {
-    let timeout: number | undefined;
+    let timeout: ReturnType<typeof setTimeout>;
+    
     function updateSize() {
       clearTimeout(timeout);
       timeout = setTimeout(() => {
         setSize([window.innerWidth, window.innerHeight]);
       }, 50);
     }
+  
     window.addEventListener("resize", updateSize);
     return () => window.removeEventListener("resize", updateSize);
   }, []);
