@@ -39,7 +39,7 @@ const YipYapPage = () => {
         <h2>
           Yip<span className="text-gradient font-medium">Yap</span>
         </h2>
-        <h4 className="font-bold mt-[-1.5rem] ~text-base/xl">
+        <h4 className="font-bold mt-[-1.5rem] ~text-base/xl text-center px-8">
           <span className="text-white">{yipyap.time}</span>
           {` — ${yipyap.description}`}
         </h4>
@@ -209,7 +209,7 @@ const YipYapPage = () => {
             className="w-full min-w-[325px]"
           />
 
-          <div className="flex flex-col lg:flex-row gap-4">
+          <div className="flex flex-col lg:flex-row gap-6">
             <div className="flex-1">
               <SectionHeader text={"Challenges"} style={"~text-xl/3xl"} />
             </div>

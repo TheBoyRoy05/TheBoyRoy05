@@ -28,20 +28,20 @@ const SortingVizPage = () => {
 
   return (
     <Page contents={contents} color={"#00639b80"}>
-      <div>
+      <div className="flex-col items-center">
         <h2>
           Sorting <span className="text-gradient font-medium">Visualizer</span>
         </h2>
-        <h4 className="font-bold mt-[-1.5rem] text-xl">
+        <h4 className="font-bold mt-[-1.5rem] ~text-base/xl text-center px-8">
           <span className="text-white">{project.time}</span>
           {` — ${project.description}`}
         </h4>
       </div>
 
-      <div className="flex-col w-[60vw]">
+      <div className="flex-col w-[80vw] md:w-[60vw]">
         <div id="overview" ref={overview} className="flex-col gap-10 pt-14">
           <div className="fade-in-up">
-            <Frame midClass={"w-[clamp(325px,60vw,1000px)]"}>
+            <Frame midClass="w-full min-w-[325px]">
               <div className="glare w-1/3" />
               <img
                 src={project.image}
@@ -53,8 +53,8 @@ const SortingVizPage = () => {
 
           <div className="flex-col gap-4">
             <div className="flex justify-between">
-              <SectionHeader text={"Overview"} style={"text-xl"} />
-              <div className="flex gap-4 items-center mr-4">
+              <SectionHeader text={"Overview"} style={"~text-base/xl"} />
+              <div className="flex ~gap-1/4 items-center mr-4">
                 {Object.entries(project.tech).map(([name, item], index) => (
                   <span key={index} className="text-white text-3xl" title={name}>
                     {item}
@@ -63,7 +63,7 @@ const SortingVizPage = () => {
               </div>
             </div>
 
-            <div className="flex gap-12 text-lg leading-8">
+            <div className="flex flex-col lg:flex-row ~gap-4/12 ~text-base/lg ~leading-7/8">
               <p className="flex-1">
                 <span className="text-white">
                   Sorting algorithms are an important factor in algorithmic thinking,
@@ -87,22 +87,22 @@ const SortingVizPage = () => {
           </div>
         </div>
 
-        <div className="divider py-20" ref={problem} />
+        <div className="divider ~py-8/20" ref={problem} />
 
-        <div id="problem" className="flex-col gap-20 pb-6">
+        <div id="problem" className="flex-col ~gap-12/20 ~pb-3/6">
           <SectionCard
-            width="60vw"
             color="#f00"
             symbol={<FaTimes />}
             title="The Problem"
             text="Sorting Algorithms are Hard"
+            className="w-full min-w-[325px]"
           />
 
-          <div className="flex gap-4">
+          <div className="flex flex-col lg:flex-row gap-6">
             <div className="flex-1">
-              <SectionHeader text={"Problem"} style={"text-3xl"} />
+              <SectionHeader text={"Problem"} style={"~text-xl/3xl"} />
             </div>
-            <div className="flex-1 flex-col gap-4 text-lg leading-8">
+            <div className="flex-1 flex-col gap-6 ~text-base/lg ~leading-7/8">
               <p>
                 <span className="text-white">Sorting algorithms are hard to understand,</span>{" "}
                 especially as they are taught in class. Typically, you're exposed to the code behind
@@ -123,14 +123,14 @@ const SortingVizPage = () => {
           </div>
         </div>
 
-        <div className="divider pt-14 pb-20" ref={priorities} />
+        <div className="divider ~pt-6/14 ~pb-8/20" ref={priorities} />
 
-        <div id="priorities" className="flex gap-12">
+        <div id="priorities" className="flex flex-col lg:flex-row gap-6">
           <div className="flex-1">
-            <SectionHeader text={"Priorities"} style={"text-3xl"} />
+            <SectionHeader text={"Priorities"} style={"~text-xl/3xl"} />
           </div>
           <div className="flex-1 flex-col gap-10">
-            <div className="flex-col gap-4 text-lg leading-8">
+            <div className="flex-col gap-6 ~text-base/lg ~leading-7/8">
               <p>
                 <span className="text-white">
                   Before I could start building, I had to outline a plan,
@@ -148,22 +148,22 @@ const SortingVizPage = () => {
           </div>
         </div>
 
-        <div className="divider py-20" ref={challenges} />
+        <div className="divider ~py-8/20" ref={challenges} />
 
-        <div id="challenges" className="flex-col gap-20">
+        <div id="challenges" className="flex-col ~gap-12/20">
           <SectionCard
-            width="60vw"
             color="#F9D10C"
             symbol={<FaExclamation />}
             title="The Main Challenge"
             text="Implementing the Algorithms"
+            className="w-full min-w-[325px]"
           />
 
-          <div className="flex gap-4">
+          <div className="flex flex-col lg:flex-row gap-6">
             <div className="flex-1">
-              <SectionHeader text={"Challenge"} style={"text-3xl"} />
+              <SectionHeader text={"Challenge"} style={"~text-xl/3xl"} />
             </div>
-            <div className="flex-1 flex-col gap-6 text-lg leading-8">
+            <div className="flex-1 flex-col gap-6 ~text-base/lg ~leading-7/8">
               <p>
                 <span className="text-white">
                   In practice, sorting algorithms don't need to be in-place.
@@ -185,31 +185,44 @@ const SortingVizPage = () => {
           </div>
         </div>
 
-        <div className="divider pt-20" />
+        <div className="divider ~pt-8/20" />
 
         <div id="algorithms" ref={algorithms} className="flex-col items-center gap-12 pt-20">
           <SectionCard
-            width="60vw"
             color="#7dd3fc"
             symbol={<FaCode />}
             title="The Algorithms"
             text="Meet the Algorithms"
+            className="w-full min-w-[325px]"
           />
+
           <div className="flex-col gap-10">
-            <div className="flex gap-10">
+            {/* lg and up: split into two rows */}
+            <div className="hidden lg:flex gap-10">
               <SectionList items={project.algorithms!.slice(0, 3)} color={"#7dd3fc"} />
               <SectionList items={project.algorithms!.slice(3, 6)} color={"#7dd3fc"} />
             </div>
-            <SectionList items={project.algorithms!.slice(6)} color={"#7dd3fc"} />
+            <div className="hidden lg:block">
+              <SectionList items={project.algorithms!.slice(6)} color={"#7dd3fc"} />
+            </div>
+
+            {/* below lg: all in one */}
+            <div className="block lg:hidden">
+              <SectionList items={project.algorithms!} color={"#7dd3fc"} />
+            </div>
           </div>
         </div>
 
-        <div className="divider py-20" />
-      </div>
-
-      <div className="flex-col items-center gap-12">
-        <h3 className="text-white hero-text-shadow text-4xl font-bold">Explore my Next Project</h3>
-        <ProjectCard {...projects[projects.length - 2]} width={"60vw"} />
+        <div className="divider ~py-8/20" />
+        <div className="flex-col items-center gap-12">
+          <h3 className="text-white hero-text-shadow ~text-2xl/4xl font-bold">
+            Explore my Next Project
+          </h3>
+          <ProjectCard
+            {...projects[projects.length - 2]}
+            props={{ midClass: "w-full min-w-[325px]" }}
+          />
+        </div>
       </div>
     </Page>
   );

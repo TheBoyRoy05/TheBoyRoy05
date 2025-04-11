@@ -115,22 +115,22 @@ export const projects = [
     algorithms: [
       {
         title: "Selection Sort:",
-        text: "An algorithm which iterates through the list and 'selects' the smallest/largest item to sort.",
+        text: "An algorithm which goes over the list and 'selects' the next item to sort.",
         symbol: <FaLocationCrosshairs />,
       },
       {
         title: "Bubble Sort:",
-        text: "An algorithm which runs through a list, comparing adjacent values, and performing swaps when necessary, allowing items towards the end to 'bubble' up.",
+        text: "An algorithm which runs through a list, comparing adjacent values, performing swaps when necessary, allowing items towards the end to 'bubble' up.",
         symbol: <TbChartBubbleFilled />,
       },
       {
         title: "Insertion Sort:",
-        text: "An algorithm which sorts a list by iteratively 'inserting' each item into their sorted position.",
+        text: "An algorithm which sorts a list by iteratively 'inserting' each item into their sorted place.",
         symbol: <MdDownload />,
       },
       {
         title: "Heap Sort:",
-        text: "An algorithm which uses a data-structure called a 'heap' to heapify the list before sorting it.",
+        text: "An algorithm which uses a data structure called a 'heap' to heapify the list before sorting it.",
         symbol: <GiCoinsPile />,
       },
       {
@@ -140,7 +140,7 @@ export const projects = [
       },
       {
         title: "Merge Sort:",
-        text: "A recursive algorithm which splits the list into two halves and recursively sorts them before 'merging' them together.",
+        text: "A recursive algorithm which splits the list in half and recursively sorts them before 'merging' them together.",
         symbol: <BsSignMergeRightFill />,
       },
       {

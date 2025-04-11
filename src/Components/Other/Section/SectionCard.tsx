@@ -19,7 +19,7 @@ const SectionCard = ({ color, symbol, title, text, className }: SectionCardProps
           {symbol}
         </div>
         <span className="text-gray-300 ~text-xs/base">{title}</span>
-        <h3 className="text-white ~text-xl/3xl font-bold hero-text-shadow">{text}</h3>
+        <h3 className="text-white text-center ~text-xl/3xl font-bold hero-text-shadow">{text}</h3>
       </div>
     </Frame>
   );
