@@ -6,7 +6,7 @@ import resume from "/src/Assets/Images/Other/Resume.jpg";
 const ResumePage = () => {
   const download = () => {
     const link = document.createElement("a");
-    link.href = "/src/Assets/Images/Other/Resume.pdf";
+    link.href = "/Resume.pdf";
     link.download = "Issac_Roy_Resume.pdf";
     link.click();
   };
