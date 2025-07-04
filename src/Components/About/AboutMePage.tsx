@@ -58,7 +58,7 @@ const AboutMePage = () => {
           />
           <AboutMeItem
             title={"In my spare time,"}
-            image={activity}
+            // image={activity}
             text={
               <>
                 You'll find me working on side projects or learning new programming skills. Other
