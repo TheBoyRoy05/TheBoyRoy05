@@ -5,7 +5,7 @@ import AboutMeItem from "./AboutMeItem";
 import profile from "/src/Assets/Images/About/Profile_Pic.jpeg";
 import guitar from "/src/Assets/Images/About/Me_Guitar.png";
 import robot from "/src/Assets/Images/About/Me_Robot.jpeg";
-import activity from "/src/Assets/Images/About/Me_Basketball.png";
+// import activity from "/src/Assets/Images/About/Me_Basketball.png";
 import signature from "/src/Assets/Images/Other/Signature.png";
 
 const AboutMePage = () => {
