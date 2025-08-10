@@ -32,7 +32,7 @@ const ResumePage = () => {
             </div>
             <p className="~text-xs/base font-bold mb-[3vw]">
               <span className="text-white">{"Last Updated"}</span>
-              {` — June 24, 2025`}
+              {` — August 9, 2025`}
             </p>
             <img
               src={resume}

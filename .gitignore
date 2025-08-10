@@ -23,3 +23,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+*.aux
+*.fls
+*.out
+*.gz

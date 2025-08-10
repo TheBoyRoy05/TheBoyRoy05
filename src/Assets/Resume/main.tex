@@ -1,0 +1,239 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage[dvipsnames]{xcolor}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{\accentColor}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-5pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\newcommand\accentColor{MidnightBlue}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    {\Huge \scshape \textcolor{\accentColor}{Issac Roy}} \\ \vspace{1pt}
+    San Diego, CA 92129 \\ \vspace{1pt}
+    \small \raisebox{-0.1\height}{\reflectbox{\faPhone}}\ 858-428-4311 ~ \href{mailto:issacroy05@gmail.com}{\raisebox{-0.2\height}\faEnvelope\ \underline{issacroy05@gmail.com}} ~ 
+    \href{https://linkedin.com/in/issacroy/}{\raisebox{-0.2\height}\faLinkedin\ \underline{linkedin.com/in/issacroy}}  ~
+    \href{https://github.com/TheBoyRoy05}{\raisebox{-0.2\height}\faGithub\ \underline{github.com/TheBoyRoy05}} ~ \href{https://www.issacroy.com}{\raisebox{-0.2\height}\faGlobe\ \underline{issacroy.com}}
+    \vspace{-8pt}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{\textcolor{\accentColor}{Education}}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of California San Diego (4.0 GPA)}{June 2027}
+      {\textbf{B.S. Data Science} $|$ Math Minor $|$ Cognitive Science Minor}{San Diego, CA}
+  \resumeSubHeadingListEnd
+\vspace{-10pt}
+
+%-----------EXPERIENCE-----------
+\section{\textcolor{\accentColor}{Experience}}
+\vspace{-5pt}
+\resumeSubHeadingListStart
+\resumeProjectHeading
+    {\textbf{Neurocrine Biosciences} $|$ \emph{Data Engineer Intern}}{June 2025 -- Present}
+    \resumeItemListStart
+        \resumeItem{Designed, developed, and deployed containerized cloud-based web scraper to save \$100k+ in operating expenses.}
+        \resumeItem{Operationalizing study-specific AI agent/knowledge bases using existing data repository to support study teams.}
+        \resumeItem{Optimizing data pipeline processing and analytical database queries, improving insight delivery timelines.}
+        \resumeItem{Gained extensive experience in AWS, containerization, serverless functions, and PowerBI.}
+    \resumeItemListEnd
+    
+\vspace{-15pt}
+\resumeProjectHeading
+    {\textbf{Data Science Student Society (DS3)} $|$ \emph{Director of Software}}{October 2024 -- Present}
+    \resumeItemListStart
+        \resumeItem{The industry uses tools that are never taught in classes. So I am leading technical workshops on modern software topics including containerization, cloud fundamentals, web development, and git fundamentals.}
+        \resumeItem{Leading the design, development, and deployment of new full-stack websites for UCSD clubs.}
+    \resumeItemListEnd
+    
+\vspace{-15pt}
+\resumeProjectHeading
+    {\textbf{San Diego Taxpayer's Association} $|$ \emph{Data Science Intern}}{October 2024 -- January 2025}
+    \resumeItemListStart
+        \resumeItem{Built social media scraper to collect public sentiment data on county policies, contributing to a sentiment analysis tool for taxpayers and policymakers.}
+        \resumeItem{Collaborated with policy researchers to define sentiment analysis objectives, aligning technical deliverables with real-world policy impact and public communication goals.}
+    \resumeItemListEnd
+    
+\resumeSubHeadingListEnd
+\vspace{-15pt}
+
+%-----------PROJECTS-----------
+\section{\textcolor{\accentColor}{Projects}}
+\resumeSubHeadingListStart
+\resumeProjectHeading
+    {\textbf{OnlyDance} $|$ \emph{OpenCV, ModelPipe, React, React Three Fiber, TypeScript, Python, FastAPI}}{April 2025}
+    \resumeItemListStart
+        \resumeItem{Won \textbf{1st place} at DataHacks 2025 against 50+ teams by developing an interactive full-stack app that teaches dance routines using 3D avatars and real-time feedback.}
+        \resumeItem{Engineered a real-time similarity scoring system using joint weighting, frame interpolation, and sliding window techniques for robust pose matching.}
+    \resumeItemListEnd
+\vspace{-15pt}
+\resumeProjectHeading
+    {\textbf{Predicting Power Outage Severities} $|$ \emph{Python, Scikit-Learn, Pandas, Folium}}{April 2025}
+    \resumeItemListStart
+        \resumeItem{Developed an end-to-end ML pipeline to predict power outage severities across the United States (except Nebraska).}
+        \resumeItem{Performed data cleaning, exploratory data analysis, hypothesis testing, and feature engineering from temporal and categorical attributes.}
+        \resumeItem{Built and tuned Random Forest models, achieving 78\% test accuracy; conducted fairness evaluations using permutation tests and bias analysis across U.S. states.}
+    \resumeItemListEnd
+\vspace{-15pt}
+\resumeProjectHeading
+    {\textbf{YipYap, the Chat App for Yappers} $|$ \emph{React, MongoDB, Express, SocketIO, TypeScript, Figma}}{August 2024}
+    \resumeItemListStart
+        \resumeItem{Developed and deployed a full-stack chat application enabling real-time communication through SocketIO with a MongoDB and Express.js backend.}
+        \resumeItem{Designed user interfaces in Figma, built RESTful APIs, and integrated Minstral AI models for intelligent conversation suggestions, enhancing user engagement.}
+        \resumeItem{Expanded skills in backend architecture, database management, authentication, UI/UX design, and large-scale system development and deployment.}
+    \resumeItemListEnd
+\vspace{-15pt}
+\resumeProjectHeading
+    {\textbf{Self-Playing Guitar} $|$ \emph{Arduino, CAD, Laser Cutting, 3D Printing}}{December 2023}
+    \resumeItemListStart
+        \resumeItem{Won \textbf{1st place} against 30+ teams at IEEE's Winter Project Competition with a self playing guitar.}
+        \resumeItem{Designed and fabricated custom parts using laser cutting and 3D printing.}
+        \resumeItem{Wrote a note transcriber in Arduino C to encode and decode musical notes to servo motions.}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+\vspace{-15pt}
+
+%-----------INVOLVEMENT---------------
+\section{\textcolor{\accentColor}{Leadership / Extracurricular}}
+    \vspace{-7pt}
+    \resumeSubHeadingListStart
+        \resumeProjectHeading
+            {\textbf{SANDY Youth Group} $|$ \emph{President} $|$ \emph{San Diego Malayalee Association (SANMA)}}{Summer 2024 -- Present}
+            \resumeItemListStart
+                \resumeItem{Elected President of a 30-member youth group, organizing monthly activities and community volunteering efforts.}
+                \resumeItem{Collaborating weekly with San Diego Malayalee Association leaders to plan and organize events.}
+            \resumeItemListEnd
+            \vspace{-15pt}
+        \resumeProjectHeading
+            {\textbf{FIRST Robotics} $|$ \emph{Software Lead} $|$ \emph{Westview High School}}{Fall 2020 -- Spring 2023}
+            \resumeItemListStart
+                \resumeItem{Led a team to program autonomous tasks for FIRST Robotics, improving efficiency by 10x over the season.}
+                \resumeItem{Completed over 100 hours of mentoring, contributing to the team's Regional Engineering Inspiration Award win.}
+            \resumeItemListEnd
+    \resumeSubHeadingListEnd
+\vspace{-15pt}
+    
+%-----------PROGRAMMING SKILLS-----------
+\section{\textcolor{\accentColor}{Technical Skills}}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages: }{Python, SQL, Java, React, TypeScript, C, C++, Go, Lua, C\#} \\
+     \textbf{Developer Tools: }{VS Code, MongoDB, Postgres, Postman, Figma, Eclipse} \\
+     \textbf{Technologies/Frameworks: }{Git, AWS, Docker, Express, Scikit-Learn, NodeJS, PyTorch, Linux} \\
+    }}
+ \end{itemize}
+ \vspace{-8pt}
+
+\end{document}
