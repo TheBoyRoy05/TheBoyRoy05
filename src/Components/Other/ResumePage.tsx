@@ -2,15 +2,25 @@ import { HiDownload } from "react-icons/hi";
 import Page from "../Page/Page";
 import Frame from "./Frame";
 import resume from "/src/Assets/Images/Other/Resume.jpg";
-import lastUpdated from "/src/Assets/Resume/last_updated.txt";
+import lastUpdatedPath from "/src/Assets/Resume/last_updated.txt";
+import { useEffect, useState } from "react";
 
 const ResumePage = () => {
+  const [lastUpdated, setLastUpdated] = useState<string>("");
+  
   const download = () => {
     const link = document.createElement("a");
     link.href = "/Resume.pdf";
     link.download = "Issac_Roy_Resume.pdf";
     link.click();
   };
+
+  useEffect(() => {
+    fetch(lastUpdatedPath)
+      .then(response => response.text())
+      .then(text => setLastUpdated(text.trim()))
+      .catch(error => console.error("Error loading last updated:", error));
+  }, []);
 
   return (
     <Page>

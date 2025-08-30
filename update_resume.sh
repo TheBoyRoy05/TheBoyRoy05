@@ -4,8 +4,8 @@ set -e
 
 cd ./src/Assets/Resume
 cp Resume.pdf ../../../public/Resume.pdf
-magick Resume.pdf ../Images/Other/Resume.jpg
-echo $(date +'%B %d, %Y') >> ./last_updated.txt
+magick -density 300 Resume.pdf -quality 100 -flatten ../Images/Other/Resume.jpg
+echo $(date +'%B %d, %Y') > ./last_updated.txt
 
 if [[ $* == *-C* ]]; then
     latexmk -C
