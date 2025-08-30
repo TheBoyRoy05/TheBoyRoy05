@@ -2,6 +2,7 @@ import { HiDownload } from "react-icons/hi";
 import Page from "../Page/Page";
 import Frame from "./Frame";
 import resume from "/src/Assets/Images/Other/Resume.jpg";
+import lastUpdated from "/src/Assets/Resume/last_updated.txt";
 
 const ResumePage = () => {
   const download = () => {
@@ -32,7 +33,7 @@ const ResumePage = () => {
             </div>
             <p className="~text-xs/base font-bold mb-[3vw]">
               <span className="text-white">{"Last Updated"}</span>
-              {` — August 30, 2025`}
+              {` — ${lastUpdated}`}
             </p>
             <img
               src={resume}
