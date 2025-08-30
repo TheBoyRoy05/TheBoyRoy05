@@ -27,12 +27,12 @@ const ResumePage = () => {
         >
           <div className="frame-content flex-col overflow-hidden">
             <div className="flex items-center justify-between ~text-lg/3xl font-bold text-white">
-              <h3 className="~mb-2/4 text-shadow">{"Résumé"}</h3>
+              <h3 className="~mb-2/4 text-shadow">{"Resume"}</h3>
               <HiDownload />
             </div>
             <p className="~text-xs/base font-bold mb-[3vw]">
               <span className="text-white">{"Last Updated"}</span>
-              {` — August 9, 2025`}
+              {` — August 30, 2025`}
             </p>
             <img
               src={resume}
