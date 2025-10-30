@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom"
+import { Route, Routes, Navigate } from "react-router-dom"
 import HomePage from "./Components/Home/HomePage"
 import ProjectsPage from "./Components/Projects/ProjectsPage"
 import BlogPage from "./Components/Blog/BlogPage.tsx"
@@ -19,6 +19,7 @@ function App() {
       <Route path="/resume" element={<ResumePage />} />
       <Route path="/yipyap" element={<YipYapPage />} />
       <Route path="/sorting-visualizer" element={<SortingVizPage />} />
+      <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   )
 }
