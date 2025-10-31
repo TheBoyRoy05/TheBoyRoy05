@@ -1,0 +1,228 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage[dvipsnames]{xcolor}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{\accentColor}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-5pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\newcommand\accentColor{MidnightBlue}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    {\Huge \scshape \textcolor{\accentColor}{Issac Roy}} \\ \vspace{1pt}
+    U.S. Citizen, San Diego, CA \\ \vspace{1pt}
+    \small \raisebox{-0.1\height}{\reflectbox{\faPhone}}\ 858-428-4311 ~ \href{mailto:issacroy05@gmail.com}{\raisebox{-0.2\height}\faEnvelope\ \underline{issacroy05@gmail.com}} ~ 
+    \href{https://linkedin.com/in/issacroy/}{\raisebox{-0.2\height}\faLinkedin\ \underline{linkedin.com/in/issacroy}}  ~
+    \href{https://github.com/TheBoyRoy05}{\raisebox{-0.2\height}\faGithub\ \underline{github.com/TheBoyRoy05}} ~ \href{https://www.issacroy.com}{\raisebox{-0.2\height}\faGlobe\ \underline{issacroy.com}}
+    \vspace{-8pt}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{\textcolor{\accentColor}{Education}}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of California San Diego (4.0 GPA)}{June 2027}
+      {\textbf{B.S. Data Science} $|$ Math Minor $|$ Cognitive Science Minor}{San Diego, CA}
+  \resumeSubHeadingListEnd
+\vspace{-10pt}
+
+%-----------EXPERIENCE-----------
+\section{\textcolor{\accentColor}{Experience}}
+\vspace{-5pt}
+\resumeSubHeadingListStart
+\resumeProjectHeading
+    {\textbf{\href{https://www.neurocrine.com/}{\underline{Neurocrine Biosciences}}} $|$ \emph{Data Engineer Intern}}{June 2025 -- September 2025}
+    \resumeItemListStart
+        \resumeItem{Architected and deployed containerized cloud-based web scraper to avoid \$200K in annual operating expenses.}
+        \resumeItem{Prototyped an AI-driven data pipeline to convert raw patient data into study-specific narratives, streamlining reporting and decision-making for study teams.}
+        \resumeItem{Implemented end-to-end DevOps workflows using Terraform (IaC), AWS Lambda, and multi-env CI/CD pipelines while collaborating across data and software teams using Jira and Confluence.}
+        \resumeItem{Supported the Clinical Data Science team's mission to enhance monitoring and oversight of clinical trials by developing and maintaining scalable ETL pipelines and Power BI dashboards.}
+    \resumeItemListEnd
+\vspace{-15pt}
+    
+\resumeProjectHeading
+    {\textbf{\href{https://www.ds3atucsd.com/}{\underline{Data Science Student Society (DS3)}}} $|$ \emph{Director of Software}}{October 2024 -- Present}
+    \resumeItemListStart
+        \resumeItem{Bridging the gap between classroom theory and real-world practice by leading workshops on cloud computing, containerization, web development, Terraform, and Git, training 200+ students on industry-standard tools.}
+        \resumeItem{Directing the design, development, and deployment of full-stack websites for UCSD clubs, creating hands-on technical experience for students.}
+        \resumeItem{Leading a 10+ member software team in one of the largest data science clubs in the nation, applying Agile methodologies to improve collaboration and delivery.}
+    \resumeItemListEnd
+
+    
+\vspace{-15pt}
+\resumeProjectHeading
+    {\textbf{\href{https://www.sdcta.org/}{\underline{San Diego Taxpayer's Association}}} $|$ \emph{Data Science Intern}}{October 2024 -- January 2025}
+    \resumeItemListStart
+        \resumeItem{Enhanced data-driven policy analysis by developing a pipeline that aggregates and analyzes public sentiment on local issues and policies, supporting evidence-based recommendations for policymakers.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-15pt}
+
+%-----------PROJECTS-----------
+\section{\textcolor{\accentColor}{Projects}}
+\resumeSubHeadingListStart
+\resumeProjectHeading
+    {\textbf{\href{https://theboyroy05.github.io/Power-Outages/}{\underline{Predicting Power Outage Severities}}} $|$ \emph{Python, Scikit-Learn, Pandas, Folium}}{December 2024}
+    \resumeItemListStart
+        \resumeItem{Created an end-to-end Machine Learning pipeline predicting power outage severities across the U.S. with 78\% accuracy.}
+        \resumeItem{Performed data cleaning, EDA, hypothesis testing, and feature engineering on temporal and categorical attributes.}
+        \resumeItem{Conducted fairness evaluations using permutation tests and bias analysis across states.}
+    \resumeItemListEnd
+\vspace{-15pt}
+\resumeProjectHeading
+    {\textbf{Neural Network from Scratch} $|$ \emph{Python, NumPy, PyTorch}}{March 2024}
+    \resumeItemListStart
+        \resumeItem{Built a neural network from scratch using only NumPy and linear algebra concepts, achieving 92\% accuracy on MNIST; improved to 95\% with PyTorch and 100x faster training.}
+        \resumeItem{Implemented regularization, dropout, and data augmentation to reduce overfitting and improve generalization.}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+\vspace{-15pt}
+
+%-----------INVOLVEMENT---------------
+\section{\textcolor{\accentColor}{Extracurricular}}
+    \vspace{-7pt}
+    \resumeSubHeadingListStart
+    \resumeProjectHeading
+        {\textbf{Project Daedalus} $|$ \emph{OpenRocket, C++, 3D Printing, Raspberry Pi}}{October 2025 -- Present}
+        \resumeItemListStart
+            \resumeItem{Developing a G-class rocket with a 3D printed payload fairing and a custom parachute system.}
+            \resumeItem{Using OpenRocket to simulate the rocket's flight and programmed the avionics system to collect telemetry data during flight with GPS and IMU sensors.}
+        \resumeItemListEnd
+    \vspace{-15pt}
+
+    \resumeProjectHeading
+        {\textbf{OnlyDance} $|$ \emph{OpenCV, ModelPipe, React Three Fiber, TypeScript, Python, FastAPI}}{April 2025}
+        \resumeItemListStart
+            \resumeItem{Won 1st place at DataHacks 2025 against 50+ teams by developing an interactive full-stack app that teaches dance routines using 3D avatars and real-time feedback.}
+            \resumeItem{Engineered a real-time similarity scoring system using joint weighting, frame interpolation, and sliding window techniques for robust pose matching.}
+        \resumeItemListEnd
+        \vspace{-15pt}
+
+    \resumeProjectHeading
+        {\textbf{Self-Playing Guitar} $|$ \emph{Arduino, CAD, Laser Cutting, 3D Printing}}{December 2023}
+        \resumeItemListStart
+            \resumeItem{Won 1st place at IEEE's Fall Competition against 30+ teams with a self-playing guitar.}
+            \resumeItem{Designed and fabricated custom parts using laser cutting and 3D printing and programmed a note transcriber in Arduino C to map musical notes to servo motions.}
+        \resumeItemListEnd
+    \resumeSubHeadingListEnd
+\vspace{-15pt}
+    
+%-----------PROGRAMMING SKILLS-----------
+\section{\textcolor{\accentColor}{Technical Skills}}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+    \textbf{Certifications: }{AWS Cloud Practitioner, AWS AI Practitioner, AWS Solutions Architect Associate} \\
+    \textbf{Languages: }{Python, SQL, React, TypeScript, Java, C, C++, C\#, Go, Lua} \\
+    \textbf{Tools: }{AWS, Git, MongoDB, Jira, Confluence, Terraform, PyTorch, Docker}
+    }}
+ \end{itemize}
+ \vspace{-8pt}
+
+\end{document}
