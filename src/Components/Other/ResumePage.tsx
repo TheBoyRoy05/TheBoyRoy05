@@ -30,7 +30,7 @@ const ResumePage = () => {
 
   return (
     <Page className="flex flex-col items-center gap-10">
-      <h2 className="mb-10">
+      <h2 className="mb-8">
         Let's
         <span className="text-gradient font-medium">{" make "}</span>
         something amazing
