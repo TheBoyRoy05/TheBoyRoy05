@@ -5,7 +5,7 @@ import AboutMeItem from "./AboutMeItem";
 import profile from "/src/Assets/Images/About/Profile_Pic.jpeg";
 import guitar from "/src/Assets/Images/About/Me_Guitar.png";
 import robot from "/src/Assets/Images/About/Me_Robot.jpeg";
-// import activity from "/src/Assets/Images/About/Me_Basketball.png";
+import neurocrine from "/src/Assets/Images/About/Neurocrine.jpg";
 import signature from "/src/Assets/Images/Other/Signature.png";
 
 const AboutMePage = () => {
@@ -58,7 +58,7 @@ const AboutMePage = () => {
           />
           <AboutMeItem
             title={"In my spare time,"}
-            // image={activity}
+            image={neurocrine}
             text={
               <>
                 You'll find me working on side projects or learning new programming skills. Other
