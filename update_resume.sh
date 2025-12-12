@@ -10,8 +10,8 @@ cp Issac_Roy_DS.pdf ../../../public/Issac_Roy_DS.pdf
 magick -density 300 Issac_Roy_DS.pdf -quality 100 -flatten ../Images/Other/Issac_Roy_DS.jpg
 
 echo $(date +'%B %d, %Y') > ./last_updated.txt
-if [[ $* == *-C* ]]; then
-    latexmk -C
+if [[ $* == *-c* ]]; then
+    latexmk -c
 fi
 
 echo "Resumes updated successfully!"
