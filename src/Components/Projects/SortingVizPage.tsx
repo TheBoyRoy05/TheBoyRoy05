@@ -11,7 +11,7 @@ import { useRef } from "react";
 import SectionHeader from "../Other/Section/SectionHeader.tsx";
 
 const SortingVizPage = () => {
-  const project = projects[projects.length - 1];
+  const project = projects["Sorting Visualizer"];
   const overview = useRef(null!);
   const problem = useRef(null!);
   const priorities = useRef(null!);
@@ -45,7 +45,7 @@ const SortingVizPage = () => {
               <div className="glare w-1/3" />
               <img
                 src={project.image}
-                alt={project.name}
+                alt="Sorting Visualizer"
                 className="border border-slate-500 rounded-xl"
               />
             </Frame>
@@ -219,7 +219,7 @@ const SortingVizPage = () => {
             Explore my Next Project
           </h3>
           <ProjectCard
-            {...projects[projects.length - 2]}
+            project="Turbo3D"
             props={{ midClass: "w-full min-w-[325px]" }}
           />
         </div>

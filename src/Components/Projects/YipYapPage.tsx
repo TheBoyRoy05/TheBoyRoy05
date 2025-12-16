@@ -16,7 +16,7 @@ import databaseViz from "/src/Assets/Images/Projects/YipYap/DatabaseViz.png";
 import chat from "/src/Assets/Images/Projects/YipYap/ChatPage.png";
 
 const YipYapPage = () => {
-  const yipyap = projects[projects.length - 2];
+  const yipyap = projects.YipYap;
   const overview = useRef(null!);
   const design = useRef(null!);
   const backend = useRef(null!);
@@ -34,7 +34,7 @@ const YipYapPage = () => {
   };
 
   return (
-    <Page contents={contents} color="#00639b80">
+    <Page contents={contents} color={yipyap.color+"c0"}>
       <div className="flex-col items-center">
         <h2>
           Yip<span className="text-gradient font-medium">Yap</span>
@@ -52,7 +52,7 @@ const YipYapPage = () => {
               <div className="glare w-1/3" />
               <img
                 src={yipyap.image}
-                alt={yipyap.name}
+                alt="YipYap"
                 className="border border-slate-500 rounded-xl"
               />
             </Frame>
@@ -274,7 +274,7 @@ const YipYapPage = () => {
             Explore my Last Project
           </h3>
           <ProjectCard
-            {...projects[projects.length - 1]}
+            project="Sorting Visualizer"
             props={{ midClass: "w-full min-w-[325px]" }}
           />
         </div>

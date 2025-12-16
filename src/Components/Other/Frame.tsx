@@ -1,4 +1,4 @@
-interface FrameProps {
+export interface FrameProps {
   children: React.ReactNode;
   color?: string;
   topClass?: string;

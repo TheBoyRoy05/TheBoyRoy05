@@ -1,39 +1,37 @@
 import { FaArrowRight } from "react-icons/fa6";
-import Frame from "../Other/Frame";
+import Frame, { FrameProps } from "../Other/Frame";
 import { useNavigate } from "react-router-dom";
+import { projects } from "../../Utils/info";
 
 interface ProjectProps {
-  name: string;
-  time: string;
-  description: string;
-  image: string;
-  link: string;
-  props?: any;
+  project: string;
+  props?: unknown;
 }
 
-const ProjectCard = ({ name, time, description, image, link, props }: ProjectProps) => {
+const ProjectCard = ({ project, props }: ProjectProps) => {
+  const projectInfo = projects[project as keyof typeof projects];
   const navigate = useNavigate();
 
   return (
-    <Frame midClass="w-[clamp(350px,72.5vw,1500px)]" {...props}>
+    <Frame midClass="w-[clamp(350px,72.5vw,1500px)]" {...props as FrameProps}>
       <div className="glare w-1/3" />
       <div
         className={`~pt-2/6 ~px-2/6 pb-0 border border-[--border-color] rounded-2xl frame-bg group hover:cursor-pointer`}
-        onClick={() => navigate(link)}
+        onClick={() => navigate(projectInfo.link)}
       >
         <div className="frame-content flex-col overflow-hidden">
           <div className="flex items-center justify-between ~text-lg/3xl font-bold text-white">
-            <h3 className="~mb-2/4 text-shadow">{name}</h3>
+            <h3 className="~mb-2/4 text-shadow">{project}</h3>
             <FaArrowRight />
           </div>
           <p className="~text-xs/base font-bold mb-[3vw]">
-            <span className="text-white">{time}</span>
-            {` — ${description}`}
+            <span className="text-white">{projectInfo.time}</span>
+            {` — ${projectInfo.description}`} 
           </p>
           <img
-            src={image}
-            alt={name}
-            className="border border-slate-500 rounded-xl group-hover:mt-[-0.5vw] ~-mb-2/8 transition-all duration-300"
+            src={projectInfo.image}
+            alt={project}
+            className="border border-slate-500 rounded-xl group-hover:-translate-y-[0.75vw] ~-mb-2/8 transition-all duration-300"
           />
         </div>
       </div>
