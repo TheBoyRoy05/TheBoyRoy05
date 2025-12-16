@@ -123,8 +123,8 @@ const Turbo3DPage = () => {
                 <p>
                   With a clear <Emphasize text="vision" /> in place, I could focus on building
                   features that mattered most. These were the non-negotiable{" "}
-                  <Emphasize text="priorities" /> that shaped every decision and kept the engine
-                  both educational and maintainable:
+                  priorities that shaped every decision and kept the engine
+                  both <Emphasize text="educational" /> and <Emphasize text="maintainable" />:
                 </p>
               </div>
               <SectionList items={turbo3d.priorities!} color={"#7DFCE5"} className="flex-1" />
