@@ -1,4 +1,4 @@
-import { articles } from "../../Utils/info";
+import { articles } from "../../Assets/Data/articles";
 import BlogCard from "./BlogCard";
 
 interface BlogProps {

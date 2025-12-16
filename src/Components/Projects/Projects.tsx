@@ -1,4 +1,4 @@
-import { projects } from "../../Utils/info";
+import { projects } from "../../Assets/Data/projects/projects";
 import ProjectCard from "./ProjectCard";
 
 interface ProjectsProps {

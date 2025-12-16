@@ -1,7 +1,7 @@
 import { FaArrowRight } from "react-icons/fa6";
 import Frame from "../Other/Frame";
 import { useNavigate } from "react-router-dom";
-import { projects } from "../../Utils/info";
+import { projects } from "../../Assets/Data/projects/projects";
 
 interface ProjectProps {
   project: string;

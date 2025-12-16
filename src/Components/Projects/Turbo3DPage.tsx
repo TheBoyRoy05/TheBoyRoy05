@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { projects } from "../../Utils/info";
+import { projects } from "../../Assets/Data/projects/projects";
 import Frame from "../Other/Frame";
 import Page from "../Page/Page";
 import Emphasize from "../Other/Emphasize";

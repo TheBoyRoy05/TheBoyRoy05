@@ -1,4 +1,4 @@
-import { projects } from "../../Utils/info.tsx";
+import { projects } from "../../Assets/Data/projects/projects.tsx";
 import Emphasize from "../Other/Emphasize";
 import Frame from "../Other/Frame";
 import Page from "../Page/Page";
