@@ -129,9 +129,9 @@ const Turbo3DPage = () => {
             </div>
           </div>
 
-          <div className="divider" ref={pipeline} />
+          <div className="divider" />
 
-          <div id="pipeline" className="flex-col gap-10 ~pt-6/14">
+          <div id="pipeline" className="flex-col gap-10 ~pt-6/14" ref={pipeline}>
             <SectionHeader text={"Rendering Pipeline"} style={"~text-xl/3xl"} />
 
             <Frame midClass="w-full min-w-[325px]">
@@ -139,7 +139,7 @@ const Turbo3DPage = () => {
               <img
                 src={teapot}
                 alt="Teapot rendered in Turbo3D"
-                className="border border-[--border-color] rounded-xl"
+                className="border border-[--border-color] rounded-xl w-full h-full object-cover"
               />
             </Frame>
 
