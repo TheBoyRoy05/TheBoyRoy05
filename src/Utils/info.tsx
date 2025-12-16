@@ -39,7 +39,7 @@ import altruism from "/src/Assets/Images/Blog/Altruism.png";
 export const projects = {
   Turbo3D: {
     time: "Winter '25",
-    color: "#156b5b",
+    color: "#197751",
     description: "A slightly awful 3D engine that runs on the CPU",
     image: turbo3d,
     gif: turbo3dGif,
@@ -273,7 +273,7 @@ export const projects = {
   },
   "Sorting Visualizer": {
     time: "Summer '24",
-    color: "#195277",
+    color: "#193F77",
     description: "Visualize your favorite sorting algorithms",
     image: sortingViz,
     link: "/sorting-visualizer",

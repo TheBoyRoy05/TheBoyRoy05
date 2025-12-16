@@ -27,7 +27,7 @@ const SortingVizPage = () => {
   };
 
   return (
-    <Page contents={contents} color={"#00639b80"}>
+    <Page contents={contents} color={project.color + "80"}>
       <div className="flex-col items-center">
         <h2>
           Sorting <span className="text-gradient font-medium">Visualizer</span>
@@ -125,26 +125,34 @@ const SortingVizPage = () => {
 
         <div className="divider ~pt-6/14 ~pb-8/20" ref={priorities} />
 
-        <div id="priorities" className="flex flex-col lg:flex-row gap-6">
-          <div className="flex-1">
-            <SectionHeader text={"Priorities"} style={"~text-xl/3xl"} />
-          </div>
-          <div className="flex-1 flex-col gap-10">
-            <div className="flex-col gap-6 ~text-base/lg ~leading-7/8">
+        <div id="priorities" className="flex flex-col gap-6">
+          <SectionHeader text={"Priorities"} style={"~text-xl/3xl"} />
+
+          <div className="flex flex-col lg:flex-row gap-10">
+            <div className="flex-1 flex-col gap-6 ~text-base/lg ~leading-7/8">
               <p>
                 <span className="text-white">
-                  Before I could start building, I had to outline a plan,
+                  Before writing a single line of code, I mapped out the essentials,
                 </span>{" "}
-                carefully deciding on the most essential features. This ensures that the project can
-                provide value from the get-go.
+                so the visualizer would feel purposeful from the first click instead of like a quick
+                demo. That meant being deliberate about what would actually help someone build
+                intuition, not just watch bars move.
               </p>
               <p>
-                With a clear <Emphasize text="vision" /> in place, I could focus on delivering a
-                user-friendly and engaging tool. These were the non-negotiable{" "}
-                <Emphasize text="priorities" /> that I set out to achieve:
+                I leaned into <Emphasize text="clarity" /> and <Emphasize text="playability" />:
+                controls that react instantly, explanations that pair with the animation, and
+                defaults that teach without getting in the way. Every feature had to earn its spot by
+                making the learning experience smoother.
+              </p>
+              <p>
+                With those guardrails in place, the roadmap became a set of non‑negotiable{" "}
+                <Emphasize text="priorities" />, the pillars that keep the project focused as it grows.
               </p>
             </div>
-            <SectionList items={project.priorities!} color={"#7dd3fc"} />
+
+            <div className="flex-1">
+              <SectionList items={project.priorities!} color={"#7dd3fc"} />
+            </div>
           </div>
         </div>
 
