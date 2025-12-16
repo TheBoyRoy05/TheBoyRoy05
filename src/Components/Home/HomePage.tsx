@@ -1,6 +1,6 @@
 import Scene from "./Boids/Scene";
 import TypingText from "./TypingText";
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import Projects from "../Projects/Projects";
 import Blog from "../Blog/Blog";
 import LoadingScreen from "../Other/LoadingScreen";
@@ -9,16 +9,11 @@ import "simplebar-react/dist/simplebar.min.css";
 import Navbar from "../Page/Navbar";
 import Footer from "../Page/Footer";
 import Arrow from "./Arrow";
+import { useLoading } from "../../Hooks/useLoading";
 
 const HomePage = () => {
   const mainPage = useRef<HTMLDivElement>(null!);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 1000);
-  }, []);
+  const { loading } = useLoading(1000);
 
   const handleClick = () => {
     if (mainPage) mainPage.current.scrollIntoView({ behavior: "smooth" });
