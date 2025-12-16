@@ -39,7 +39,7 @@ import altruism from "/src/Assets/Images/Blog/Altruism.png";
 export const projects = {
   Turbo3D: {
     time: "Winter '25",
-    color: "#7DFCE5",
+    color: "#156b5b",
     description: "A slightly awful 3D engine that runs on the CPU",
     image: turbo3d,
     gif: turbo3dGif,

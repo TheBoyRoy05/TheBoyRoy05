@@ -1,12 +1,13 @@
 export interface FrameProps {
   children: React.ReactNode;
   color?: string;
+  hoverColor?: string;
   topClass?: string;
   midClass?: string;
   bottomClass?: string;
 }
 
-const Frame = ({ children, color, topClass, midClass, bottomClass }: FrameProps) => {
+const Frame = ({ children, color, hoverColor, topClass, midClass, bottomClass }: FrameProps) => {
   const glareStyle = {
     height: "1px",
     backgroundImage: `linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, ${
@@ -15,7 +16,7 @@ const Frame = ({ children, color, topClass, midClass, bottomClass }: FrameProps)
   };
 
   const frameStyle = {
-    "--gradient-color": color || "#195277",
+    "--gradient-color": hoverColor || color || "#195277",
     "--opacity": color && 0.1,
   } as React.CSSProperties;
 

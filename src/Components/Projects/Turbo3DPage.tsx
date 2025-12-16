@@ -33,7 +33,7 @@ const Turbo3DPage = () => {
   };
 
   return (
-    <Page contents={contents} color={turbo3d.color+"40"}>
+    <Page contents={contents} color={turbo3d.color+"80"}>
       <div className="flex-col items-center">
         <h2>
           Turbo <span className="text-gradient font-medium">3D</span>

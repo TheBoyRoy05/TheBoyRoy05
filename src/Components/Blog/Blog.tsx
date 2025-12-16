@@ -7,10 +7,9 @@ interface BlogProps {
 
 const Blog = ({ upTo = articles.length }: BlogProps) => {
   return (
-    <div className="flex-col items-center">
+    <div className="flex-col items-center gap-10 py-10">
       <h2>
-        I like <span className="text-gradient font-medium">sharing</span> what I
-        learn
+        I like <span className="text-gradient font-medium">sharing</span> what I learn
       </h2>
       <div className="flex ~gap-10/20 flex-wrap justify-center">
         {articles.slice(0, upTo).map((articles, index) => (

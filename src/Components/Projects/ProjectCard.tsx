@@ -13,7 +13,7 @@ const ProjectCard = ({ project, props }: ProjectProps) => {
   const navigate = useNavigate();
 
   return (
-    <Frame midClass="w-[clamp(350px,72.5vw,1500px)]" {...props as FrameProps}>
+    <Frame midClass="w-[clamp(350px,72.5vw,1500px)]" hoverColor={projectInfo.color} {...props as FrameProps}>
       <div className="glare w-1/3" />
       <div
         className={`~pt-2/6 ~px-2/6 pb-0 border border-[--border-color] rounded-2xl frame-bg group hover:cursor-pointer`}
