@@ -13,12 +13,12 @@ import { BiSolidCube } from "react-icons/bi";
 import turbo3d from "/src/Assets/Images/Projects/Turbo3D/grass.png";
 import turbo3dGif from "/src/Assets/Images/Projects/Turbo3D/grass.gif";
 
-import fail1 from "/src/Assets/Images/Projects/Turbo3D/Fails/fail1.png";
-import fail2 from "/src/Assets/Images/Projects/Turbo3D/Fails/fail2.png";
-import fail3 from "/src/Assets/Images/Projects/Turbo3D/Fails/fail3.png";
-import fail4 from "/src/Assets/Images/Projects/Turbo3D/Fails/fail4.png";
-import fail5 from "/src/Assets/Images/Projects/Turbo3D/Fails/fail5.png";
-import fail6 from "/src/Assets/Images/Projects/Turbo3D/Fails/fail6.png";
+import fail1 from "/src/Assets/Images/Projects/Turbo3D/Fails/Fail1.png";
+import fail2 from "/src/Assets/Images/Projects/Turbo3D/Fails/Fail2.png";
+import fail3 from "/src/Assets/Images/Projects/Turbo3D/Fails/Fail3.png";
+import fail4 from "/src/Assets/Images/Projects/Turbo3D/Fails/Fail4.png";
+import fail5 from "/src/Assets/Images/Projects/Turbo3D/Fails/Fail5.png";
+import fail6 from "/src/Assets/Images/Projects/Turbo3D/Fails/Fail6.png";
 
 export default {
   time: "Winter '25",
