@@ -13,6 +13,13 @@ import { BiSolidCube } from "react-icons/bi";
 import turbo3d from "/src/Assets/Images/Projects/Turbo3D/grass.png";
 import turbo3dGif from "/src/Assets/Images/Projects/Turbo3D/grass.gif";
 
+import fail1 from "/src/Assets/Images/Projects/Turbo3D/Fails/fail1.png";
+import fail2 from "/src/Assets/Images/Projects/Turbo3D/Fails/fail2.png";
+import fail3 from "/src/Assets/Images/Projects/Turbo3D/Fails/fail3.png";
+import fail4 from "/src/Assets/Images/Projects/Turbo3D/Fails/fail4.png";
+import fail5 from "/src/Assets/Images/Projects/Turbo3D/Fails/fail5.png";
+import fail6 from "/src/Assets/Images/Projects/Turbo3D/Fails/fail6.png";
+
 export default {
   time: "Winter '25",
   color: "#197751",
@@ -21,6 +28,7 @@ export default {
   gif: turbo3dGif,
   link: "/turbo-3d",
   tech: { "C++": <TbBrandCpp /> },
+  fails: [fail1, fail2, fail3, fail4, fail5, fail6],
   priorities: [
     {
       title: "Learn from scratch -",

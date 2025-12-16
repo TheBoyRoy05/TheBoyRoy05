@@ -12,7 +12,7 @@ import { useLoading } from "../../Hooks/useLoading";
 import LoadingScreen from "../Other/LoadingScreen";
 
 import teapot from "/src/Assets/Images/Projects/Turbo3D/teapot.png";
-import grass from "/src/Assets/Images/Projects/Turbo3D/grass.png";
+import funkyTeapot from "/src/Assets/Images/Projects/Turbo3D/funky_teapot.png";
 
 const Turbo3DPage = () => {
   const turbo3d = projects.Turbo3D;
@@ -22,6 +22,7 @@ const Turbo3DPage = () => {
   const math = useRef(null!);
   const lighting = useRef(null!);
   const challenges = useRef(null!);
+  const bugs = useRef(null!);
   const future = useRef(null!);
 
   const contents = {
@@ -31,6 +32,7 @@ const Turbo3DPage = () => {
     "Math & Camera": math,
     "Lighting & Texturing": lighting,
     challenges,
+    "Memorable Bugs": bugs,
     future,
   };
 
@@ -176,7 +178,7 @@ const Turbo3DPage = () => {
           <div id="math_camera" className="flex-col gap-10 ~pt-6/14 ~pb-8/20">
             <SectionHeader text={"Math & Camera"} style={"~text-xl/3xl"} />
 
-            <div className="flex flex-col-reverse lg:flex-row gap-12 items-center h-fit">
+            <div className="flex flex-col lg:flex-row gap-12 items-center h-fit">
               <div className="flex-1 flex-col gap-6 ~text-base/lg ~leading-7/8">
                 <p>
                   <span className="text-white">
@@ -203,11 +205,12 @@ const Turbo3DPage = () => {
 
             <Frame midClass="w-full min-w-[325px]">
               <div className="glare w-1/3" />
-              <img
-                src={grass}
-                alt="Grass texture rendered in Turbo3D"
-                className="border border-[--border-color] rounded-xl"
-              />
+              <div className="border border-[--border-color] rounded-xl w-full flex justify-center items-center bg-black">
+                <img
+                  src={funkyTeapot}
+                  alt="Grass texture rendered in Turbo3D"
+                />
+              </div>
             </Frame>
 
             <div className="flex flex-col lg:flex-row gap-6 ~pb-8/20">
@@ -274,6 +277,35 @@ const Turbo3DPage = () => {
                   performance.
                 </p>
               </div>
+            </div>
+          </div>
+
+          <div className="divider ~pt-8/20" ref={bugs} />
+
+          <div id="memorable_bugs" className="flex-col gap-10 ~pt-8/20">
+            <SectionHeader text={"Memorable Bugs"} style={"~text-xl/3xl"} />
+
+            <div className="flex flex-col gap-6 ~text-base/lg ~leading-7/8">
+              <p>
+                <span className="text-white">
+                  Building a graphics engine from scratch led to some memorable bugs along the way.
+                </span>{" "}
+                From models appearing upside-down to textures rendering as psychedelic patterns, each
+                bug taught me something new about how 3D graphics actually work under the hood.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              {turbo3d.fails?.map((fail, index) => (
+                <Frame key={index} midClass="w-full min-w-[325px] md:min-w-[300px]">
+                  <div className="glare w-1/3" />
+                  <img
+                    src={fail}
+                    alt={`Turbo3D bug ${index + 1}`}
+                    className="border border-[--border-color] rounded-xl w-full h-full object-cover"
+                  />
+                </Frame>
+              ))}
             </div>
           </div>
 
