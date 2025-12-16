@@ -218,10 +218,7 @@ const SortingVizPage = () => {
           <h3 className="text-white hero-text-shadow ~text-2xl/4xl font-bold">
             Explore my Next Project
           </h3>
-          <ProjectCard
-            project="Turbo3D"
-            props={{ midClass: "w-full min-w-[325px]" }}
-          />
+          <ProjectCard project="Turbo3D" />
         </div>
       </div>
     </Page>

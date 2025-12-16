@@ -1,19 +1,18 @@
 import { FaArrowRight } from "react-icons/fa6";
-import Frame, { FrameProps } from "../Other/Frame";
+import Frame from "../Other/Frame";
 import { useNavigate } from "react-router-dom";
 import { projects } from "../../Utils/info";
 
 interface ProjectProps {
   project: string;
-  props?: unknown;
 }
 
-const ProjectCard = ({ project, props }: ProjectProps) => {
+const ProjectCard = ({ project }: ProjectProps) => {
   const projectInfo = projects[project as keyof typeof projects];
   const navigate = useNavigate();
 
   return (
-    <Frame midClass="w-[clamp(350px,72.5vw,1500px)]" hoverColor={projectInfo.color} {...props as FrameProps}>
+    <Frame midClass="w-full min-w-[325px]" hoverColor={projectInfo.color}>
       <div className="glare w-1/3" />
       <div
         className={`~pt-2/6 ~px-2/6 pb-0 border border-[--border-color] rounded-2xl frame-bg group hover:cursor-pointer`}

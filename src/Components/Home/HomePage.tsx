@@ -33,7 +33,7 @@ const HomePage = () => {
         <TypingText />
         <Arrow handleClick={handleClick} />
         <div className="mt-[9vh] h-64 fade-gradient" />
-        <div className="bg-[#101010] py-[7vh]" ref={mainPage}>
+        <div className="bg-[#101010] py-[7vh] flex flex-col items-center gap-20" ref={mainPage}>
           <Projects upTo={2} />
           <Blog upTo={3} />
         </div>

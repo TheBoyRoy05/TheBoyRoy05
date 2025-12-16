@@ -34,7 +34,7 @@ const YipYapPage = () => {
   };
 
   return (
-    <Page contents={contents} color={yipyap.color+"c0"}>
+    <Page contents={contents} color={yipyap.color + "c0"}>
       <div className="flex-col items-center">
         <h2>
           Yip<span className="text-gradient font-medium">Yap</span>
@@ -50,11 +50,7 @@ const YipYapPage = () => {
           <div className="fade-in-up">
             <Frame midClass={"w-full min-w-[325px]"}>
               <div className="glare w-1/3" />
-              <img
-                src={yipyap.image}
-                alt="YipYap"
-                className="border border-slate-500 rounded-xl"
-              />
+              <img src={yipyap.image} alt="YipYap" className="border border-slate-500 rounded-xl" />
             </Frame>
           </div>
 
@@ -273,10 +269,7 @@ const YipYapPage = () => {
           <h3 className="text-white hero-text-shadow ~text-2xl/4xl font-bold">
             Explore my Last Project
           </h3>
-          <ProjectCard
-            project="Sorting Visualizer"
-            props={{ midClass: "w-full min-w-[325px]" }}
-          />
+          <ProjectCard project="Sorting Visualizer" />
         </div>
       </div>
     </Page>

@@ -1,4 +1,4 @@
-export interface FrameProps {
+interface FrameProps {
   children: React.ReactNode;
   color?: string;
   hoverColor?: string;

@@ -33,7 +33,7 @@ const Turbo3DPage = () => {
   };
 
   return (
-    <Page contents={contents} color={turbo3d.color+"80"}>
+    <Page contents={contents} color={turbo3d.color + "80"}>
       <div className="flex-col items-center">
         <h2>
           Turbo <span className="text-gradient font-medium">3D</span>
@@ -104,24 +104,22 @@ const Turbo3DPage = () => {
                 <span className="text-white">
                   Before starting implementation, I outlined clear priorities
                 </span>{" "}
-                to guide the development process. Modern graphics APIs like OpenGL and DirectX make it
-                easy to create beautiful visuals, but they also hide a lot of the details. 
+                to guide the development process. Modern graphics APIs like OpenGL and DirectX make
+                it easy to create beautiful visuals, but they also hide a lot of the details.
               </p>
               <p>
-                I wanted a project that would force me to understand every step of the rendering pipeline, from
-                the <Emphasize text="math" /> behind transformations to the pixel-by-pixel drawing on screen.
+                I wanted a project that would force me to understand every step of the rendering
+                pipeline, from the <Emphasize text="math" /> behind transformations to the
+                pixel-by-pixel drawing on screen.
               </p>
               <p>
-                With a clear <Emphasize text="vision" /> in place, I could focus on building features
-                that mattered most. These were the non-negotiable <Emphasize text="priorities" /> that
-                shaped every decision and kept the engine both educational and maintainable:
+                With a clear <Emphasize text="vision" /> in place, I could focus on building
+                features that mattered most. These were the non-negotiable{" "}
+                <Emphasize text="priorities" /> that shaped every decision and kept the engine both
+                educational and maintainable:
               </p>
             </div>
-            <SectionList
-              items={turbo3d.priorities!}
-              color={"#7DFCE5"}
-              className="flex-1"
-            />
+            <SectionList items={turbo3d.priorities!} color={"#7DFCE5"} className="flex-1" />
           </div>
         </div>
 
@@ -177,14 +175,14 @@ const Turbo3DPage = () => {
                 <span className="text-white">
                   Linear algebra is the foundation of 3D graphics programming.
                 </span>{" "}
-                Every transformation, from rotating a model to positioning the camera, relies on vector
-                and matrix operations. I implemented a custom math library to handle all these
-                calculations, giving me full control over the rendering process.
+                Every transformation, from rotating a model to positioning the camera, relies on
+                vector and matrix operations. I implemented a custom math library to handle all
+                these calculations, giving me full control over the rendering process.
               </p>
               <p>
-                The camera system supports <Emphasize text="FPS-style" /> movement and navigation with
-                mouse controls. Implementing smooth camera controls required careful handling of input
-                and coordinate system transformations.
+                The camera system supports <Emphasize text="FPS-style" /> movement and navigation
+                with mouse controls. Implementing smooth camera controls required careful handling
+                of input and coordinate system transformations.
               </p>
             </div>
             <SectionList items={turbo3d.math!} color={"#7DFCE5"} className="flex-1" />
@@ -208,16 +206,17 @@ const Turbo3DPage = () => {
           <div className="flex flex-col lg:flex-row gap-6 ~pb-8/20">
             <div className="flex-1 flex-col justify-center gap-6 ~text-base/lg ~leading-7/8">
               <p>
-                <span className="text-white">Lighting and texturing bring 3D scenes to life.</span> I
-                implemented both directional and point lights, calculating diffuse shading based on
-                surface normals. The lighting model uses <Emphasize text="Lambertian shading" />, which
-                creates realistic depth and dimension.
+                <span className="text-white">Lighting and texturing bring 3D scenes to life.</span>{" "}
+                I implemented both directional and point lights, calculating diffuse shading based
+                on surface normals. The lighting model uses <Emphasize text="Lambertian shading" />,
+                which creates realistic depth and dimension.
               </p>
               <p>
                 Texture mapping was one of the more challenging features to implement. It requires
                 careful interpolation of UV coordinates across triangle surfaces and proper texture
                 sampling. The result is <Emphasize text="detailed" /> and{" "}
-                <Emphasize text="visually appealing" /> surfaces that make models look much more realistic.
+                <Emphasize text="visually appealing" /> surfaces that make models look much more
+                realistic.
               </p>
             </div>
             <SectionList items={turbo3d.lighting!} color={"#7DFCE5"} className="flex-1" />
@@ -250,15 +249,17 @@ const Turbo3DPage = () => {
                 checking coordinate system conversions.
               </p>
               <p>
-                Implementing texture mapping required learning about <Emphasize text="barycentric coordinates" />{" "}
-                and proper UV interpolation. Getting textures to display correctly without distortion
-                or artifacts was a process of trial and error and I ended up spending many hours on it, but the end result was worth it.
+                Implementing texture mapping required learning about{" "}
+                <Emphasize text="barycentric coordinates" /> and proper UV interpolation. Getting
+                textures to display correctly without distortion or artifacts was a process of trial
+                and error and I ended up spending many hours on it, but the end result was worth it.
               </p>
               <p>
-                I tried implementing <Emphasize text="multithreading" /> on the CPU to somewhat simulate
-                GPU performance by parallelizing the rendering work across multiple cores. However, it
-                only <Emphasize text="marginally improved" /> rendering speed. In the future, I 
-                would like to add GPU rendering using OpenGL or Vulkan to improve performance.
+                I tried implementing <Emphasize text="multithreading" /> on the CPU to somewhat
+                simulate GPU performance by parallelizing the rendering work across multiple cores.
+                However, it only <Emphasize text="marginally improved" /> rendering speed. In the
+                future, I would like to add GPU rendering using OpenGL or Vulkan to improve
+                performance.
               </p>
             </div>
           </div>
@@ -272,18 +273,16 @@ const Turbo3DPage = () => {
           <div className="flex flex-col lg:flex-row gap-6">
             <div className="flex-1 flex-col justify-center gap-6 ~text-base/lg ~leading-7/8">
               <p>
-                <span className="text-white">
-                  There's so much more I'd like to add to Turbo3D.
-                </span>{" "}
+                <span className="text-white">There's so much more I'd like to add to Turbo3D.</span>{" "}
                 The most obvious next step would be moving to GPU rendering using OpenGL or Vulkan,
-                which would unlock <Emphasize text="realistic performance" /> and enable more complex
-                scenes.
+                which would unlock <Emphasize text="realistic performance" /> and enable more
+                complex scenes.
               </p>
               <p>
-                I'd also love to add more advanced lighting features like <Emphasize text="shadows" />,{" "}
-                <Emphasize text="reflections" />, and physically-based rendering. A scene graph system
-                would make it easier to organize and render complex scenes, and physics integration
-                would add interactivity.
+                I'd also love to add more advanced lighting features like{" "}
+                <Emphasize text="shadows" />, <Emphasize text="reflections" />, and physically-based
+                rendering. A scene graph system would make it easier to organize and render complex
+                scenes, and physics integration would add interactivity.
               </p>
             </div>
             <SectionList items={turbo3d.future!} color={"#7DFCE5"} className="flex-1" />
@@ -295,10 +294,7 @@ const Turbo3DPage = () => {
           <h3 className="text-white hero-text-shadow ~text-2xl/4xl font-bold">
             Explore my Last Project
           </h3>
-          <ProjectCard
-            project="YipYap"
-            props={{ midClass: "w-full min-w-[325px]" }}
-          />
+          <ProjectCard project="YipYap" />
         </div>
       </div>
     </Page>

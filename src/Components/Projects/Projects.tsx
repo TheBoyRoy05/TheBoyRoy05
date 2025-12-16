@@ -11,7 +11,7 @@ const Projects = ({ upTo = Object.keys(projects).length }: ProjectsProps) => {
       <h2>
         I like <span className="text-gradient font-medium">making</span> things
       </h2>
-      <div className="flex flex-col items-center gap-10 w-full">
+      <div className="flex flex-col items-center gap-10 w-[80vw] md:w-[60vw]">
         {Object.keys(projects).slice(0, upTo).map((project, index) => (
           <ProjectCard key={index} project={project} />
         ))}
