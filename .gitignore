@@ -28,3 +28,4 @@ dist-ssr
 *.fls
 *.out
 *.gz
+*.fdb_latexmk
