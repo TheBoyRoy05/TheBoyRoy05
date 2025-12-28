@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { FaArrowDownLong } from "react-icons/fa6";
+import { motion } from "framer-motion";
+import { IoIosArrowDown } from "react-icons/io";
 
 const Arrow = ({ handleClick }: { handleClick: () => void }) => {
   const [opacity, setOpacity] = useState(1);
@@ -16,13 +17,22 @@ const Arrow = ({ handleClick }: { handleClick: () => void }) => {
   }, []);
 
   return (
-    <button
+    <motion.button
       onClick={handleClick}
       className="absolute top-[90vh] left-1/2 -translate-x-1/2"
       style={{ opacity }}
+      animate={{
+        y: [0, 10, 0],
+      }}
+      transition={{
+        duration: 1.5,
+        repeat: Infinity,
+        repeatType: "loop",
+        ease: "easeIn",
+      }}
     >
-      <FaArrowDownLong className="text-3xl text-white" />
-    </button>
+      <IoIosArrowDown size={40} className="text-white" />
+    </motion.button>
   );
 };
 
