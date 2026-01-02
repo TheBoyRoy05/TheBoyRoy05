@@ -178,14 +178,15 @@ const NeuralNectorPage = () => {
               </span>{" "}
               and challenges players to select all the fake (AI-generated) flowers. The game
               features <Emphasize text="multiple difficulty levels" /> and scoring based on{" "}
-              <Emphasize text="accuracy" /> and <Emphasize text="speed" />, with scores tracked on
-              global leaderboards.
+              <Emphasize text="speed" /> and <Emphasize text="correctness" />, tracked on global
+              leaderboards.
             </p>
             <p className="flex-1">
-              Built with <Emphasize text="React" />, <Emphasize text="TypeScript" />, and{" "}
-              <Emphasize text="PostgreSQL" />. As AI-generated content becomes increasingly
-              difficult to distinguish from real content, this game serves as some fun practice for
-              identifying <Emphasize text="synthetic media" /> in our increasingly synthetic world.
+              The scoring system is designed to be fair and challenging, with the{" "}
+              <Emphasize text="correctness" />
+              being calculated using the <Emphasize text="F1 metric" /> to penalize False Positives
+              (calling a real flower fake) and False Negatives (missing a fake) to discourage
+              guessing.
             </p>
           </div>
         </div>
