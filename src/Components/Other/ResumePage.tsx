@@ -3,6 +3,7 @@ import Page from "../Page/Page";
 import Frame from "./Frame";
 import sweResumeImage from "/src/Assets/Images/Other/Issac_Roy_SWE.jpg";
 import dsResumeImage from "/src/Assets/Images/Other/Issac_Roy_DS.jpg";
+import fsResumeImage from "/src/Assets/Images/Other/Issac_Roy_FS.jpg";
 import lastUpdatedPath from "/src/Assets/Resume/last_updated.txt";
 import { useEffect, useState } from "react";
 
@@ -12,6 +13,7 @@ const ResumePage = () => {
   const images = {
     SWE: sweResumeImage,
     DS: dsResumeImage,
+    FS: fsResumeImage,
   };
 
   const download = () => {
@@ -44,6 +46,7 @@ const ResumePage = () => {
         >
           <option value="SWE" className="bg-black">Software Engineering</option>
           <option value="DS" className="bg-black">Data Science</option>
+          <option value="FS" className="bg-black">Full Stack</option>
         </select>
       </div>
       <Frame midClass={"w-[clamp(325px,50vw,1000px)]"}>
