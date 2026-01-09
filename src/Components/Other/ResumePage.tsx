@@ -3,7 +3,7 @@ import Page from "../Page/Page";
 import Frame from "./Frame";
 import sweResumeImage from "/src/Assets/Images/Other/Issac_Roy_SWE.jpg";
 import dsResumeImage from "/src/Assets/Images/Other/Issac_Roy_DS.jpg";
-import fsResumeImage from "/src/Assets/Images/Other/Issac_Roy_FS.jpg";
+import webResumeImage from "/src/Assets/Images/Other/Issac_Roy_WEB.jpg";
 import lastUpdatedPath from "/src/Assets/Resume/last_updated.txt";
 import { useEffect, useState } from "react";
 
@@ -13,7 +13,7 @@ const ResumePage = () => {
   const images = {
     SWE: sweResumeImage,
     DS: dsResumeImage,
-    FS: fsResumeImage,
+    WEB: webResumeImage,
   };
 
   const download = () => {
@@ -26,9 +26,20 @@ const ResumePage = () => {
   useEffect(() => {
     fetch(lastUpdatedPath)
       .then((response) => response.text())
-      .then((text) => setLastUpdated(text.trim()))
+      .then((text) => {
+        const lines = text.trim().split('\n');
+        const dateMap: Record<string, string> = {};
+        
+        lines.forEach((line) => {
+          const match = line.match(/^(\w+):\s*(.+)$/);
+          if (match === null) return;
+          dateMap[match[1]] = match[2].trim();
+        });
+        
+        setLastUpdated(dateMap[resumeType] || '');
+      })
       .catch((error) => console.error("Error loading last updated:", error));
-  }, []);
+  }, [resumeType]);
 
   return (
     <Page className="flex flex-col items-center gap-10">
@@ -46,7 +57,7 @@ const ResumePage = () => {
         >
           <option value="SWE" className="bg-black">Software Engineering</option>
           <option value="DS" className="bg-black">Data Science</option>
-          <option value="FS" className="bg-black">Full Stack</option>
+          <option value="WEB" className="bg-black">Web Development</option>
         </select>
       </div>
       <Frame midClass={"w-[clamp(325px,50vw,1000px)]"}>
@@ -58,7 +69,7 @@ const ResumePage = () => {
         >
           <div className="frame-content flex-col overflow-hidden">
             <div className="flex items-center justify-between ~text-lg/3xl font-bold text-white">
-              <h3 className="~mb-2/4 text-shadow">{`${resumeType} Resume`}</h3>
+              <h3 className="~mb-2/4 text-shadow">Resume</h3>
               <HiDownload />
             </div>
             <p className="~text-xs/base font-bold mb-[3vw]">
