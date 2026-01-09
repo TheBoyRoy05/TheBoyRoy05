@@ -108,15 +108,14 @@
 \newcommand\accentColor{MidnightBlue}
 
 %-------------------------------------------
-%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%
-
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
 
 %----------HEADING----------
 \begin{center}
     {\Huge \scshape \textcolor{\accentColor}{Issac Roy}} \\ \vspace{1pt}
-    U.S. Citizen, San Diego, CA \\ \vspace{1pt}
+    San Diego, CA \\ \vspace{1pt}
     \small \raisebox{-0.1\height}{\reflectbox{\faPhone}}\ 858-428-4311 ~ \href{mailto:issacroy05@gmail.com}{\raisebox{-0.2\height}\faEnvelope\ \underline{issacroy05@gmail.com}} ~ 
     \href{https://linkedin.com/in/issacroy/}{\raisebox{-0.2\height}\faLinkedin\ \underline{linkedin.com/in/issacroy}}  ~
     \href{https://github.com/TheBoyRoy05}{\raisebox{-0.2\height}\faGithub\ \underline{github.com/TheBoyRoy05}} ~ \href{https://www.issacroy.com}{\raisebox{-0.2\height}\faGlobe\ \underline{issacroy.com}}
@@ -125,102 +124,106 @@
 
 %-----------EDUCATION-----------
 \section{\textcolor{\accentColor}{Education}}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {University of California San Diego (4.0 GPA)}{March 2027}
-      {\textbf{B.S. Data Science} $|$ Math Minor $|$ Cognitive Science Minor}{San Diego, CA}
+    \resumeSubHeadingListStart
+        \resumeSubheading{University of California San Diego (3.98 GPA)}{March 2027}{\textbf{B.S. Data Science} $|$ Math Minor $|$ Cognitive Science Minor}{San Diego, CA}
+        % \small{\item{Relevant Coursework: Data Structures & Algorithms, Systems Programming, Computer Architecture, Linear Algebra}} 
+        % ^ ADD RELEVANT CS COURSEWORK HERE IF YOU HAVE TAKEN THESE CLASSES
   \resumeSubHeadingListEnd
-\vspace{-10pt}
-
+  \vspace{-15pt}
+  
 %-----------EXPERIENCE-----------
 \section{\textcolor{\accentColor}{Experience}}
-\vspace{-5pt}
+\vspace{-7pt}
 \resumeSubHeadingListStart
-\resumeProjectHeading
-    {\textbf{\href{https://www.neurocrine.com/}{\underline{Neurocrine Biosciences}}} $|$ \emph{Data Engineer Intern}}{June 2025 -- September 2025}
+    \resumeProjectHeading{\textbf{Neurocrine Biosciences} $|$ \emph{Software Engineer Intern (Data Infrastructure)}}{June 2025 -- September 2025}
     \resumeItemListStart
-        \resumeItem{Architected and deployed containerized cloud-based web scraper to avoid \$200K in annual operating expenses.}
-        \resumeItem{Prototyped an AI-driven data pipeline to convert raw patient data into study-specific narratives, streamlining reporting and decision-making for study teams.}
-        \resumeItem{Implemented end-to-end DevOps workflows using Terraform (IaC), AWS Lambda, and multi-env CI/CD pipelines while collaborating across data and software teams using Jira and Confluence.}
-        \resumeItem{Supported the Clinical Data Science team's mission to enhance monitoring and oversight of clinical trials by developing and maintaining scalable ETL pipelines and Power BI dashboards.}
-    \resumeItemListEnd
-\vspace{-15pt}
-    
-\resumeProjectHeading
-    {\textbf{\href{https://www.ds3atucsd.com/}{\underline{Data Science Student Society (DS3)}}} $|$ \emph{Director of Software}}{October 2024 -- Present}
-    \resumeItemListStart
-        \resumeItem{Bridging the gap between classroom theory and real-world practice by leading workshops on cloud computing, containerization, web development, Terraform, and Git, training 200+ students on industry-standard tools.}
-        \resumeItem{Directing the design, development, and deployment of full-stack websites for UCSD clubs, contributing personally to front-end and back-end code.}
-        \resumeItem{Leading a 10+ member software team in one of the largest data science clubs in the nation, applying Agile methodologies to improve collaboration and delivery.}
+        \resumeItem{Architected a serverless, event-driven application on AWS (ECS, Lambda) to automate data ingestion, decoupling system components and reducing operational costs by \$200k annually.}
+        \resumeItem{Engineered a production-grade backend pipeline using Python and AWS Bedrock and Redshift, integrating LLM APIs with patient data to generate study-specific narratives to streamline reporting and decision-making for study teams.}
+        \resumeItem{Implemented Infrastructure as Code (IaC) using Terraform and built multi-environment CI/CD pipelines, enforcing DevOps best practices and reducing deployment latency.}
     \resumeItemListEnd
     
-\vspace{-15pt}
-\resumeProjectHeading
-    {\textbf{\href{https://www.sdcta.org/}{\underline{San Diego Taxpayer's Association}}} $|$ \emph{Data Science Intern}}{October 2024 -- January 2025}
+    \vspace{-15pt}
+    \resumeProjectHeading{\textbf{San Diego County Taxpayers Association} $|$ \emph{Data Science Intern}}{October 2024 -- January 2025}
     \resumeItemListStart
-        \resumeItem{Enhanced data-driven policy analysis by developing a pipeline that aggregates and analyzes public sentiment on local issues and policies, supporting evidence-based recommendations for policymakers.}
-    \resumeItemListEnd
-
+        \resumeItem{Developed a robust web scraping service using Playwright (Python) to harvest data from dynamic web pages, engineering solutions for rate-limiting and edge cases.}
+        \resumeItem{Developed a high-performance frontend dashboard using Plotly Dash (React-based), implementing client-side caching and callback optimization to render large-scale datasets with sub-second latency to inform policy recommendations.}
+\resumeItemListEnd
 \resumeSubHeadingListEnd
 \vspace{-15pt}
 
-%-----------PROJECTS-----------
-\section{\textcolor{\accentColor}{Projects}}
+  %------RELEVANT COURSEWORK-------
+  \section{\textcolor{\accentColor}{Relevant Coursework}}
+          \begin{multicols}{3}
+              \begin{itemize}[itemsep=-5pt, parsep=3pt]
+                  \item Advanced Data Structures
+                  \item Computer Vision
+                  \item Systems Programming
+                  \item Database Management
+                  \item Computer Organization 
+                  \item Artificial Intelligence
+              \end{itemize}
+          \end{multicols}
+    \vspace*{2.0\multicolsep}
+
+%-----------PROJECTS (Systems & Embedded)-----------
+\section{\textcolor{\accentColor}{Technical Projects}}
+\vspace{-7pt}
 \resumeSubHeadingListStart
-\resumeProjectHeading
-    {\textbf{\href{https://github.com/TheBoyRoy05/Turbo-3D/}{\underline{Turbo 3D Engine}}} $|$ \emph{C++, SDL2}}{March 2025}
-    \resumeItemListStart
-        \resumeItem{Developed a CPU-based 3D graphics engine from scratch with support for camera movement, lighting, texture mapping, and OBJ file parsing to render complex 3D models with realistic lighting and shading effects.}
-        \resumeItem{Expanded skills in low-level graphics programming, performance optimization, and real-time rendering fundamentals.}
-    \resumeItemListEnd
-\vspace{-15pt}
-
-\resumeProjectHeading {\textbf{\href{https://www.issacroy.com/\#/yipyap}{\underline{YipYap, the Chat App for Yappers}}} $|$ \emph{React, MongoDB, Express, SocketIO, TypeScript, Figma}}{August 2024}
-    \resumeItemListStart \resumeItem{Developed and deployed a full-stack chat app with real-time yapping using SocketIO, MongoDB, and Express.js.} 
-        \resumeItem{Designed user interfaces in Figma, built REST APIs, and integrated AI models for intelligent conversation suggestions.} 
-        \resumeItem{Expanded skills in backend architecture, DBMS, authentication, and UI/UX design.} 
-    \resumeItemListEnd 
-    \resumeSubHeadingListEnd 
-\vspace{-15pt}
-
-%-----------INVOLVEMENT---------------
-\section{\textcolor{\accentColor}{Extracurricular}}
-    \vspace{-7pt}
-    \resumeSubHeadingListStart
     \resumeProjectHeading
-        {\textbf{Project Daedalus} $|$ \emph{OpenRocket, C++, 3D Printing, Raspberry Pi}}{October 2025 -- Present}
+        {\textbf{\href{https://github.com/TheBoyRoy05/Turbo-3D/}{\underline{Turbo 3D Engine}}} $|$ \emph{C++, SDL2, Linear Algebra}}{March 2025}
         \resumeItemListStart
-            \resumeItem{Developing a G-class rocket with a 3D printed payload fairing and a custom parachute system.}
-            \resumeItem{Using OpenRocket to simulate the rocket's flight and programmed the avionics system to collect telemetry data during flight with GPS and IMU sensors.}
+            \resumeItem{Built a 3D graphics engine from scratch in C++, implementing a custom rasterization pipeline, matrix transformations for camera space, texture mapping, and lighting without external graphics libraries.}
+            \resumeItem{Optimized rendering performance through manual memory management and efficient vertex processing algorithms and a custom linear algebra library.}
         \resumeItemListEnd
     \vspace{-15pt}
 
     \resumeProjectHeading
-        {\textbf{OnlyDance} $|$ \emph{OpenCV, ModelPipe, React Three Fiber, TypeScript, Python, FastAPI}}{April 2025}
+        {\textbf{Project Daedalus (Avionics System)} $|$ \emph{C++, Raspberry Pi, OpenRocket}}{October 2025 -- Present}
         \resumeItemListStart
-            \resumeItem{Won 1st place at DataHacks 2025 against 50+ teams by developing an interactive full-stack app that teaches dance routines using 3D avatars and real-time feedback.}
-            \resumeItem{Engineered a real-time similarity scoring system using joint weighting, frame interpolation, and sliding window techniques for robust pose matching.}
+            \resumeItem{Engineering the avionics package for a G-class rocket, programming a Raspberry Pi in C++ to interface with IMU and GPS via I2C for telemetry. Designed a custom 3D-printed fairing to protect electronics under high-G launch loads.}
         \resumeItemListEnd
-        \vspace{-15pt}
+    \vspace{-15pt}
+
+    \resumeProjectHeading {\textbf{\href{https://www.issacroy.com/\#/yipyap}{\underline{YipYap Chat Application}}} $|$ \emph{React, TypeScript, MongoDB, WebSockets}}{August 2024}
+    \resumeItemListStart 
+        \resumeItem{Architected a full-stack real-time messaging app using Socket.IO for event-based communication and Express.js for RESTful API endpoints. Implemented JWT authentication and managed a MongoDB database for scalable storage.}
+    \resumeItemListEnd 
+    \vspace{-15pt}
 
     \resumeProjectHeading
-        {\textbf{Self-Playing Guitar} $|$ \emph{Arduino, CAD, Laser Cutting, 3D Printing}}{December 2023}
+        {\textbf{Self-Playing Guitar} $|$ \emph{C++, Arduino, Mechatronics}}{December 2023}
         \resumeItemListStart
-            \resumeItem{Won 1st place at IEEE's Fall Competition against 30+ teams with a self-playing guitar.}
-            \resumeItem{Designed and fabricated custom parts using laser cutting and 3D printing and programmed a note transcriber in Arduino C to map musical notes to servo motions.}
+            \resumeItem{Won 1st place at IEEE's Fall Competition against 30+ teams by engineering a self-playing guitar with custom laser-cut and 3D printed parts, programming a note transcriber in C++ to map musical notes to precise servo motions.}
         \resumeItemListEnd
-    \resumeSubHeadingListEnd
+\resumeSubHeadingListEnd 
 \vspace{-15pt}
     
-%-----------PROGRAMMING SKILLS-----------
-\section{\textcolor{\accentColor}{Technical Skills}}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-    \textbf{Certifications: }{AWS Cloud Practitioner, AWS AI Practitioner, AWS Solutions Architect Associate} \\
-    \textbf{Languages: }{Python, SQL, React, TypeScript, Java, C, C++, C\#, Go, Lua} \\
-    \textbf{Tools: }{AWS, Git, MongoDB, Jira, Confluence, Terraform, PyTorch, Docker, Linux}
-    }}
- \end{itemize}
- \vspace{-8pt}
+%-----------LEADERSHIP---------------
+\section{\textcolor{\accentColor}{Leadership}}
+\vspace{-7pt}
+\resumeSubHeadingListStart
+    \resumeProjectHeading{\textbf{\href{https://www.ds3atucsd.com/}{\underline{Data Science Student Society (DS3)}}} $|$ \emph{Director of Software}}{October 2024 -- Present}
+        \resumeItemListStart
+            \resumeItem{Directing a team of 10+ engineers to build full-stack web applications for a 1,000+ member community, enforcing Agile workflows and CI/CD standards through Github Actions.}
+            \resumeItem{Architected the backend for the centralized membership portal, implementing secure authentication flows and managing complex SQL database schemas on Supabase/Postgres.}
+        \resumeItemListEnd
+    \vspace{-15pt}
+    \resumeProjectHeading
+    {\textbf{AWS Cloud Club at UCSD} $|$ \emph{Founder \& VP Technical}}{November 2025 -- Present}
+    \resumeItemListStart
+        \resumeItem{Established UCSD's official AWS affiliate organization, fostering a technical community focused on upskilling students in cloud computing, serverless architecture, and industry best practices.}
+        \resumeItem{Curating and leading technical workshops on core AWS services (S3, Lambda, SageMaker), equipping 200+ members with the practical skills to build and deploy scalable cloud infrastructure.}
+    \resumeItemListEnd
+    \resumeSubHeadingListEnd
+\vspace{-15pt}
+  %-----------PROGRAMMING SKILLS-----------
+  \section{\textcolor{\accentColor}{Technical Skills}}
+   \begin{itemize}[leftmargin=0.15in, label={}]
+      \small{\item{
+          \textbf{Embedded \& Systems: }{Raspberry Pi, Arduino, I2C, Linux, SDL2} \\ 
+          \textbf{Cloud \& DevOps: }{AWS, Terraform, Docker, Git, CI/CD, Postgres, MongoDB, Jira, Confluence}
+          }} \\
+          \textbf{Languages: }{C++, C, Python, TypeScript, Java, SQL, React, Bash}
+   \end{itemize}
 
 \end{document}
