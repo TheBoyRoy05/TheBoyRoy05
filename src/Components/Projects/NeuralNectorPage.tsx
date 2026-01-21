@@ -5,22 +5,27 @@ import Page from "../Page/Page";
 import Emphasize from "../Other/Emphasize";
 import SectionHeader from "../Other/Section/SectionHeader";
 import SectionCard from "../Other/Section/SectionCard";
+import SectionList from "../Other/Section/SectionList";
 import { FaExclamation } from "react-icons/fa6";
 import ProjectCard from "./ProjectCard";
 
 import gameplay from "/src/Assets/Images/Projects/NeuralNector/game.png";
 import yinyang from "/src/Assets/Images/Projects/NeuralNector/yin-yang-flowers.png";
+import epochsImage from "/src/Assets/Images/Projects/NeuralNector/epochs.png";
+import modeCollapse from "/src/Assets/Images/Projects/NeuralNector/flower_collapse.png";
 
 const NeuralNectorPage = () => {
   const neuralNector = projects["Neural Nector"];
   const overview = useRef(null!);
   const gan = useRef(null!);
+  const training = useRef(null!);
   const challenges = useRef(null!);
   const game = useRef(null!);
 
   const contents = {
     overview,
     "GAN Model": gan,
+    training,
     challenges,
     game,
   };
@@ -72,14 +77,13 @@ const NeuralNectorPage = () => {
               <p className="flex-1">
                 The application is powered by a <Emphasize text="PyTorch-trained GAN" /> model that
                 generates realistic flower images with a <Emphasize text="FID score of 50" />,
-                demonstrating moderate-to-high quality synthetic image generation. Can you tell the
-                difference? Try it out here:{" "}
+                demonstrating moderate-to-high quality synthetic image generation. {" "}
                 <a
                   href="https://neuralnector.com"
                   target="_blank"
                   className="text-blue-400 underline"
                 >
-                  Neural Nector
+                  Can you tell the difference?
                 </a>
               </p>
             </div>
@@ -100,6 +104,9 @@ const NeuralNectorPage = () => {
               />
             </div>
             <div className="flex-1 flex-col gap-6 ~text-base/lg ~leading-7/8">
+              <h3 className="text-white ~text-xl/2xl font-bold mb-2">
+                How it Works
+              </h3>
               <p>
                 <span className="text-white">
                   The Generative Adversarial Network was trained using PyTorch
@@ -119,6 +126,57 @@ const NeuralNectorPage = () => {
           </div>
         </div>
 
+        <div className="divider ~py-8/20" ref={training} />
+
+        <div id="Training_Progression" className="flex-col gap-10 ~py-8/20">
+          <SectionHeader text={"Training Progression"} style={"~text-xl/3xl"} />
+
+          <div className="flex flex-col gap-12">
+            <div className="flex flex-col-reverse lg:flex-row gap-12 items-center h-fit">
+              <div className="flex-1 flex-col gap-6 ~text-base/lg ~leading-7/8">
+                <h3 className="text-white ~text-xl/2xl font-bold mb-2">
+                  Two Rivals Sharpening Each Other
+                </h3>
+                <p>
+                  <span className="text-white">At first, both the generator and discriminator</span>{" "}
+                  don't know what they're doing. The generator creates random noise, and the
+                  discriminator guesses randomly. As the discriminator picks up on the generator's patterns, the generator learns more and more subtle details to fool it.
+                </p>
+                <p>
+                  <span className="text-white">Like two rivals sharpening each other,</span> the generator and discriminator keep improving until the generator is able to create realistic flowers. However, just as two rivals need to be <Emphasize text="equals" /> to sharpen each other, the generator and discriminator must maintain <Emphasize text="balance" />, without one being too strong or too weak. If that becomes the case, both will regress to safe patterns and stop improving (<Emphasize text="Mode Collapse" />).
+                </p>
+                <p>
+                  <span className="text-white">By the end of training,</span> it becomes a challenge for even humans to tell the difference between
+                  real and fake flowers (for 64x64 images). That's where this game comes in. You are
+                  now the discriminator. Can <Emphasize text="you" /> tell the difference?
+                </p>
+              </div>
+              <div className="flex-1 w-full h-full min-w-[325px] flex items-center justify-center">
+                <Frame midClass="w-full">
+                  <div className="glare w-1/3" />
+                  <img
+                    src={epochsImage}
+                    alt="Training Progression Across Epochs"
+                    className="border border-[--border-color] rounded-xl w-full h-full object-cover"
+                  />
+                </Frame>
+              </div>
+            </div>
+            <div className="flex-col gap-10">
+              {/* lg and up: split into two columns (2x2 grid) */}
+              <div className="hidden lg:flex gap-10">
+                <SectionList className="flex-1" items={neuralNector.epochs!.slice(0, 2)} color={neuralNector.color} />
+                <SectionList className="flex-1" items={neuralNector.epochs!.slice(2, 4)} color={neuralNector.color} />
+              </div>
+
+              {/* below lg: all in one column */}
+              <div className="block lg:hidden">
+                <SectionList items={neuralNector.epochs!} color={neuralNector.color} />
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="divider ~py-8/20" ref={challenges} />
 
         <div id="challenges" className="flex-col ~gap-12/20">
@@ -130,9 +188,16 @@ const NeuralNectorPage = () => {
             className="w-full min-w-[325px]"
           />
 
-          <div className="flex flex-col lg:flex-row gap-6">
+          <div className="flex flex-col lg:flex-row gap-12">
             <div className="flex-1">
-              <SectionHeader text={"Challenges"} style={"~text-xl/3xl"} />
+              <Frame midClass="w-full min-w-[325px]">
+                <div className="glare w-1/3" />
+                <img
+                  src={modeCollapse}
+                  alt="Mode Collapse"
+                  className="border border-[--border-color] rounded-xl w-full h-full object-cover"
+                />
+              </Frame>
             </div>
             <div className="flex-1 flex-col gap-6 ~text-base/lg ~leading-7/8">
               <p>
@@ -140,11 +205,9 @@ const NeuralNectorPage = () => {
                   Training a GAN comes with unique challenges, with mode collapse being a common
                   issue.
                 </span>{" "}
-                Mode collapse occurs when the generator produces{" "}
-                <Emphasize text="limited diversity" />, generating very similar or identical images
-                instead of learning the full distribution of the data. This happens when the
-                generator finds a pattern that consistently fools the discriminator and{" "}
-                <Emphasize text="stops exploring" /> other possibilities.
+                Mode collapse occurs when the generator produces similar images
+                instead of learning the full distribution. This happens when the
+                discriminator outpaces the generator, which then regresses to a safe but incorrect pattern.
               </p>
               <p>
                 To address this, I implemented several solutions including{" "}
