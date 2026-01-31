@@ -10,6 +10,7 @@ import Navbar from "../Page/Navbar";
 import Footer from "../Page/Footer";
 import Arrow from "./Arrow";
 import { useLoading } from "../../Hooks/useLoading";
+import Disclaimer from "./Disclaimer";
 
 const HomePage = () => {
   const mainPage = useRef<HTMLDivElement>(null!);
@@ -26,6 +27,7 @@ const HomePage = () => {
       <SimpleBar className={`absolute left-0 top-0 w-screen h-screen overflow-x-hidden`}>
         <Navbar />
         <TypingText />
+        <Disclaimer />
         <Arrow handleClick={handleClick} />
         <div className="mt-[9vh] h-64 fade-gradient" />
         <div className="bg-[#101010] py-[7vh] flex flex-col items-center gap-20" ref={mainPage}>
