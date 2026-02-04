@@ -10,7 +10,7 @@ import { PiTestTubeFill } from "react-icons/pi";
 import { IoSparkles, IoCubeOutline } from "react-icons/io5";
 import { BiSolidCube } from "react-icons/bi";
 
-import turbo3d from "/src/Assets/Images/Projects/Turbo3D/grass.png";
+import turbo3d from "/src/Assets/Images/Projects/Turbo3D/funky_teapot.png";
 import turbo3dGif from "/src/Assets/Images/Projects/Turbo3D/grass.gif";
 
 import fail1 from "/src/Assets/Images/Projects/Turbo3D/Fails/Fail1.png";
