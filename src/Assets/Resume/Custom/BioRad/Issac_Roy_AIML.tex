@@ -1,0 +1,218 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage[dvipsnames]{xcolor}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage[charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{\accentColor}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-5pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\newcommand\accentColor{MidnightBlue}
+
+%-------------------------------------------
+%%%%%%  BIORAD AI/ML INTERN  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+  {\Huge \scshape \textcolor{\accentColor}{Issac Roy}} \\ \vspace{1pt}
+  U.S. Citizen $|$ AI/ML Intern Candidate $|$ San Diego \\ \vspace{1pt}
+  \small \raisebox{-0.1\height}{\href{https://www.issacroy.com}{\raisebox{-0.2\height}\faGlobe\ \underline{issacroy.com}} ~
+    \href{https://github.com/TheBoyRoy05}{\raisebox{-0.2\height}\faGithub\ \underline{github.com/TheBoyRoy05}} ~
+    \href{https://linkedin.com/in/issacroy/}{\raisebox{-0.2\height}\faLinkedin\ \underline{linkedin.com/in/issacroy}} ~ \href{mailto:issacroy05@gmail.com}{\raisebox{-0.2\height}\faEnvelope\ \underline{issacroy05@gmail.com}} ~ \raisebox{-0.1\height}{\reflectbox{\faPhone}}\ 858-428-4311}
+  \vspace{-8pt}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{\textcolor{\accentColor}{Education}}
+\resumeSubHeadingListStart
+\resumeSubheading{University of California San Diego (3.98 GPA)}{March 2027}{\textbf{B.S. Data Science} $|$ Math Minor $|$ Cognitive Science Minor}{San Diego, CA}
+\vspace{-5pt}
+\small\item\textbf{Courses:} Computer Vision, Data Structures, Linear Algebra, Systems Programming, Computer Organization, DBMS
+\resumeSubHeadingListEnd
+\vspace{-20pt}
+
+%-----------EXPERIENCE-----------
+\section{\textcolor{\accentColor}{Experience}}
+\vspace{-7pt}
+\resumeSubHeadingListStart
+\resumeProjectHeading{\textbf{MC Computer Vision Lab at UCSD} $|$ \emph{Research Assistant}}{January 2026 -- Present}
+\resumeItemListStart
+    \resumeItem{Engineered an OpenRooms++ automation pipeline on NRP Kubernetes, integrating Trellis2 and Flux 2.0 to transform coarse meshes into high-fidelity 3D assets.}
+    \resumeItem{Implemented inverse rendering algorithms using SAM3D and Laval Indoor HDR to decompose generated imagery into PBR texture maps (Albedo, Roughness) for photorealistic reconstruction.}
+    \resumeItem{Designed experiments and created benchmarks to assess key metrics throughout the pipeline; documented and presented findings to the team.}
+\resumeItemListEnd
+\vspace{-15pt}
+
+\resumeProjectHeading{\textbf{Neurocrine Biosciences} $|$ \emph{Data Engineering Intern}}{June 2025 -- September 2025}
+\resumeItemListStart
+\resumeItem{Saved 50+ hours per month by developing an AI-driven pipeline with Azure AI Foundry, integrating document processing for clinical data ingestion into Redshift and LLM endpoints to extract and convert large-scale patient data into study-specific narratives, streamlining reporting for study teams.}
+\resumeItem{Saved \$100k in annual OpEx by architecting, building, and deploying an end-to-end serverless containerized data ingestion pipeline on AWS ECS and Lambda, eliminating dependency on third-party vendors.}
+\resumeItem{Implemented DevOps workflows using Terraform (IaC), AWS Lambda, and multi-environment CI/CD pipelines, collaborating with Jira and Confluence to support Clinical Solution's mission to enhance monitoring of clinical trials.}
+\resumeItemListEnd
+\vspace{-15pt}
+
+\resumeProjectHeading{\textbf{San Diego County Taxpayers Association (SDCTA)} $|$ \emph{Data Science Intern}}{October 2024 -- January 2025}
+\resumeItemListStart
+    \resumeItem{Built a natural language processing (NLP) pipeline for policy analysis, utilizing Playwright for data scraping and Hugging Face Transformers for sentiment analysis, supporting evidence-based recommendations for policymakers.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-15pt}
+
+%-----------PROJECTS (ML \& Computer Vision)-----------
+\section{\textcolor{\accentColor}{Projects}}
+\vspace{-7pt}
+\resumeSubHeadingListStart
+\resumeProjectHeading
+    {\textbf{\href{https://www.issacroy.com/neural-nector}{\underline{Neural Nector}}} $|$ \emph{PyTorch, GAN, React, Python, FastAPI, Postgres}}{December 2025}
+    \resumeItemListStart
+        \resumeItem{Fine-tuned a CNN model for pipeline validation; trained a Generative Adversarial Network (GAN) to synthesize realistic flower images, achieving a FID score of 50.}
+        \resumeItem{Built an interactive, full-stack web app challenging users to distinguish between real and GAN-generated flower images, engaging 100+ unique users.}
+    \resumeItemListEnd
+\vspace{-15pt}
+
+\resumeProjectHeading
+    {\textbf{OnlyDance} $|$ \emph{OpenCV, MediaPipe, React Three Fiber, Python, FastAPI}}{April 2025}
+    \resumeItemListStart
+        \resumeItem{Won 1st place at DataHacks 2025 against 50+ teams by developing an interactive full-stack app that teaches dance routines using 3D avatars and real-time feedback.}
+        \resumeItem{Engineered a real-time similarity scoring algorithm using MediaPipe to extract 3D pose landmarks, implementing sliding window techniques and frame interpolation to quantify dance accuracy.}
+    \resumeItemListEnd
+\vspace{-15pt}
+
+\resumeProjectHeading
+    {\textbf{\href{https://theboyroy05.github.io/Power-Outages/}{\underline{Predicting Power Outage Severities}}} $|$ \emph{Python, Scikit-Learn, Pandas, Folium}}{December 2024}
+    \resumeItemListStart
+        \resumeItem{Created an ML pipeline to predict power outage severities across the U.S. with 78\% accuracy, preprocessing data, performing EDA, hypothesis testing, feature engineering, and fairness evaluations across states.}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------LEADERSHIP---------------
+\section{\textcolor{\accentColor}{Leadership}}
+\vspace{-7pt}
+\resumeSubHeadingListStart
+\resumeProjectHeading{\textbf{\href{https://www.ds3atucsd.com/}{\underline{Data Science Student Society (DS3)}}} $|$ \emph{Software Lead}}{October 2024 -- Present}
+\resumeItemListStart
+\resumeItem{Leading a team of 10 developers to build a centralized membership portal for 1,000+ users; debugging and shipping hotfixes across a large codebase, isolating root causes in authentication flows, database queries, and CI/CD pipelines.}
+\resumeItem{Established automated CI/CD pipelines and Agile workflows via GitHub Actions, managing documentation and enforcing strict weekly PR reviews.}
+\resumeItemListEnd
+\vspace{-15pt}
+\resumeProjectHeading{\textbf{AWS Cloud Club at UCSD} $|$ \emph{Founder \& VP Technical}}{November 2025 -- Present}
+\resumeItemListStart
+\resumeItem{Established UCSD's official AWS affiliate organization; designing and leading technical workshops on MLOps (Git, AWS, Docker, Terraform) to equip 200+ students with practical skills to build and deploy scalable ML solutions.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+\vspace{-15pt}
+%-----------PROGRAMMING SKILLS-----------
+\section{\textcolor{\accentColor}{Technical Skills}}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+        \textbf{Languages: }{Python, C++, C, C\#,  Java, SQL, Bash, TypeScript} \\
+        \textbf{ML \& NLP: }{PyTorch, TensorFlow, Scikit-Learn, Hugging Face Transformers, MediaPipe, OpenCV, Azure AI Foundry} \\
+        \textbf{Systems \& Tools: }{Linux, GCC, Docker, Terraform, Git, CI/CD, AWS, Azure, Postgres, Jira} \\
+        \textbf{Certifications: }{AWS Cloud Practitioner, AWS AI Practitioner, AWS Solutions Architect Associate} \\
+        \textbf{Hobbies: }{3D Printing, Robotics, Guitar, Rubik's Cube (PB: 26.50s), 8-Ball Pool (Tracked every shot for 700+ games)}
+        }}
+\end{itemize}
+\vspace{-10pt}
+
+\end{document}
