@@ -1,0 +1,221 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage[dvipsnames]{xcolor}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{\accentColor}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-5pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\newcommand\accentColor{MidnightBlue}
+
+%-------------------------------------------
+%%%%%%  QUALCOMM AUTOMOTIVE ENGINEERING TRACK  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+  {\Huge \scshape \textcolor{\accentColor}{Issac Roy}} \\ \vspace{1pt}
+  U.S. Citizen $|$ Automotive Engineering Intern $|$ San Diego \\ \vspace{1pt}
+  \small \raisebox{-0.1\height}{\href{https://www.issacroy.com}{\raisebox{-0.2\height}\faGlobe\ \underline{issacroy.com}} ~
+    \href{https://github.com/TheBoyRoy05}{\raisebox{-0.2\height}\faGithub\ \underline{github.com/TheBoyRoy05}} ~
+    \href{https://linkedin.com/in/issacroy/}{\raisebox{-0.2\height}\faLinkedin\ \underline{linkedin.com/in/issacroy}} ~ \href{mailto:issacroy05@gmail.com}{\raisebox{-0.2\height}\faEnvelope\ \underline{issacroy05@gmail.com}} ~ \raisebox{-0.1\height}{\reflectbox{\faPhone}}\ 858-428-4311}
+  \vspace{-8pt}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{\textcolor{\accentColor}{Education}}
+\resumeSubHeadingListStart
+\resumeSubheading{University of California San Diego (3.98 GPA)}{March 2027}{\textbf{B.S. Data Science} $|$ Math Minor $|$ Cognitive Science Minor}{San Diego, CA}
+\vspace{-5pt}
+\small\item\textbf{Courses:} Computer Organization, Systems Programming, Data Structures, Computer Vision, Linear Algebra, Database Management
+\resumeSubHeadingListEnd
+\vspace{-20pt}
+
+%-----------PROJECTS (Embedded, Perception \& Systems)-----------
+\section{\textcolor{\accentColor}{Projects}}
+\vspace{-7pt}
+\resumeSubHeadingListStart
+\resumeProjectHeading
+    {\textbf{Project Daedalus} $|$ \emph{C++, Arduino, I2C, LoRa, KiCad, Onshape}}{October 2025 -- Present}
+    \resumeItemListStart
+        \resumeItem{Developed real-time flight software in C++ on Arduino Nano Every (resource-constrained), integrating MPU6050 and BMP388 over I2C and LoRa radio for 915Hz telemetry sampling and black-box logging with minimal latency.}
+        \resumeItem{Processing real-time IMU and barometer data streams for state estimation and flight logging.}
+        \resumeItem{Designed a custom PCB in KiCad and 3D-printed avionics bay in Onshape to sustain high-G loads and protect electronics from the ejection charge, targeting a 5,500ft (1 mile+) apogee.}
+    \resumeItemListEnd
+\vspace{-15pt}
+
+\resumeProjectHeading
+{\textbf{\href{https://github.com/TheBoyRoy05/Turbo-3D/}{\underline{Turbo 3D Engine}}} $|$ \emph{C++, SDL2, GDB, Multi-threading}}{March 2025}
+\resumeItemListStart
+\resumeItem{Implemented multi-threaded rendering to parallelize vertex processing and rasterization across CPU cores; optimized performance through manual memory management and a custom linear algebra library.}
+\resumeItem{Built a 3D graphics engine from scratch in C++, implementing a custom rasterization pipeline, matrix transformations for camera space, texture mapping, and lighting without external graphics libraries.}
+\resumeItem{Debugged rendering artifacts and memory corruption using GDB; isolated race conditions in the multi-threaded pipeline and fixed synchronization issues.}
+\resumeItem{Wrote an OBJ file parser to load 3D models from file, implementing a custom material system, texture mapping, and multiple lighting models for realistic rendering.}
+\resumeItemListEnd
+\vspace{-15pt}
+
+\resumeProjectHeading
+    {\textbf{OnlyDance} $|$ \emph{OpenCV, MediaPipe, Python, FastAPI}}{April 2025}
+    \resumeItemListStart
+        \resumeItem{Won 1st place at DataHacks 2025 against 50+ teams by developing an interactive app that teaches dance routines using 3D avatars and real-time feedback.}
+        \resumeItem{Engineered a real-time similarity scoring algorithm using MediaPipe to extract 3D pose landmarks, implementing sliding window techniques and frame interpolation to quantify dance accuracy.}
+    \resumeItemListEnd
+\vspace{-15pt}
+
+\resumeProjectHeading
+    {\textbf{Self Playing Guitar} $|$ \emph{C++, Arduino, CAD, Laser Cutting, 3D Printing}}{December 2023}
+    \resumeItemListStart
+        \resumeItem{Won 1st place at IEEE's Fall Competition (30+ teams); implemented a C++ note transcriber algorithm on Arduino to parse musical inputs and map them to precise servo control signals; designed custom laser-cut and 3D printed assembly.}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+\vspace{-15pt}
+
+%-----------EXPERIENCE-----------
+\section{\textcolor{\accentColor}{Experience}}
+\vspace{-7pt}
+\resumeSubHeadingListStart
+\resumeProjectHeading{\textbf{MC Computer Vision Lab at UCSD} $|$ \emph{Research Assistant}}{January 2026 -- Present}
+\resumeItemListStart
+    \resumeItem{Engineered an OpenRooms++ automation pipeline on NRP Kubernetes, integrating Trellis2 and Flux 2.0 to transform coarse meshes into high-fidelity 3D assets.}
+    \resumeItem{Implemented inverse rendering algorithms using SAM3D and Laval Indoor HDR to decompose generated imagery into PBR texture maps (Albedo, Roughness) for photorealistic reconstruction.}
+\resumeItemListEnd
+\vspace{-15pt}
+
+\resumeProjectHeading{\textbf{Neurocrine Biosciences} $|$ \emph{Cloud Engineer Intern}}{June 2025 -- September 2025}
+\resumeItemListStart
+\resumeItem{Saved \$200k in annual OpEx by architecting, building, and deploying an end-to-end serverless containerized data ingestion pipeline on AWS ECS and Lambda, eliminating dependency on third-party vendors.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-15pt}
+
+%-----------LEADERSHIP---------------
+\section{\textcolor{\accentColor}{Leadership}}
+\vspace{-7pt}
+\resumeSubHeadingListStart
+\resumeProjectHeading{\textbf{\href{https://www.ds3atucsd.com/}{\underline{Data Science Student Society (DS3)}}} $|$ \emph{Software Lead}}{October 2024 -- Present}
+\resumeItemListStart
+\resumeItem{Leading a team of 10 developers to build a centralized membership portal for 1,000+ users; debugging and shipping hotfixes across a large codebase, isolating root causes in authentication flows, database queries, and CI/CD pipelines.}
+\resumeItem{Established automated CI/CD pipelines and Agile workflows via GitHub Actions, managing documentation and enforcing strict weekly PR reviews.}
+\resumeItemListEnd
+\vspace{-15pt}
+\resumeProjectHeading{\textbf{AWS Cloud Club at UCSD} $|$ \emph{Founder \& VP Technical}}{November 2025 -- Present}
+\resumeItemListStart
+\resumeItem{Established UCSD's official AWS affiliate organization; designing and leading technical workshops on MLOps (Git, AWS, Docker, Terraform) to equip 200+ students with practical skills to build and deploy scalable solutions.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+\vspace{-15pt}
+%-----------PROGRAMMING SKILLS-----------
+\section{\textcolor{\accentColor}{Technical Skills}}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+        \textbf{Languages: }{C, C++, Python, Assembly, Java, SQL, Bash} \\
+        \textbf{Embedded \& Systems: }{Arduino, OpenCV, MediaPipe, Raspberry Pi, I2C/SPI, Linux, Make, GCC, GDB, SDL2} \\
+        \textbf{Tools: }{MATLAB, Simulink, KiCad, Git, Docker, Terraform, CI/CD, AWS, Jira, Confluence} \\
+        \textbf{Certifications: }{AWS Cloud Practitioner, AWS AI Practitioner, AWS Solutions Architect Associate} \\
+        \textbf{Hobbies: }{3D Printing, Robotics, Guitar, Rubik's Cube (PB: 26.50s), 8-Ball Pool (Tracked every shot for 700+ games)}
+        }}
+\end{itemize}
+\vspace{-10pt}
+
+\end{document}

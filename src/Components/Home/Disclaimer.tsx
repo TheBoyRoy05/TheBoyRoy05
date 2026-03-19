@@ -6,13 +6,13 @@ const Disclaimer = () => {
 
   return (
     <div className="dropdown dropdown-hover dropdown-top absolute left-[2vw] bottom-[2vw]">
-      <FaInfoCircle role="button" tabIndex={0} className="mt-2" style={{ opacity }} />
+      <FaInfoCircle role="button" tabIndex={0} className="mt-2 text-2xl" style={{ opacity }} />
       <div
         tabIndex={0}
         className="dropdown-content card card-sm z-1 w-64 bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 shadow-xl"
       >
         <span className="card-body p-6">
-          This is NOT a template or AI-generated.{" "}
+          This is NOT a template or AI-generated. Try clicking and holding to attract the boids!{" "}
           <a
             href="https://medium.com/@issacroy05/boids-simulating-flocks-e11c121a35cc"
             target="_blank"
