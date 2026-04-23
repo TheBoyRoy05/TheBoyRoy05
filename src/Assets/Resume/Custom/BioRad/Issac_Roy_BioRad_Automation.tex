@@ -1,0 +1,168 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage[dvipsnames]{xcolor}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{\accentColor}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-5pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\newcommand\accentColor{MidnightBlue}
+
+% Bio-Rad: AI Automation Intern (Power Platform, Copilot Studio, AI Builder) and engineering automation
+
+\begin{document}
+
+\begin{center}
+  {\Huge \scshape \textcolor{\accentColor}{Issac Roy}} \\ \vspace{1pt}
+  U.S. Citizen $|$ AI \& Automation Intern $|$ San Diego, CA \\ \vspace{1pt}
+  \small \raisebox{-0.1\height}{\href{https://www.issacroy.com}{\raisebox{-0.2\height}\faGlobe\ \underline{issacroy.com}} ~
+    \href{https://github.com/TheBoyRoy05}{\raisebox{-0.2\height}\faGithub\ \underline{github.com/TheBoyRoy05}} ~
+    \href{https://linkedin.com/in/issacroy/}{\raisebox{-0.2\height}\faLinkedin\ \underline{linkedin.com/in/issacroy}} ~ \href{mailto:issacroy05@gmail.com}{\raisebox{-0.2\height}\faEnvelope\ \underline{issacroy05@gmail.com}} ~ \raisebox{-0.1\height}{\reflectbox{\faPhone}}\ 858-428-4311}
+  \vspace{-8pt}
+\end{center}
+
+\section{\textcolor{\accentColor}{Education}}
+\resumeSubHeadingListStart
+\resumeSubheading{University of California San Diego (3.98 GPA)}{March 2027}{\textbf{B.S. Data Science} $|$ Math Minor $|$ Cognitive Science Minor}{San Diego, CA}
+\vspace{-5pt}
+\small\item\textbf{Courses:} Data Structures, Systems Programming, Database Management, Computer Organization, Web Development
+\resumeSubHeadingListEnd
+\vspace{-20pt}
+
+\section{\textcolor{\accentColor}{Experience}}
+\vspace{-7pt}
+\resumeSubHeadingListStart
+\resumeProjectHeading{\textbf{MC Computer Vision Lab at UCSD} $|$ \emph{AI Research Assistant}}{January 2026 -- Present}
+\resumeItemListStart
+\resumeItem{Engineered an OpenRooms++ automation pipeline on NRP Kubernetes, integrating Trellis2 and Flux 2.0 to transform coarse meshes into high-fidelity 3D assets.}
+\resumeItem{Implemented inverse rendering using SAM3D and Laval Indoor HDR to recover PBR texture maps (albedo, roughness) from synthetic imagery for batch evaluation runs.}
+\resumeItem{Pinned dependencies and data staging steps in container images so scheduled jobs stay reproducible when cluster images or drivers change.}
+\resumeItemListEnd
+\vspace{-15pt}
+
+\resumeProjectHeading{\textbf{Neurocrine Biosciences} $|$ \emph{Cloud Engineer Intern}}{June 2025 -- September 2025}
+\resumeItemListStart
+\resumeItem{Saved \$200k in annual OpEx by architecting and deploying an end-to-end serverless containerized data ingestion pipeline on AWS ECS and Lambda, eliminating dependency on third-party vendors.}
+\resumeItem{Saved 50+ hours per month by developing an AI-driven data pipeline with AWS Bedrock, integrating LLM endpoints with AWS Redshift to convert raw patient data into study-specific narratives for study teams.}
+\resumeItem{Implemented DevOps workflows using Terraform (IaC), AWS Lambda, and multi-environment CI/CD pipelines; collaborated through Jira and Confluence with documentation for engineering and clinical stakeholders.}
+\resumeItemListEnd
+\vspace{-15pt}
+
+\resumeProjectHeading{\textbf{San Diego County Taxpayers Association} $|$ \emph{Software Intern}}{October 2024 -- January 2025}
+\resumeItemListStart
+\resumeItem{Developed a Python data ingestion pipeline with Playwright for dynamic pages, including rate limiting and handling of inconsistent markup.}
+\resumeItem{Built a Plotly Dash (React-based) dashboard with client-side caching and tuned callbacks so large tables and charts stayed responsive for policy analysis.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+\vspace{-15pt}
+
+\section{\textcolor{\accentColor}{Projects}}
+\vspace{-7pt}
+\resumeSubHeadingListStart
+\resumeProjectHeading
+{\textbf{\href{https://neuralnector.com}{\underline{Neural Nector}}} $|$ \emph{Python, FastAPI, React, TypeScript, Postgres}}{December 2025}
+\resumeItemListStart
+\resumeItem{Shipped a full-stack web application with a React and TypeScript client, FastAPI services, and Postgres. Supports interactive sessions, leaderboards, and authenticated state.}
+\resumeItem{Trained a PyTorch generative model and separated training, inference, and API layers so the client could call stable HTTP endpoints.}
+\resumeItem{Serves 100+ unique users during traffic spikes; tuned FastAPI handlers and Postgres access patterns to keep round-trip latency predictable for interactive play.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+\vspace{-15pt}
+
+\section{\textcolor{\accentColor}{Leadership}}
+\vspace{-7pt}
+\resumeSubHeadingListStart
+\resumeProjectHeading{\textbf{\href{https://www.ds3atucsd.com/}{\underline{Data Science Student Society (DS3)}}} $|$ \emph{Software Lead}}{October 2024 -- Present}
+\resumeItemListStart
+\resumeItem{Lead a 10-person software team on sprint planning, code review, and releases for the membership portal (1,000+ users).}
+\resumeItem{Build production features with React and TypeScript, including Supabase Auth, row-level security in Postgres, and API integration from the client.}
+\resumeItem{Maintain GitHub Actions workflows for deploys and pull-request checks.}
+\resumeItem{Ships multiple pull requests per week across the portal; traces regressions through auth flows, SQL, and failing workflow steps before release.}
+\resumeItemListEnd
+\vspace{-15pt}
+\resumeProjectHeading{\textbf{AWS Cloud Club at UCSD} $|$ \emph{Founder \& VP Technical}}{November 2025 -- Present}
+\resumeItemListStart
+\resumeItem{Established UCSD's official AWS-affiliated student organization; lead workshops on core services (S3, Lambda, SageMaker), Docker, and Terraform for 200+ members.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+\vspace{-15pt}
+
+\section{\textcolor{\accentColor}{Technical Skills}}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+        \textbf{Languages: }{Python, TypeScript, JavaScript, SQL, Bash, Java} \\
+        \textbf{Automation \& delivery: }{CI/CD, GitHub Actions, Git, Jira, Confluence, Terraform, Docker, Azure DevOps} \\
+        \textbf{Cloud: }{AWS (Lambda, ECS, Bedrock, Redshift), Azure Functions, serverless triggers} \\
+        \textbf{Microsoft / low-code: }{Power Platform, Copilot Studio, AI Builder, Dataverse} \\
+        \textbf{Web \& ML: }{React, FastAPI, REST, Postgres, PyTorch, LLM APIs} \\
+        \textbf{Certifications: }{AWS Cloud Practitioner, AWS AI Practitioner, AWS Solutions Architect Associate}
+        }}
+\end{itemize}
+\vspace{-10pt}
+
+\end{document}
