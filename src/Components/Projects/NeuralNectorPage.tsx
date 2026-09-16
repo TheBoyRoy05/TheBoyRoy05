@@ -79,7 +79,7 @@ const NeuralNectorPage = () => {
                 generates realistic flower images with a <Emphasize text="FID score of 50" />,
                 demonstrating moderate-to-high quality synthetic image generation. {" "}
                 <a
-                  href="https://neuralnector.com"
+                  href="https://neuralnector.issacroy.com"
                   target="_blank"
                   className="text-blue-400 underline"
                 >
