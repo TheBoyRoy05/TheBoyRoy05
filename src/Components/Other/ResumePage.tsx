@@ -12,8 +12,8 @@ const ResumePage = () => {
   const [resumeType, setResumeType] = useState<string>("SWE");
   const images = {
     SWE: sweResumeImage,
-    DS: dsResumeImage,
-    WEB: webResumeImage,
+    // DS: dsResumeImage,
+    // WEB: webResumeImage,
   };
 
   const download = () => {
