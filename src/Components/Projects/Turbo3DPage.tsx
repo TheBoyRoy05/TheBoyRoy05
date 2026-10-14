@@ -36,7 +36,7 @@ const Turbo3DPage = () => {
     future,
   };
 
-  const { loading } = useLoading(1000);
+  const { loading } = useLoading(2000);
 
   return (
     <>

@@ -14,7 +14,7 @@ import Disclaimer from "./Disclaimer";
 
 const HomePage = () => {
   const mainPage = useRef<HTMLDivElement>(null!);
-  const { loading } = useLoading(1000);
+  const { loading } = useLoading(2000);
 
   const handleClick = () => {
     if (mainPage) mainPage.current.scrollIntoView({ behavior: "smooth" });
