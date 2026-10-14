@@ -79,14 +79,14 @@ latexmk -C
 
 # Commit changes: if update_all is true, commit all resumes, otherwise list committed resumes
 if [ "$update_all" = true ]; then
-    git acp "Chore: Updated all resumes"
+    git acp -n -m "Chore: Updated all resumes"
 else
     # Join resume types with commas for the commit message
     resume_list=$(IFS=', '; echo "${resume_types[*]}")
     if [ ${#resume_types[@]} -eq 1 ]; then
-        git acp "Chore: Updated ${resume_list} resume"
+        git acp -n -m "Chore: Updated ${resume_list} resume"
     else
-        git acp "Chore: Updated ${resume_list} resumes"
+        git acp -n -m "Chore: Updated ${resume_list} resumes"
     fi
 fi
 
