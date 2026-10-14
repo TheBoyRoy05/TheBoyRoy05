@@ -9,7 +9,8 @@ import { useEffect, useState } from "react";
 
 const ResumePage = () => {
   const [lastUpdated, setLastUpdated] = useState<string>("");
-  const [resumeType, setResumeType] = useState<string>("SWE");
+  // const [resumeType, setResumeType] = useState<string>("SWE");
+  const resumeType = "SWE";
   const images = {
     SWE: sweResumeImage,
     // DS: dsResumeImage,
@@ -48,7 +49,7 @@ const ResumePage = () => {
         <span className="text-gradient font-medium">{" make "}</span>
         something amazing
       </h2>
-      <div className="flex flex-col md:flex-row items-center gap-y-4 gap-10">
+      {/* <div className="flex flex-col md:flex-row items-center gap-y-4 gap-10">
         <h3 className="text-white ~text-lg/2xl font-bold">Select Resume Type:</h3>
         <select
           className="select select-bordered text-white bg-transparent"
@@ -56,10 +57,10 @@ const ResumePage = () => {
           name="resumeType"
         >
           <option value="SWE" className="bg-black">Software Engineering</option>
-          {/* <option value="DS" className="bg-black">Data Science</option>
-          <option value="WEB" className="bg-black">Web Development</option> */}
+          <option value="DS" className="bg-black">Data Science</option>
+          <option value="WEB" className="bg-black">Web Development</option>
         </select>
-      </div>
+      </div> */}
       <Frame midClass={"w-[clamp(325px,50vw,1000px)]"}>
         <div className="glare w-1/3" />
         <div

@@ -12,7 +12,7 @@ update_resume() {
     cp "${resume_name}.pdf" "../../../public/${resume_name}.pdf"
     
     # Convert PDF to JPG
-    magick -density 300 "${resume_name}.pdf" -quality 100 -flatten "../Images/Other/${resume_name}.jpg"
+    magick -density 300 "${resume_name}.pdf" -flatten -resize 1600x -quality 85 "../Images/Other/${resume_name}.jpg"
     
     # Update last_updated.txt with timestamp for this resume
     local current_date=$(date +'%B %d, %Y')
