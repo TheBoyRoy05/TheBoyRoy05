@@ -19,6 +19,8 @@
 \setlength{\columnsep}{-1pt}
 \input{glyphtounicode}
 
+\usepackage{amsmath}
+
 
 %----------FONT OPTIONS----------
 % sans-serif
@@ -107,8 +109,8 @@
 
 \newcommand\accentColor{MidnightBlue}
 
-%-------------------------------------------
-%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%-----------------------------------------
+%%%%%%%%%%  RESUME STARTS HERE  %%%%%%%%%%
 
 \begin{document}
 
@@ -126,34 +128,32 @@
 \section{\textcolor{\accentColor}{Education}}
 \resumeSubHeadingListStart
 \resumeSubheading{University of California San Diego (3.98 GPA)}{March 2027}{\textbf{B.S. Data Science} $|$ Math Minor $|$ Cognitive Science Minor}{San Diego, CA}
-\vspace{-5pt}
-\small\item\textbf{Courses:} Data Structures, Computer Vision, Systems Programming, Computer Organization, Database Management
 \resumeSubHeadingListEnd
-\vspace{-20pt}
+\vspace{-15pt}
 
 %-----------EXPERIENCE-----------
 \section{\textcolor{\accentColor}{Experience}}
 \vspace{-7pt}
 \resumeSubHeadingListStart
-\resumeProjectHeading{\textbf{MC Computer Vision Lab at UCSD} $|$ \emph{Research Assistant}}{January 2026 -- Present}
+\resumeProjectHeading{\textbf{Amazon Web Services} $|$ \emph{Software Development Engineer Intern} $|$ \emph{EBS Snapshots}}{September 2026 -- Present}
 \resumeItemListStart
-    \resumeItem{Engineered an OpenRooms++ automation pipeline on NRP Kubernetes, integrating Trellis2 and Flux 2.0 to transform coarse meshes into high-fidelity 3D assets.}
-    \resumeItem{Implemented inverse rendering algorithms using SAM3D and Laval Indoor HDR to decompose generated imagery into PBR texture maps (Albedo, Roughness) for photorealistic reconstruction.}
+    \resumeItem{Built and deployed an automated pipeline on AWS (CDK, Fargate, EventBridge, DynamoDB, S3) that keeps on-call agents' knowledge bases in sync with their sources, such as code, team docs and PDF/DOCX files.}
+    \resumeItem{Designed an extensible connector framework with a shared test suite, developed a change-significance classifier that blocks cosmetic changes, and gated every knowledge update behind regression tests.}
 \resumeItemListEnd
 \vspace{-15pt}
 
-\resumeProjectHeading{\textbf{Neurocrine Biosciences} $|$ \emph{Cloud Engineer Intern}}{June 2025 -- September 2025}
+\resumeProjectHeading{\textbf{Apple} $|$ \emph{Software Engineer Intern} $|$ \emph{WebKit}}{June 2026 -- September 2026}
 \resumeItemListStart
-\resumeItem{Saved \$200k in annual OpEx by architecting, building, and deploying an end-to-end serverless containerized data ingestion pipeline on AWS ECS and Lambda, eliminating dependency on third-party vendors.}
-\resumeItem{Saved 50+ hours per month by developing an AI-driven data pipeline with AWS Bedrock, integrating LLM endpoints with AWS Redshift to convert raw patient data into study-specific narratives, streamlining reporting for study teams.}
-\resumeItem{Implemented DevOps workflows using Terraform (IaC), AWS Lambda, and multi-environment CI/CD pipelines, collaborating with Jira and Confluence to support Clinical Solution's mission to enhance monitoring of clinical trials.}
+    \resumeItem{Implemented \texttt{flex-wrap:balance}, a new CSS feature, in \href{https://github.com/WebKit/WebKit}{\underline{\color{blue}{WebKit}}} using dynamic programming to minimize line-length imbalance, and built an \href{https://flexbalance.issacroy.com/}{\underline{\color{blue}{interactive visualizer}}} to compare layouts.}
+    \resumeItem{Developed tooling that uses WebKit's test history to separate flaky failures from real regressions, clearing false positives from pre-commit testing and unblocking 50+ PRs per week.}
 \resumeItemListEnd
-
 \vspace{-15pt}
-\resumeProjectHeading{\textbf{San Diego County Taxpayers Association} $|$ \emph{Software Intern}}{October 2024 -- January 2025}
+
+\resumeProjectHeading{\textbf{Neurocrine Biosciences} $|$ \emph{Data Engineer Intern} $|$ \emph{Clinical Solutions}}{June 2025 -- September 2025}
 \resumeItemListStart
-\resumeItem{Developed a robust data ingestion pipeline using Playwright (Python) to harvest data from dynamic web pages, engineering solutions for rate-limiting and edge cases.}
-\resumeItem{Developed a high-performance frontend dashboard using Plotly Dash (React-based), implementing client-side caching and callback optimization to render large-scale datasets with sub-second latency to inform policy recommendations.}
+\resumeItem{Saved \$100k annually by architecting a serverless containerized data ingestion pipeline on AWS (ECS, Lambda, S3, Redshift), eliminating dependency on third-party vendors.}
+\resumeItem{Saved 50+ hours / month for study teams by developing a data pipeline with LLM endpoints from AWS Bedrock to convert raw patient data into study narratives.}
+\resumeItem{Implemented DevOps workflows using Terraform (IaC), Github Actions, and multi-environment CI/CD pipelines.}
 \resumeItemListEnd
 \resumeSubHeadingListEnd
 \vspace{-15pt}
@@ -165,18 +165,33 @@
 \resumeProjectHeading
 {\textbf{\href{https://github.com/TheBoyRoy05/Turbo-3D/}{\underline{Turbo 3D Engine}}} $|$ \emph{C++, SDL2, Linear Algebra}}{March 2025}
 \resumeItemListStart
-\resumeItem{Built a 3D graphics engine from scratch in C++, implementing a custom rasterization pipeline, matrix transformations for camera space, texture mapping, and lighting without external graphics libraries.}
-\resumeItem{Optimized rendering performance through manual memory management and efficient vertex processing algorithms and a custom linear algebra library.}
-\resumeItem{Wrote an OBJ file parser to load and render 3D models from file, implementing a custom material system, texture mapping, and multiple lighting models for realistic rendering.}
+\resumeItem{Built a 3D graphics engine from scratch, implementing a custom rasterization pipeline, matrix transformations for camera space, custom material system, texture mapping, and multiple lighting models without external graphics libraries.}
+\resumeItem{Wrote an OBJ file parser to load and render 3D models from file and optimized performance through efficient vertex processing algorithms and a custom linear algebra library.}
 \resumeItemListEnd
 \vspace{-15pt}
 
 \resumeProjectHeading
-    {\textbf{Project Daedalus} $|$ \emph{C++, KiCad, Onshape, Arduino}}{October 2025 -- Present}
+{\textbf{GhostWriter} $|$ \emph{TypeScript, Bun, React, SQLite, LaTeX}}{October 2026 -- Present}
+\resumeItemListStart
+\resumeItem{Building a resume generator that scrapes a LinkedIn profile through a browser extension into SQLite with change history, then compiles a LaTeX resume tailored to each job posting.}
+\resumeItemListEnd
+\vspace{-15pt}
+
+\resumeProjectHeading
+{\textbf{\href{https://neuralnector.com}{\underline{Neural Nector}}} $|$ \emph{React, TypeScript, PyTorch, Python, FastAPI, Postgres}}{December 2025}
+\resumeItemListStart
+\resumeItem{Developed a full-stack web app game that had 100+ players, featuring a React frontend and a FastAPI backend.}
+\resumeItem{Optimized a custom GAN model, managing async tasks and database transactions to track game states \& leaderboards.}
+\resumeItemListEnd
+\vspace{-15pt}
+
+\resumeProjectHeading
+    {\textbf{Project Daedalus (G-Class Rocket)} $|$ \emph{C++, KiCad, Onshape, Arduino}}{October 2025 -- Present}
     \resumeItemListStart
-        \resumeItem{Developed a custom C++ flight computer on Arduino Nano Every, integrating MPU6050, BMP388, and LoRa radio for 915Hz telemetry and black-box logging.}
-        \resumeItem{Designed a custom PCB in KiCad and a 3D-printed avionics bay in Onshape to sustain high-G loads and protect electronics from the ejection charge, targeting a 5,500ft (1 mile+) apogee.}
+        \resumeItem{Developed a custom PCB, integrating an MPU6050, BMP388, and LoRa radio for telemetry and black-box logging.}
+        \resumeItem{Designed \& 3D-printed avionics bay to sustain high-G loads and protect electronics, targeting a 5,500ft (1 mi+) apogee.}
     \resumeItemListEnd
+  
 \resumeSubHeadingListEnd
 \vspace{-15pt}
 
@@ -185,16 +200,16 @@
 \vspace{-7pt}
 \resumeSubHeadingListStart
 \resumeProjectHeading
-{\textbf{AWS Cloud Club at UCSD} $|$ \emph{Founder \& VP Technical}}{November 2025 -- Present}
+{\textbf{AWS Student Builder Group at UCSD} $|$ \emph{Founder \& Technical Lead}}{November 2025 -- Present}
 \resumeItemListStart
-\resumeItem{Established UCSD's official AWS affiliate organization, fostering a technical community focused on upskilling students in cloud computing, serverless architecture, and industry best practices.}
-\resumeItem{Curating and leading technical workshops on core AWS services (S3, Lambda, SageMaker), equipping 200+ members with the practical skills to build and deploy scalable cloud infrastructure.}
+\resumeItem{Founded AWS SBG to teach students cloud computing, serverless architecture, and industry best practices.}
+\resumeItem{Leading technical workshops on core AWS services, equipping 200+ members with practical cloud skills.}
 \resumeItemListEnd
 \vspace{-15pt}
-\resumeProjectHeading{\textbf{\href{https://www.ds3atucsd.com/}{\underline{Data Science Student Society (DS3)}}} $|$ \emph{Director of Software}}{October 2024 -- Present}
+\resumeProjectHeading{\textbf{\href{https://www.ds3atucsd.com/}{\underline{Data Science Student Society (DS3)}}} $|$ \emph{Software Lead}}{October 2024 -- June 2026}
 \resumeItemListStart
-\resumeItem{Established automated CI/CD pipelines and Agile workflows via GitHub Actions, leading a 10-person team to build a centralized membership portal for 1,000+ users focused on UX.}
-\resumeItem{Engineered a scalable Supabase/Postgres backend, handling secure authentication flows and relational database schemas for member tracking, event attendance, and analytics.}
+\resumeItem{Led a 10-person team to build a membership portal for 1,000+ students. Established automated CI/CD pipelines via GitHub Actions and introduced Agile methodologies to improve productivity and accountability.}
+\resumeItem{Developed the website frontend and engineered a Supabase backend, incorporating auth and schemas for member tracking, event attendance, and analytics.}
 \resumeItemListEnd
 
 \resumeSubHeadingListEnd
@@ -203,12 +218,11 @@
 \section{\textcolor{\accentColor}{Technical Skills}}
 \begin{itemize}[leftmargin=0.15in, label={}]
   \small{\item{
-        \textbf{Languages: }{C++, C, Python, Java, SQL, React, Bash, Assembly, JavaScript, HTML/CSS} \\
-        \textbf{Embedded \& Systems: }{Raspberry Pi, Arduino, I2C/SPI, Linux, SDL2, Make, GCC} \\
-        \textbf{Tools: }{AWS, Terraform, Docker, Git, CI/CD, Postgres, MongoDB, Jira, Confluence} \\
+        \textbf{Languages: }{C++, C, Python, Java, SQL, TypeScript, JavaScript, Bash, HTML/CSS} \\
+        \textbf{Tools: }{AWS, React, Terraform, Docker, Git, CI/CD, Postgres, MongoDB, Raspberry Pi, Linux} \\
         \textbf{Certifications: }{AWS Cloud Practitioner, AWS AI Practitioner, AWS Solutions Architect Associate} \\
-        \textbf{Hobbies: }{3D Printing, Robotics, Guitar, Rubik's Cube (PB: 26.50s), Pool (Tracked every shot for 700+ games)}
-        }}
+        \textbf{Hobbies: }{3D Printing, Robotics, Guitar, Rubik's Cube (PB: 26.50s), Pool}
+  }}
 \end{itemize}
 \vspace{-10pt}
 
