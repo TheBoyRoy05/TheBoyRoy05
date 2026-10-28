@@ -1,0 +1,257 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage[dvipsnames]{xcolor}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+\usepackage{amsmath}
+\usepackage{needspace}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\small\thepage}
+\setlength{\footskip}{24pt}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{\sectionTopGap}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{\accentColor}\titlerule \vspace{\sectionRuleGap}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1\vspace{\bulletGap}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{\headingGap}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \needspace{4\baselineskip}\item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{\headingGap}
+}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[itemsep=0pt, parsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{\entryGap}}
+\newcommand{\resumeAward}[2]{\resumeProjectHeading{#1}{#2}\vspace{\awardGap}}
+\newcommand{\cvlink}[2]{\href{#1}{\underline{#2}\,\raisebox{0.1\height}{\tiny\faExternalLink*}}}
+\newcommand{\resumeText}[1]{\vspace{\textSectionGap}\small{#1}\vspace{\textSectionEnd}}
+
+\newcommand\accentColor{MidnightBlue}
+
+% Spacing knobs: negative values pull content closer
+\newlength{\sectionTopGap}\setlength{\sectionTopGap}{2pt}       % above each section title
+\newlength{\sectionRuleGap}\setlength{\sectionRuleGap}{-6pt}    % section underline to first entry
+\newlength{\textSectionGap}\setlength{\textSectionGap}{3pt}     % extra space above plain-text sections (\resumeText)
+\newlength{\textSectionEnd}\setlength{\textSectionEnd}{-4pt}    % after \resumeText
+\newlength{\headingGap}\setlength{\headingGap}{-4pt}            % entry heading to its first bullet
+\newlength{\bulletGap}\setlength{\bulletGap}{0pt}               % after each bullet
+\newlength{\entryGap}\setlength{\entryGap}{-15pt}               % after each entry's bullets
+\newlength{\awardGap}\setlength{\awardGap}{-20pt}               % after each \resumeAward row
+
+%-----------------------------------------
+%%%%%%%%%%  CV STARTS HERE  %%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+  {\Huge \scshape \textcolor{\accentColor}{Issac Roy}} \\ \vspace{1pt}
+  Curriculum Vitae $|$ San Diego, CA \\ \vspace{1pt}
+  \small \raisebox{-0.1\height}{\href{https://www.issacroy.com}{\raisebox{-0.2\height}\faGlobe\ \underline{issacroy.com}} ~
+    \href{https://github.com/TheBoyRoy05}{\raisebox{-0.2\height}\faGithub\ \underline{github.com/TheBoyRoy05}} ~
+    \href{https://linkedin.com/in/issacroy/}{\raisebox{-0.2\height}\faLinkedin\ \underline{linkedin.com/in/issacroy}} ~ \href{mailto:iroy@ucsd.edu}{\raisebox{-0.2\height}\faEnvelope\ \underline{iroy@ucsd.edu}} ~ \raisebox{-0.1\height}{\reflectbox{\faPhone}}\ 858-428-4311}
+  \vspace{-8pt}
+\end{center}
+
+%-----------RESEARCH INTERESTS-----------
+\section{\textcolor{\accentColor}{Research Interests}}
+\resumeText{Embodied AI, robotics, and ML systems: efficient inference, 3D perception}
+
+%-----------EDUCATION-----------
+\section{\textcolor{\accentColor}{Education}}
+\resumeSubHeadingListStart
+\resumeSubheading{University of California San Diego}{March 2027}{\textbf{B.S. Data Science} $|$ Math Minor $|$ Cognitive Science Minor $|$ GPA: 3.97/4.00}{San Diego, CA}
+\resumeItemListStart
+    \resumeItem{\textbf{ML \& Vision:} Computer Vision, Neural Networks and Deep Learning, Machine Learning, Probabilistic Modeling \& ML}
+    \resumeItem{\textbf{Math:} Honors Linear Algebra, Honors Multivariable Calculus, Honors Vector Calculus, Differential Equations, Probability, Statistics, Optimization for Data Science}
+    \resumeItem{\textbf{Computer Science:} Data Structures and Algorithms, Theoretical Foundations of Data Science II, Systems for Scalable Analytics, Data Science Capstone, IoT and Sensors}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------RESEARCH EXPERIENCE-----------
+\section{\textcolor{\accentColor}{Research Experience}}
+\resumeSubHeadingListStart
+\resumeProjectHeading{\textbf{Z-Lab} $|$ \emph{Undergraduate Researcher (Capstone), 10 hrs/week} $|$ \emph{Prof. Zhijian Liu}}{September 2026 -- Present}
+\resumeItemListStart
+    \resumeItem{Studying efficient inference for large models, including speculative decoding (DFlash) and quantization (AWQ, GPTQ).}
+    \resumeItem{Planned project: accelerating $\pi_{0.5}$, Physical Intelligence's vision-language-action robot policy, on consumer GPUs.}
+\resumeItemListEnd
+
+\resumeProjectHeading{\textbf{MC Computer Vision Lab} $|$ \emph{Undergraduate Researcher} $|$ \emph{Prof. Manmohan Chandraker}}{January 2026 -- May 2026}
+\resumeItemListStart
+    \resumeItem{Designed a generative pipeline to turn coarse meshes into high-fidelity 3D assets with PBR materials, and built its mesh-generation stage on the National Research Platform's Kubernetes GPU cluster.}
+    \resumeItem{Contributed to OpenRooms++, a photorealistic indoor-scene dataset for inverse rendering, surveying recent methods in generative 3D reconstruction (TRELLIS 2) and material estimation.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------INDUSTRY EXPERIENCE-----------
+\section{\textcolor{\accentColor}{Industry Experience}}
+\resumeSubHeadingListStart
+\resumeProjectHeading{\textbf{Amazon Web Services} $|$ \emph{Software Development Engineer Intern} $|$ \emph{EBS Snapshots}}{September 2026 -- Present}
+\resumeItemListStart
+    \resumeItem{Built and deployed an automated pipeline on AWS (CDK, Fargate, EventBridge, DynamoDB, S3) that keeps on-call agents' knowledge bases in sync with their sources, such as code, team docs and PDF/DOCX files.}
+    \resumeItem{Designed an extensible connector framework with a shared test suite, developed a change-significance classifier that blocks cosmetic changes, and gated every knowledge update behind regression tests.}
+\resumeItemListEnd
+
+\resumeProjectHeading{\textbf{Apple} $|$ \emph{Software Engineer Intern} $|$ \emph{WebKit}}{June 2026 -- September 2026}
+\resumeItemListStart
+    \resumeItem{Implemented \texttt{flex-wrap:balance}, a new CSS feature, in \cvlink{https://github.com/WebKit/WebKit}{WebKit}, the C++ engine behind Safari, using dynamic programming to minimize line-length imbalance, and built an \cvlink{https://flexbalance.issacroy.com/}{interactive visualizer} to compare layouts.}
+    \resumeItem{Developed tooling that uses WebKit's test history to separate flaky failures from real regressions, clearing false positives from pre-commit testing and unblocking 50+ PRs per week.}
+\resumeItemListEnd
+
+\resumeProjectHeading{\textbf{Neurocrine Biosciences} $|$ \emph{Data Engineer Intern} $|$ \emph{Clinical Solutions}}{June 2025 -- September 2025}
+\resumeItemListStart
+\resumeItem{Saved \$100k annually by architecting a serverless containerized data ingestion pipeline on AWS (ECS, Lambda, S3, Redshift), eliminating dependency on third-party vendors.}
+\resumeItem{Saved 50+ hours / month for study teams by developing a data pipeline with LLM endpoints from AWS Bedrock to convert raw patient data into study narratives.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------EMBEDDED & VISION PROJECTS-----------
+\section{\textcolor{\accentColor}{Embedded \& Vision Projects}}
+\resumeSubHeadingListStart
+\resumeProjectHeading
+    {\textbf{Project Daedalus (G-Class Rocket)} $|$ \emph{C++, KiCad, Onshape, Arduino}}{October 2025 -- Present}
+    \resumeItemListStart
+        \resumeItem{Wrote real-time flight software in C++ on an Arduino Nano Every, reading an IMU and barometer over I2C/SPI, with LoRa telemetry and black-box logging on a custom PCB.}
+        \resumeItem{Designed \& 3D-printed avionics bay to sustain high-G loads and protect electronics, targeting a 5,500 ft (1 mi+) apogee.}
+    \resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{OnlyDance} $|$ \emph{Python, MediaPipe, OpenCV, FastAPI, React Three Fiber}}{April 2025}
+\resumeItemListStart
+\resumeItem{Won 1st place at Datahacks 2025 by developing an interactive full-stack app that teaches dance routines using 3D avatars and real-time feedback.}
+\resumeItem{Devised a real-time similarity scoring algorithm using MediaPipe to extract 3D pose landmarks, implementing sliding window techniques and frame interpolation to quantify dance accuracy.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{\cvlink{https://github.com/TheBoyRoy05/Turbo-3D/}{Turbo 3D Engine}} $|$ \emph{C++, SDL2, Linear Algebra}}{March 2025}
+\resumeItemListStart
+\resumeItem{Built a 3D graphics engine from scratch, implementing a custom rasterization pipeline, matrix transformations for camera space, custom material system, texture mapping, and multiple lighting models without external graphics libraries.}
+\resumeItem{Implemented multi-threaded rendering to parallelize vertex processing and rasterization across CPU cores, achieving playable frame rates through iterative performance profiling and optimization.}
+\resumeItem{Debugged rendering artifacts and memory corruption using GDB; isolated race conditions in the multi-threaded pipeline and fixed synchronization issues.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{Self-Playing Guitar} $|$ \emph{C++, Arduino, Laser Cutting, 3D Printing}}{October 2023}
+\resumeItemListStart
+\resumeItem{Engineered a self-playing guitar with custom laser-cut and 3D-printed parts, programming a note transcriber algorithm to map musical inputs to precise servo motions.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------SOFTWARE PROJECTS-----------
+\section{\textcolor{\accentColor}{Software Projects}}
+\resumeSubHeadingListStart
+\resumeProjectHeading
+{\textbf{\cvlink{https://github.com/TheBoyRoy05/Obsidian-Unified-Tag-Links}{Unified Tag Links}} $|$ \emph{TypeScript, Obsidian API, Vitest}}{October 2026 -- Present}
+\resumeItemListStart
+\resumeItem{Built and published an open-source plugin, downloaded 200+ times, in Obsidian, a note-taking app with 1.5M+ users.}
+\resumeItem{Designed a concept-note index that resolves nested tags to their deepest matching note, keeping a managed frontmatter property in sync as notes change, tested with Vitest and GitHub Actions CI.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{\cvlink{https://neuralnector.com}{Neural Nector}} $|$ \emph{React, TypeScript, PyTorch, Python, FastAPI, Postgres}}{December 2025}
+\resumeItemListStart
+\resumeItem{Trained a GAN to synthesize realistic flower images (FID 50), and built a full-stack game where 100+ players tell real images from generated ones.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------LEADERSHIP & TEACHING---------------
+\section{\textcolor{\accentColor}{Leadership \& Teaching}}
+\resumeSubHeadingListStart
+\resumeProjectHeading
+{\textbf{AWS Student Builder Group at UCSD} $|$ \emph{Founder \& Technical Lead}}{November 2025 -- Present}
+\resumeItemListStart
+\resumeItem{Founded AWS SBG to teach students cloud computing, serverless architecture, and industry best practices.}
+\resumeItem{Leading technical workshops on core AWS services, equipping 200+ members with practical cloud skills.}
+\resumeItemListEnd
+\resumeProjectHeading{\textbf{\cvlink{https://www.ds3atucsd.com/}{Data Science Student Society (DS3)}} $|$ \emph{Software Lead}}{October 2024 -- June 2026}
+\resumeItemListStart
+\resumeItem{Led a 10-person team to build a membership portal for 1,000+ students. Established automated CI/CD pipelines via GitHub Actions and introduced Agile methodologies to improve productivity and accountability.}
+\resumeItem{Developed the website frontend in React and engineered a Supabase backend, incorporating auth and schemas for member tracking, event attendance, and analytics.}
+\resumeItemListEnd
+
+\resumeProjectHeading{\textbf{theCoderSchool} $|$ \emph{Code Coach}}{June 2024 -- October 2024}
+\resumeItemListStart
+\resumeItem{Led 4 week-long summer coding camps, teaching Python and Lua to K-12 students. Remained undefeated in foosball.}
+\resumeItemListEnd
+
+\resumeProjectHeading{\textbf{Mathnasium} $|$ \emph{Learning Instructor}}{July 2022 -- June 2024}
+\resumeItemListStart
+\resumeItem{Tutored K-12 students in math, teaching for intuition over memorized procedures so concepts carry to new problems.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------AWARDS-----------
+\section{\textcolor{\accentColor}{Awards}}
+\resumeSubHeadingListStart
+\resumeAward{\textbf{1st Place, DataHacks} $|$ \emph{OnlyDance, 50+ teams}}{April 2025}
+\resumeAward{\textbf{3rd Place, DataHacks} $|$ \emph{Dino Classifier, 30+ teams}}{March 2024}
+\resumeAward{\textbf{1st Place, IEEE Fall Competition} $|$ \emph{Self-Playing Guitar, 30+ teams}}{October 2023}
+\resumeAward{\textbf{Provost Honors, UC San Diego} $|$ \emph{9 of 9 Quarters}}{Fall 2023 -- Present}
+\resumeSubHeadingListEnd
+
+%-----------SKILLS-----------
+\section{\textcolor{\accentColor}{Technical Skills}}
+\resumeText{\textbf{Languages: }{C++, C, Python, Java, SQL, TypeScript, JavaScript, Bash, HTML/CSS} \\
+\textbf{Tools: }{AWS, PyTorch, React, Terraform, Docker, Git, CI/CD, Postgres, Linux, Raspberry Pi, Arduino, KiCad, Onshape} \\
+\textbf{Certifications: }{\cvlink{https://www.credly.com/badges/20322967-3e11-4e5c-bc74-0ab3f855c4f0/public_url}{AWS AI Practitioner}, \cvlink{https://www.credly.com/badges/1793b980-30c3-4ba5-9b25-08277daedf15/public_url}{AWS Cloud Practitioner}, AWS Solutions Architect -- Associate (in progress)}}
+
+\end{document}
