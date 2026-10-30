@@ -140,6 +140,13 @@
     \resumeItem{Designed a generative pipeline to turn coarse meshes into high-fidelity 3D assets with PBR materials, and built its mesh-generation stage on the National Research Platform's Kubernetes GPU cluster.}
     \resumeItem{Contributed to OpenRooms++, a photorealistic indoor-scene dataset for inverse rendering, surveying recent methods in generative 3D reconstruction (TRELLIS 2) and material estimation.}
 \resumeItemListEnd
+
+\resumeProjectHeading{\textbf{Independent Research} $|$ \emph{GANs for Image Synthesis} $|$ \cvlink{https://neuralnector.issacroy.com/report.pdf}{Technical Report}}{December 2025}
+\resumeItemListStart
+    \resumeItem{Trained a DCGAN on Oxford Flowers 102 in PyTorch Lightning, stabilizing training with label smoothing, asymmetric learning rates and adaptive discriminator skipping; the production model reached FID 50.3.}
+    \resumeItem{Ran 5 ablations of these stabilizers, scoring each with FID/KID/IS on held-out test images.}
+    \resumeItem{Deployed the generator in \cvlink{https://neuralnector.com}{Neural Nector}, a full-stack web game where 100+ users tell real flowers from generated ones.}
+\resumeItemListEnd
 \resumeSubHeadingListEnd
 
 %-----------INDUSTRY EXPERIENCE-----------
@@ -164,9 +171,16 @@
 \resumeItemListEnd
 \resumeSubHeadingListEnd
 
-%-----------EMBEDDED & VISION PROJECTS-----------
-\section{\textcolor{\accentColor}{Embedded \& Vision Projects}}
+%-----------PROJECTS-----------
+\section{\textcolor{\accentColor}{Projects}}
 \resumeSubHeadingListStart
+\resumeProjectHeading
+{\textbf{\cvlink{https://github.com/TheBoyRoy05/Obsidian-Unified-Tag-Links}{Unified Tag Links}} $|$ \emph{TypeScript, Obsidian API, Vitest}}{October 2026 -- Present}
+\resumeItemListStart
+\resumeItem{Built and published an open-source plugin, downloaded 200+ times, in Obsidian, a note-taking app with 1.5M+ users.}
+\resumeItem{Designed a concept-note index that resolves nested tags to their deepest matching note, keeping a managed frontmatter property in sync as notes change, tested with Vitest and GitHub Actions CI.}
+\resumeItemListEnd
+
 \resumeProjectHeading
     {\textbf{Project Daedalus (G-Class Rocket)} $|$ \emph{C++, KiCad, Onshape, Arduino}}{October 2025 -- Present}
     \resumeItemListStart
@@ -193,23 +207,6 @@
 {\textbf{Self-Playing Guitar} $|$ \emph{C++, Arduino, Laser Cutting, 3D Printing}}{October 2023}
 \resumeItemListStart
 \resumeItem{Engineered a self-playing guitar with custom laser-cut and 3D-printed parts, programming a note transcriber algorithm to map musical inputs to precise servo motions.}
-\resumeItemListEnd
-\resumeSubHeadingListEnd
-
-%-----------SOFTWARE PROJECTS-----------
-\section{\textcolor{\accentColor}{Software Projects}}
-\resumeSubHeadingListStart
-\resumeProjectHeading
-{\textbf{\cvlink{https://github.com/TheBoyRoy05/Obsidian-Unified-Tag-Links}{Unified Tag Links}} $|$ \emph{TypeScript, Obsidian API, Vitest}}{October 2026 -- Present}
-\resumeItemListStart
-\resumeItem{Built and published an open-source plugin, downloaded 200+ times, in Obsidian, a note-taking app with 1.5M+ users.}
-\resumeItem{Designed a concept-note index that resolves nested tags to their deepest matching note, keeping a managed frontmatter property in sync as notes change, tested with Vitest and GitHub Actions CI.}
-\resumeItemListEnd
-
-\resumeProjectHeading
-{\textbf{\cvlink{https://neuralnector.com}{Neural Nector}} $|$ \emph{React, TypeScript, PyTorch, Python, FastAPI, Postgres}}{December 2025}
-\resumeItemListStart
-\resumeItem{Trained a GAN to synthesize realistic flower images (FID 50), and built a full-stack game where 100+ players tell real images from generated ones.}
 \resumeItemListEnd
 \resumeSubHeadingListEnd
 
