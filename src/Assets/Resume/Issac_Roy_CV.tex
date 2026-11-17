@@ -132,7 +132,8 @@
 \resumeProjectHeading{\textbf{Z-Lab} $|$ \emph{Undergraduate Researcher (Capstone), 10 hrs/week} $|$ \emph{Prof. Zhijian Liu}}{September 2026 -- Present}
 \resumeItemListStart
     \resumeItem{Studying efficient inference for large models, including speculative decoding (DFlash) and quantization (AWQ, GPTQ).}
-    \resumeItem{Planned project: accelerating $\pi_{0.5}$, Physical Intelligence's vision-language-action robot policy, on consumer GPUs.}
+    \resumeItem{Reproduced $\pi_{0.5}$, Physical Intelligence's vision-language-action robot policy, on the LIBERO manipulation benchmark, and profiled its per-stage latency on RTX 3090 Ti and RTX 5080 GPUs.}
+    \resumeItem{Built a roofline model showing the vision encoder and language model (86\% of BF16 latency) are compute-bound, so weight-only quantization cannot speed them up; compiled inference runs within 1.5--1.6$\times$ of the predicted floor.}
 \resumeItemListEnd
 
 \resumeProjectHeading{\textbf{MC Computer Vision Lab} $|$ \emph{Undergraduate Researcher} $|$ \emph{Prof. Manmohan Chandraker}}{January 2026 -- May 2026}
@@ -145,7 +146,7 @@
 \resumeItemListStart
     \resumeItem{Trained a DCGAN on Oxford Flowers 102 in PyTorch Lightning, stabilizing training with label smoothing, asymmetric learning rates and adaptive discriminator skipping; the production model reached FID 50.3.}
     \resumeItem{Ran 5 ablations of these stabilizers, scoring each with FID/KID/IS on held-out test images.}
-    \resumeItem{Deployed the generator in \cvlink{https://neuralnector.com}{Neural Nector}, a full-stack web game where 100+ users tell real flowers from generated ones.}
+    \resumeItem{Deployed the generator in \cvlink{https://neuralnector.issacroy.com}{Neural Nector}, a full-stack web game where 100+ users tell real flowers from generated ones.}
 \resumeItemListEnd
 \resumeSubHeadingListEnd
 
@@ -191,7 +192,7 @@
 \resumeProjectHeading
 {\textbf{OnlyDance} $|$ \emph{Python, MediaPipe, OpenCV, FastAPI, React Three Fiber}}{April 2025}
 \resumeItemListStart
-\resumeItem{Won 1st place at Datahacks 2025 by developing an interactive full-stack app that teaches dance routines using 3D avatars and real-time feedback.}
+\resumeItem{Won 1st place at DataHacks 2025 by developing an interactive full-stack app that teaches dance routines using 3D avatars and real-time feedback.}
 \resumeItem{Devised a real-time similarity scoring algorithm using MediaPipe to extract 3D pose landmarks, implementing sliding window techniques and frame interpolation to quantify dance accuracy.}
 \resumeItemListEnd
 
