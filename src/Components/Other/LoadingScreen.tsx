@@ -4,11 +4,12 @@ const LoadingScreen = () => {
     "Deleting System32 folder",
     "Downloading more RAM...",
     "Still faster than Windows update.",
-    "Please wait while we ignore you.",
-    "Bored of slow loading spinner?, buy more RAM!",
+    "Please wait while I ignore you.",
     "We will be back in 1/0 minutes.",
-    "Help, I'm trapped in a loader!",
-    "Convincing AI not to turn evil"
+    "Convincing AI not to turn evil",
+    "Calculating pi...",
+    "Closing Chrome tabs...",
+    "Thinking of a funny loading message."
   ]
 
   return (

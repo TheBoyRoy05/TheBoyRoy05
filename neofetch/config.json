@@ -1,14 +1,37 @@
 {
   "image": "https://raw.githubusercontent.com/TheBoyRoy05/TheBoyRoy05/main/neofetch/portrait.png",
   "coloredImage": true,
+  "imageScale": 1,
   "sections": [
     {
       "title": "{{username}}@github",
       "fields": [
         { "key": "Name", "value": "{{name}}" },
         { "key": "Location", "value": "{{location}}" },
-        { "key": "Uptime", "value": "{{uptime}}" },
-        { "key": "Languages", "value": "{{languages}}" }
+        { "key": "Host", "value": "{{company}}" },
+        { "key": "Uptime", "value": "{{uptime}}" }
+      ]
+    },
+    {
+      "fields": [
+        { "key": "Languages", "value": "C++, Python, TypeScript, Java" },
+        { "key": "Hobbies", "value": "Robots, Rockets, Racecars" }
+      ]
+    },
+    {
+      "fields": [
+        { "key": "CPU", "value": "1 Core, Overclocked" },
+        { "key": "GPU", "value": "Running on Vibes" },
+        { "key": "Memory", "value": "Lacking, Too Expensive" },
+        { "key": "Power Supply", "value": "Coffee" }
+      ]
+    },
+    {
+      "title": "- Contact",
+      "fields": [
+        { "key": "Website", "value": "issacroy.com" },
+        { "key": "LinkedIn", "value": "issacroy" },
+        { "key": "Email", "value": "issacroy05@gmail.com" }
       ]
     }
   ],
@@ -17,6 +40,7 @@
     "rows": [
       { "left": { "key": "Repos", "value": "{{repos}}" }, "right": { "key": "Stars", "value": "{{stars}}" } },
       { "left": { "key": "Commits", "value": "{{commits}}" }, "right": { "key": "Followers", "value": "{{followers}}" } },
+      { "left": { "key": "PRs", "value": "{{prs}}" }, "right": { "key": "Issues", "value": "{{issues}}" } },
       "loc"
     ]
   }
